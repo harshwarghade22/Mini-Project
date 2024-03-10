@@ -4,6 +4,7 @@ import { data } from "../data.js";
 import { useState } from "react";
 import Arrow from "./Icons/Arrow.jsx";
 import Multiselect from "multiselect-react-dropdown";
+import FilterArrow from "./Icons/FilterArrow.jsx";
 
 function Filters() {
   const [listedProperties, setListedProperties] = useState(data);
@@ -61,9 +62,9 @@ function Filters() {
         <h1 className="text-3xl font-['Gilroy-Medium'] text-zinc-800 font-medium tracking-tight">
           Mumbai,
         </h1>
-        <div className="left w-[70%] h-full  flex justify-center items-center  ">
+        <div className="left w-[65%] h-full  flex justify-center items-center  ">
           <Multiselect
-            className="w-full h-full ml-2"
+            className="w-full h-full ml-2 "
             isObject={false}
             options={Location}
             onSelect={handleLocationChange}
@@ -88,8 +89,8 @@ function Filters() {
           </div>
         </div>
 
-        <div className="right w-2/6 h-full  flex justify-center items-center mx-2  mr-16 ">
-          <div className="w-4/6 flex justify-center items-center gap-6  rounded-full shadow-lg  p-2 ">
+        <div className="right w-[38%] h-full  flex justify-center items-center   mr-16  ">
+          <div className="w-full flex justify-center items-center gap-6  rounded-full shadow-lg  p-1  ">
             <h1 className="text-xl font-['Gilroy-Medium'] tracking-tight ">
               Mumbai
             </h1>
@@ -99,6 +100,9 @@ function Filters() {
             <h1 className="text-xl font-['Gilroy-Medium'] tracking-tight border-l-2 pl-4">
               3 Mates
             </h1>
+            <button className="rounded-full shadow-lg bg-[#F1F1F1] w-10 h-10 flex justify-center items-center p-2">
+              <FilterArrow />
+            </button>
           </div>
           <button className="bg-[#F45C2C] py-2 px-6 rounded-full flex justify-center items-center gap-2  text-white text-xl font-['Gilroy-Medium'] ml-4">
             Go <Arrow />
