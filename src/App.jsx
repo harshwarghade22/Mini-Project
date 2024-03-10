@@ -1,62 +1,13 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import Card2 from "./Card2";
-import { data } from "./data";
-import { FaArrowRightLong } from "react-icons/fa6";
-import Multiselect from "multiselect-react-dropdown";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Details from './components/Details';
+import Reserve1 from './components/Reserve1';
+import Reserve2 from './components/Reserve2';
 
 function App() {
-  const [listedProperties, setListedProperties] = useState(data);
-  const [filterData, setFilterData] = useState(data);
-  const [priceValue, setPriceValue] = useState("");
-  const [Location, setLocation] = useState([
-    "Mumbai",
-    "Andheri",
-    "Mira-Road",
-    "Borivali",
-    
-  ]);
-
-  // useEffect(() => {
-  //   const getLocationNames = data.map(item => item.location);
-  //   setLocation(getLocationNames);
-  // }, [data]);
-
-  const handleLocationChange = (selectedLocations) => {
-    const searchProperties = listedProperties.filter((property) =>
-      selectedLocations.some((location) =>
-        property.location.toLowerCase().includes(location.toLowerCase())
-      )
-    );
-    setFilterData(searchProperties);
-  };
-
-  //search filter input handler
-  const changeHandler = (e) => {
-    setInputText(e.target.value);
-  };
-
-  const optionChangeHandler = (e) => {
-    setinputOption(e.target.value);
-  };
-
-  //price filter handler
-  const priceChangeHandler = (e) => {
-    const selectedRange = e.target.value;
-    setPriceValue(selectedRange);
-
-    if (selectedRange) {
-      const [min, max] = selectedRange.split("-").map(Number);
-      const priceFilter = listedProperties.filter(
-        (item) => item.price >= min && item.price <= max
-      );
-      setFilterData(priceFilter);
-    } else {
-      setFilterData(listedProperties);
-    }
-  };
-
   return (
+
     <>
       <div className="w-full h-[4.94vw] bg-[#FFFFFF] text-center text-3xl ">
         Nav bar
@@ -142,6 +93,7 @@ function App() {
         </div>
       </div>
     </>
+
   );
 }
 
