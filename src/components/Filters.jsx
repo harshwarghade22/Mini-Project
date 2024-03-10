@@ -86,6 +86,7 @@ function Filters() {
           </div>
         </div>
 
+       
         <div className="right h-full  flex justify-start lg:justify-center items-start gap-4 md:gap-8">
           <div className="min-w-fit w-full flex justify-center items-center gap-6  rounded-full shadow-lg  p-1  ">
             <h1 className="text-xl font-['Gilroy-Medium'] tracking-tight ">
@@ -113,6 +114,7 @@ function Filters() {
           Metro Station
         </h1>
 
+        <a href="/details">
         <div className=" card w-full  border-1 py-10  px-4">
           <div className="w-full  bg-[#FFFFFF] pt-4 px-10  flex justify-center items-center flex-wrap ">
             {filterData.map((item, index) => (
@@ -120,6 +122,7 @@ function Filters() {
             ))}
           </div>
         </div>
+        </a>
       </div>
     </div>
   );

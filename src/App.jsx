@@ -9,14 +9,14 @@ import Home from './Home';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/carts",
     element: <>
       <Filters />
       <Checkout />
     </>
   },
   {
-    path: '/home',
+    path: '/',
     element: <Home />
   },
   {

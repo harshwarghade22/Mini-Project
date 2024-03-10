@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div className='overflow-x-hidden'>
             <div className='bg-zinc-50 h-screen w-full'>
-                <div className='bg-zinc-50 w-full h-[10vh] flex justify-between items-center border-b-2 border-zinc-300'>
+                {/* <div className='bg-zinc-50 w-full h-[10vh] flex justify-between items-center border-b-2 border-zinc-300'>
                     <div className='logo text-2xl font-semibold text-black ml-2'>Urban<span className='text-orange-400'>Rent...</span></div>
                     <div className='links flex gap-10'>
                         <a className='text-sm font-semibold text-zinc-600' href="#">Home</a>
@@ -18,7 +18,7 @@ export default function Home() {
                         <div className='h-[20px] w-[20px] rounded-full'><CgProfile className='h-full w-full' /></div>
                         <h1>Profile</h1>
                     </div>
-                </div>
+                </div> */}
                 <div className='central bg-zinc-50 h-[90vh] w-full grid grid-cols-10 grid-rows-3'>
                     {/* Manually creating grid boxes */}
                     <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>1</div>
@@ -41,9 +41,12 @@ export default function Home() {
                             <h1 className='text-[1em] font-semibold '>3 Mates</h1>
                             <div className='h-[28px] w-[28px] bg-zinc-300 rounded-full flex items-center justify-center'><GiHamburgerMenu className='text-sm' /></div>
                         </div>
+                        <a href="/carts">
                         <div className='h-[7vh] w-[7vw] bg-orange-600 text-white rounded-full mt-[1.5vh] ml-3 flex items-center text-lg justify-center '>
                             Go<FaArrowRightLong className='ml-2 text-sm' />
                         </div>
+                        </a>
+                        
                     </div>
                     <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>19</div>
                     <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>20</div>

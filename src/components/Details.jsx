@@ -36,7 +36,7 @@ function Details() {
     const isFirstSlide=currentIndx===0
     const indx=isFirstSlide ? slides.length-1 : currentIndx-1
     setCurrentIndx(indx)
-  }
+  }  
 
   return (
     <div>
