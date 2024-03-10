@@ -116,7 +116,7 @@ function Filters() {
         <div className=" card w-full  border-1 py-10  px-4">
           <div className="w-full  bg-[#FFFFFF] pt-4 px-10  flex justify-center items-center flex-wrap ">
             {filterData.map((item, index) => (
-              <Card2 key={item.id} data={item} />
+            <Card2 key={item.id} data={item} />
             ))}
           </div>
         </div>
