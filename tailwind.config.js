@@ -6,8 +6,6 @@ export default {
   ],
   theme: {
 
-  extend: {},
-=======
     extend: {
       fontFamily:{
         gilroy_bold:["gilroy-bold","sans-serif"],
@@ -18,8 +16,6 @@ export default {
         gilroy_thin:["gilroy-thin","sans-serif"]
       }
     },
-
-  },
   plugins: [],
 }
-
+}
