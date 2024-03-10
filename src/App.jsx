@@ -73,7 +73,7 @@ function App() {
       options={Location}
       onSelect={handleLocationChange}
       onRemove={handleLocationChange}
-      showCheckbox={}
+      
       style={{
         '.multiselect-checkbox': {
           // Tailwind CSS classes for checkbox styling
