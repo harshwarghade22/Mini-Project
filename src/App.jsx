@@ -3,11 +3,16 @@ import Navbar from './components/Navbar';
 import Details from './components/Details';
 import Reserve1 from './components/Reserve1';
 import Reserve2 from './components/Reserve2';
+import Filters from "./components/Filters";
+import Checkout from "./components/Checkout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/details" />
+    element: <>
+      <Filters />
+      <Checkout />
+    </>
   },
   {
     path: "/details",
