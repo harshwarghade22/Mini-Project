@@ -5,6 +5,7 @@ import Reserve1 from './components/Reserve1';
 import Reserve2 from './components/Reserve2';
 import Filters from "./components/Filters";
 import Checkout from "./components/Checkout";
+import Home from './Home';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       <Filters />
       <Checkout />
     </>
+  },
+  {
+    path: '/home',
+    element: <Home />
   },
   {
     path: "/details",
