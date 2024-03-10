@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+=======
 @font-face {
     font-family: "gilroy-bold";
     src: url("./fonts/Gilroy-Bold.ttf");
@@ -32,6 +34,5 @@
     font-family: "gilroy-thin";
     src: url("./fonts/Gilroy-Thin.ttf");
 }
-
 
 

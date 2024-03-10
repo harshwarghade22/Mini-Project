@@ -3,7 +3,7 @@ import Property1 from "../assets/Images/Property1";
 
 function Checkout() {
   return (
-    <div className="w-full h-screen  ">
+    <div className="md: ">
       <div className="top w-full h-[76px] bg-zinc-300 text-center">header</div>
       <div
         className="w-full  py-10 px-20 flex justify-center items-center"
