@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './Navbar'
 import { IoBed } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
@@ -6,6 +6,25 @@ import { FaArrowRight } from "react-icons/fa";
 
 
 function Reserve1() {
+
+    const [price,setPrice]=useState(null);
+    const [sharing,setSharing] = useState(null);
+
+    const priceTriple = ()=>{
+        setPrice(7000);
+        setSharing('triple');
+    }
+
+    const priceDouble = ()=>{
+        setPrice(11000);
+        setSharing('double');
+    }
+
+    const pricePrivate = ()=>{
+        setPrice(18000);
+        setSharing('private');
+    }
+
   return (
     <div>
       <div className='h-[600px] mr-[100px] ml-[100px] mt-5  flex gap-48'>
@@ -75,26 +94,23 @@ function Reserve1() {
             <div className='h-[107px] mt-6'>
                 <p className='font-gilroy_semi_bold text-gray-600 text-xl'>Select Occupancy</p>
                 <div className='flex justify-between mt-2'>
-                    <a href="">
-                        <div className='w-[145px] h-[63px] border border-black rounded-xl hover:bg-black hover:text-white'>
+                    
+                        <div className={`w-[145px] h-[63px] border border-black rounded-xl ${sharing === 'triple' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'}`} onClick={priceTriple} >
                             <p className='font-gilroy_regular pt-2 pl-3'>Triple Sharing</p>
-                            <p className='font-gilroy_bold pl-3'>₹7000/mo</p>
+                            <p className='font-gilroy_bold pl-3' >₹7000/mo</p>
                         </div>
-                    </a>
-                    <a href="">
-                        <div className='w-[145px] h-[63px] border border-black rounded-xl hover:bg-black hover:text-white'>
+                   
+                    
+                        <div className={`w-[145px] h-[63px] border border-black rounded-xl ${sharing === 'double' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'}`} onClick={priceDouble}>
                             <p className='font-gilroy_regular pt-2 pl-3'>Double Sharing</p>
                             <p className='font-gilroy_bold pl-3'>₹11000/mo</p>
                         </div>
-                    </a>
-                    <a href="">
-                        <div className='w-[145px] h-[63px] border border-black rounded-xl hover:bg-black hover:text-white'>
+                    
+                    
+                        <div className={`w-[145px] h-[63px] border border-black rounded-xl ${sharing === 'private' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'}`} onClick={pricePrivate}>
                             <p className='font-gilroy_regular pt-2 pl-3'>Private Sharing</p>
                             <p className='font-gilroy_bold pl-3'>₹18000/mo</p>
                         </div>
-                    </a>
-                    
-                    
                 </div>
             </div>
             <div className='h-[250px] mt-3 bg-slate-100'>
@@ -114,7 +130,7 @@ function Reserve1() {
             </div>
             <div className='h-[100px] border-t border-t-gray-400 mt-10 flex justify-between p-5'>
                 <div className='w-[130px] h-[50px] rounded-full bg-slate-200 text-center pt-3 font-gilroy_regular'>
-                ₹7000/mo
+                ₹{price}/mo
                 </div>
                 <a href="/reserve2">
                 <div className='w-[130px] h-[50px] rounded-lg bg-orange-600 text-white text-center font-gilroy_regular hover:bg-black hover:text-white flex justify-center items-center gap-1'>
@@ -122,7 +138,6 @@ function Reserve1() {
                     <FaArrowRight/> 
                 </div>
                 </a>
-                
             </div>
         </div>
       </div>
