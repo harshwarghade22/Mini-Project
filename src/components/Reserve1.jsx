@@ -25,10 +25,11 @@ function Reserve1() {
         setSharing('private');
     }
 
+
   return (
     <div>
       <div className='h-[600px] mr-[100px] ml-[100px] mt-5  flex gap-48'>
-        <div className='w-[400px] border-gray-200 shadow-2xl rounded-xl p-4'>
+        <div className='w-[370px] border-gray-200 shadow-2xl rounded-xl p-4'>
             <div className='w-full h-[200px] rounded-md bg-[url("https://d2blna3sxzw742.cloudfront.net/Property-Photos/46-Thumbnail_1.jpg")] bg-center bg-cover'>
             </div>
             <div className='w-full h-[40px] mt-3 flex gap-3'>
@@ -74,8 +75,8 @@ function Reserve1() {
             </div>
         </div>
 
-        <div className='w-[550px]  flex flex-col'>
-            <div className='h-[75px]  flex justify-between'>
+        <div className='w-[530px]  flex flex-col'>
+            <div className='h-[70px]  flex justify-between'>
                 <div className='w-[100px] h-full  flex flex-col justify-center items-center gap-2'>
                     <p className='font-gilroy_semi_bold text-center text-sm'>Select pricing</p>
                     <div className='w-[45px] h-[45px] rounded-full border-black border flex justify-center items-center text-2xl bg-black text-white'>
@@ -113,7 +114,7 @@ function Reserve1() {
                         </div>
                 </div>
             </div>
-            <div className='h-[250px] mt-3 bg-slate-100'>
+            <div className='h-[225px] mt-3 bg-slate-100'>
                 <p className='font-gilroy_semi_bold text-gray-600 bg-white text-xl pb-2'>Occupant info</p>
                 <label for="first_name" class="block mb-2 text-lg pl-6 pt-6 font-gilroy_regular text-gray-900 ">Name</label>
                 <input type="text" className='bg-slate-100 w-4/5 border-b mx-6 border-b-gray-400' id="first_name" />
@@ -128,7 +129,8 @@ function Reserve1() {
                 </div>
                 
             </div>
-            <div className='h-[100px] border-t border-t-gray-400 mt-10 flex justify-between p-5'>
+            <div className='h-[100px] border-t border-t-gray-400  flex justify-between py-5 mt-10'>
+                
                 <div className='w-[130px] h-[50px] rounded-full bg-slate-200 text-center pt-3 font-gilroy_regular'>
                 ₹{price}/mo
                 </div>
@@ -140,6 +142,7 @@ function Reserve1() {
                 </a>
             </div>
         </div>
+
       </div>
     </div>
   )
