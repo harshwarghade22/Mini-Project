@@ -334,52 +334,54 @@ export default function Home() {
                 </div>
                 {/* Row 5, Column 6 */}
             </div>
-            <div className='h-[65vh] w-full bg-zinc-50'>
-                <div className='h-[80%] w-full bg-zinc-100 flex'>
-                    <div className='h-full w-[40%] bg-zinc-50 flex flex-col  justify-center pl-[5vw] gap-2'>
-                        <h1 className='h-[4vh] w-[6vw] rounded-full bg-orange-600 text-white text-center'>Logo</h1>
-                        <div className='font-bold tracking-tight text-2xl'>
-                            <h1>To make sure when you are </h1>
-                            <h1>independent you live like a boss</h1>
-                        </div>
-                        <h1 className='font-semibold text-lg tracking-tight mt-4'>Habit8,2023</h1>
-                    </div>
-                    <div className="h-full w-[60%] bg-zinc-200 flex">
-                         <div className="h-full w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
-                           <h4 className="text-zinc-500">FAQ's</h4>
-                           <h4 className="text-zinc-900 font-semibold">How it works</h4>
-                           <h4 className="text-zinc-900 font-semibold">List your property</h4>
-                           <h4 className="text-zinc-900 font-semibold">See More</h4>
-                         </div>
-                         <div className="h-full w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
-                           <h4 className="text-zinc-500">Company</h4>
-                           <h4 className="text-zinc-900 font-semibold">Blogs</h4>
-                           <h4 className="text-zinc-900 font-semibold">Career</h4>
-                           <h4 className="text-zinc-900 font-semibold">News</h4>
-                         </div>                         
-                         <div className="h-full w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
-                           <h4 className="text-zinc-500">Insights</h4>
-                           <h4 className="text-zinc-900 font-semibold">Inventory</h4>
-                           <h4 className="text-zinc-900 font-semibold">Stats</h4>
-                           <h4 className="text-zinc-900 font-semibold">Investments</h4>
-                         </div>                        
-                          <div className="h-full w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
-                           <h4 className="text-zinc-500">Get the app</h4>
-                           <button className="w-fit px-4 py-1 font-semibold border-2 rounded-full border-zinc-500 flex justify-center items-center gap-1"><DiAndroid />Android</button>
-                           <button className="w-fit px-4 py-1 font-semibold border-2 rounded-full border-zinc-500 flex justify-center items-center gap-1"><FaApple />Apple</button>
-
-                         </div>                    
-                         </div>
-                </div>
-                <div className='h-[20%] w-full text-white bg-orange-600 flex items-center p-7 gap-[40vw]'>
-                    <div><h4 className='font-semibold tracking-tight flex items-center '>Copyright <FaRegCopyright /> 2023 Techademy Campus</h4></div>
-                    <div className='font-semibold tracking-tight flex items-center gap-[6vw] '>
-                        <h4>Terms of Services</h4>
-                        <h4>Privacy Policy</h4>
-                        <h4>Cookies</h4>
-                    </div>
-                </div>
+            <div class='h-[65vh] w-full bg-zinc-50'>
+    <div class='h-[80%] w-full bg-zinc-100 flex flex-col md:flex-row'>
+        <div class='h-full w-full md:w-[40%] bg-zinc-50 flex flex-col justify-center pl-[5vw] gap-2'>
+            <h1 class='h-[4vh] w-[6vw] rounded-full bg-orange-600 text-white text-center'>Logo</h1>
+            <div class='font-bold tracking-tight text-2xl'>
+                <h1>To make sure when you are </h1>
+                <h1>independent you live like a boss</h1>
             </div>
+            <h1 class='font-semibold text-lg tracking-tight mt-4'>Habit8,2023</h1>
+        </div>
+        <div class="h-full w-full md:w-[60%] bg-zinc-200 flex flex-wrap">
+            <div class="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
+                <h4 class="text-zinc-500">FAQ's</h4>
+                <h4 class="text-zinc-900 font-semibold">How it works</h4>
+                <h4 class="text-zinc-900 font-semibold">List your property</h4>
+                <h4 class="text-zinc-900 font-semibold">See More</h4>
+            </div>
+            <div class="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
+                <h4 class="text-zinc-500">Company</h4>
+                <h4 class="text-zinc-900 font-semibold">Blogs</h4>
+                <h4 class="text-zinc-900 font-semibold">Career</h4>
+                <h4 class="text-zinc-900 font-semibold">News</h4>
+            </div>                         
+            <div class="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
+                <h4 class="text-zinc-500">Insights</h4>
+                <h4 class="text-zinc-900 font-semibold">Inventory</h4>
+                <h4 class="text-zinc-900 font-semibold">Stats</h4>
+                <h4 class="text-zinc-900 font-semibold">Investments</h4>
+            </div>                        
+            <div class="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
+                <h4 class="text-zinc-500">Get the app</h4>
+                <button class="w-fit px-4 py-1 font-semibold border-2 rounded-full border-zinc-500 flex justify-center items-center gap-1"><DiAndroid />Android</button>
+                <button class="w-fit px-4 py-1 font-semibold border-2 rounded-full border-zinc-500 flex justify-center items-center gap-1"><FaApple />Apple</button>
+            </div>                    
+        </div>
+    </div>
+    <div class='h-[20%] w-full text-white bg-orange-600 flex flex-col md:flex-row items-center p-7'>
+        <div class='md:w-[50%]'>
+            <h4 class='font-semibold tracking-tight flex items-center '>Copyright <FaRegCopyright /> 2023 Techademy Campus</h4>
+        </div>
+        <div class='md:w-[50%] flex flex-col md:flex-row md:justify-end mt-4 md:mt-0'>
+            <h4 class='mr-4'>Terms of Services</h4>
+            <h4 class='mr-4'>Privacy Policy</h4>
+            <h4>Cookies</h4>
+        </div>
+    </div>
+</div>
+
         </div>
     )
 }
