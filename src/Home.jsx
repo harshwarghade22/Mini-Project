@@ -73,7 +73,7 @@ export default function Home() {
                     <div className='h-[1vh] w-full bg-zinc-200'></div>
                     <div className='h-[1vh] w-full bg-zinc-200'></div>
                     <div className='h-[1vh] w-full bg-zinc-200'></div>
-                    <div className='h-[1vh] w-full bg-zinc-200'></div>git
+                    <div className='h-[1vh] w-full bg-zinc-200'></div>
 
 
                 </div>
@@ -172,12 +172,16 @@ export default function Home() {
                 </div>
             </div>
             <div className='bg-zinc-50 h-screen w-full p-5 fit'>
-                <div className='h-[20vh] w-full  flex flex-col justify-center items-center bg-zinc-500'>
+                <div className='h-[20vh] w-full  flex  justify-evenly items-center bg-zinc-50'>
+                    <img src="./src/assets/Group 48096305.png" alt="" />
+                    <img src="./src/assets/Group.png" alt="" />
                     <div className='text-3xl font-semibold text-zinc-800 text-center flex flex-col items-center '>
                         <h1>Keep the standard of living</h1>
                         <h1><span className='text-orange-600'>alive</span> at any location</h1>
                         <div className='w-[15vw] h-[2px] bg-zinc-300 mt-5'></div>
                     </div>
+                    <img className="-rotate-[300deg]" src="./src/assets/Group.png" alt="" />
+                    <img src="./src/assets/Isolation Mode.png" alt="" />
 
                 </div>
                 <div className='h-[50vh] w-full bg-zinc-100 flex justify-center items-center space-x-10 '>
