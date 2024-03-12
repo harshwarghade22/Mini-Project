@@ -1,10 +1,12 @@
 import { CgProfile } from "react-icons/cg";
 import { FaArrowRightLong, FaRegCopyright } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaApple } from "react-icons/fa";
+import { DiAndroid } from "react-icons/di";
 
 export default function Home() {
     return (
-        <div className='overflow-x-hidden'>
+        <div className='overflow-x-hidden font-gilroy_regular'>
             <div className='bg-zinc-50 h-screen w-full'>
                 {/* <div className='bg-zinc-50 w-full h-[10vh] flex justify-between items-center border-b-2 border-zinc-300'>
                     <div className='logo text-2xl font-semibold text-black ml-2'>Urban<span className='text-orange-400'>Rent...</span></div>
@@ -170,7 +172,7 @@ export default function Home() {
                 </div>
             </div>
             <div className='bg-zinc-50 h-screen w-full p-5 fit'>
-                <div className='h-[20vh] w-full  flex flex-col justify-center items-center'>
+                <div className='h-[20vh] w-full  flex flex-col justify-center items-center bg-zinc-500'>
                     <div className='text-3xl font-semibold text-zinc-800 text-center flex flex-col items-center '>
                         <h1>Keep the standard of living</h1>
                         <h1><span className='text-orange-600'>alive</span> at any location</h1>
@@ -178,16 +180,19 @@ export default function Home() {
                     </div>
 
                 </div>
-                <div className='h-[50vh] w-full bg-zinc-50 flex justify-center items-center'>
-                    <div className='h-[45vh] w-[15vw] bg-zinc-200 shadow-2xl'></div>
-                </div>
+                <div className='h-[50vh] w-full bg-zinc-100 flex justify-center items-center space-x-10 '>
+                    <img src="./src/assets/Group 48096313.png" alt="" />
+                    <div className='h-[45vh] w-[15vw] bg-zinc-200 shadow-2xl'>
+                        <img className="h-full w-full object-contain" src="./src/assets/Group 48096306.png" alt="" />
+                    </div>
+                    <img className="pl-[2vw]" src="./src/assets/Group 48096314.png" alt="" />                </div>
                 <div className='h-[30vh] w-full bg-zinc-50 flex  mt-2 '>
-                    <img className='pl-[5vw] pb-[10vh] image1 w-[20%] scale-150 h-[150%] object-contain position-center -rotate-12' src="https://s3-alpha-sig.figma.com/img/d5a1/5ac5/ce5ea6752b97dd19dc17b6b02166d2d0?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K7JcEBJZ4AGveZg-hGawLQB18Kn6YmKagLgT4rJRJlRGTGMdWvNJ5kcIH9mectwKG0u~FlvDV9QCeFPL0VacKDJnHd4iV87AZv0EbuenUFtKqi2biCu5gzw8bNVoNX8osU7F7kIuJr6cdPJQTYt4rqtvEN3VBn0Bzkrgsx9R3rck1Gx0elYFN6oM2IHGkCytcuO8fv3f18NvcAG1gL2yu~SIb2BHH6ze7EmxHvR7auwhQ0~P8dgd9MJZQgp0KnWJzDrZxFwEBDTx947fsZkUp71--fcPncrs-mm~n~O56xk7SRgrDSSAesMBuXvh7ogk~8LY~OFW50U6K7ZejeJNgQ__" alt="" />
+                    <img className='pl-[7vw] pb-[10vh] image1 w-[20%] scale-150 h-[150%] object-contain position-center -rotate-12 grayscale' src="https://s3-alpha-sig.figma.com/img/d5a1/5ac5/ce5ea6752b97dd19dc17b6b02166d2d0?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K7JcEBJZ4AGveZg-hGawLQB18Kn6YmKagLgT4rJRJlRGTGMdWvNJ5kcIH9mectwKG0u~FlvDV9QCeFPL0VacKDJnHd4iV87AZv0EbuenUFtKqi2biCu5gzw8bNVoNX8osU7F7kIuJr6cdPJQTYt4rqtvEN3VBn0Bzkrgsx9R3rck1Gx0elYFN6oM2IHGkCytcuO8fv3f18NvcAG1gL2yu~SIb2BHH6ze7EmxHvR7auwhQ0~P8dgd9MJZQgp0KnWJzDrZxFwEBDTx947fsZkUp71--fcPncrs-mm~n~O56xk7SRgrDSSAesMBuXvh7ogk~8LY~OFW50U6K7ZejeJNgQ__" alt="" />
                     <div className='centre flex flex-col justify-center items-center '>
                         <h5 className='w-1/3 text-center font-semibold text-sm text-zinc-400'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam error voluptatum eum voluptates minus autem obcaecati incidunt eos tempore maxime.</h5>
                         <div className='px-4 py-2 mt-5 bg-orange-600 text-white rounded-full flex justify-center items-center'>Start Now<FaArrowRightLong className='ml-2 text-sm' /></div>
                     </div>
-                    <img className='pr-[7vw] pb-[5vh] image2 w-[20%] scale-110  -rotate-12 h-[120%] object-contain position-center grayscale' src="https://i.pinimg.com/236x/1e/e3/f7/1ee3f7734fbea4c66bf42cecba90045f.jpg" alt="" />
+                    <img className='pr-[7vw] pb-[5vh] image2 w-[20%] scale-[1.7]  -rotate-12 h-[120%] object-contain position-center grayscale' src="./src/assets/Group 48096312.png" alt="" />
 
                 </div>
 
@@ -326,7 +331,7 @@ export default function Home() {
                 {/* Row 5, Column 6 */}
             </div>
             <div className='h-[65vh] w-full bg-zinc-50'>
-                <div className='h-[80%] w-full bg-zinc-100'>
+                <div className='h-[80%] w-full bg-zinc-100 flex'>
                     <div className='h-full w-[40%] bg-zinc-50 flex flex-col  justify-center pl-[5vw] gap-2'>
                         <h1 className='h-[4vh] w-[6vw] rounded-full bg-orange-600 text-white text-center'>Logo</h1>
                         <div className='font-bold tracking-tight text-2xl'>
@@ -335,7 +340,32 @@ export default function Home() {
                         </div>
                         <h1 className='font-semibold text-lg tracking-tight mt-4'>Habit8,2023</h1>
                     </div>
-                    <div></div>
+                    <div className="h-full w-[60%] bg-zinc-200 flex">
+                         <div className="h-full w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
+                           <h4 className="text-zinc-500">FAQ's</h4>
+                           <h4 className="text-zinc-900 font-semibold">How it works</h4>
+                           <h4 className="text-zinc-900 font-semibold">List your property</h4>
+                           <h4 className="text-zinc-900 font-semibold">See More</h4>
+                         </div>
+                         <div className="h-full w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
+                           <h4 className="text-zinc-500">Company</h4>
+                           <h4 className="text-zinc-900 font-semibold">Blogs</h4>
+                           <h4 className="text-zinc-900 font-semibold">Career</h4>
+                           <h4 className="text-zinc-900 font-semibold">News</h4>
+                         </div>                         
+                         <div className="h-full w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
+                           <h4 className="text-zinc-500">Insights</h4>
+                           <h4 className="text-zinc-900 font-semibold">Inventory</h4>
+                           <h4 className="text-zinc-900 font-semibold">Stats</h4>
+                           <h4 className="text-zinc-900 font-semibold">Investments</h4>
+                         </div>                        
+                          <div className="h-full w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
+                           <h4 className="text-zinc-500">Get the app</h4>
+                           <button className="w-fit px-4 py-1 font-semibold border-2 rounded-full border-zinc-500 flex justify-center items-center gap-1"><DiAndroid />Android</button>
+                           <button className="w-fit px-4 py-1 font-semibold border-2 rounded-full border-zinc-500 flex justify-center items-center gap-1"><FaApple />Apple</button>
+
+                         </div>                    
+                         </div>
                 </div>
                 <div className='h-[20%] w-full text-white bg-orange-600 flex items-center p-7 gap-[40vw]'>
                     <div><h4 className='font-semibold tracking-tight flex items-center '>Copyright <FaRegCopyright /> 2023 Techademy Campus</h4></div>
