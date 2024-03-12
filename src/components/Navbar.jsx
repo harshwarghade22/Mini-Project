@@ -4,7 +4,7 @@ import { CgProfile } from "react-icons/cg";
 
 function Navbar() {
   return (
-    <div className='w-full md:w-11/12 max-w-screen-2xl mx-auto h-20 border-b border-b-black flex justify-between items-center'>
+    <div className='w-[80vw] md:w-11/12  max-w-screen-2xl mx-auto h-20 border-b border-b-black flex justify-between items-center'>
         <div className=' text-3xl font-gilroy_semi_bol font-semibold'>Conti<span className='text-orange-400'>new...</span></div>
         <div className='hidden md:flex justify-between gap-8 text-gray-400 font-gilroy_medium'>
             <a href="/"><div className='hover:text-black text-sm'>Home</div></a>

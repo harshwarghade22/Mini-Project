@@ -13,7 +13,9 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 
 
+
 function Details() {
+  
   const slides=[
     {url:'https://d2blna3sxzw742.cloudfront.net/Property-Photos/46-Thumbnail_1.jpg'},
     {url:'https://img.staticmb.com/mbphoto/pg/grd2/cropped_images/2022/Jul/22/Photo_h400_w540/GR2-305273-1442031_400_540.jpeg'},
@@ -39,18 +41,18 @@ function Details() {
   }  
 
   return (
-    <div>
-      <h1 className='ml-[100px] mt-2 mb-3 font-gilroy_medium'>Home/Flats/Description</h1>
+    <div className='md:px-14 px-14'>
+      <h1 className='mt-2 mb-3 font-gilroy_medium'>Home/Flats/Description</h1>
       
-      <div className='h-[450px] ml-[100px] mr-[100px] border rounded-lg flex p-4 gap-4'>
-        <div style={{backgroundImage:`url(${slides[currentIndx].url})`}} className='w-3/5 h-full  border border-gray-400 rounded-lg  bg-center bg-cover flex flex-col justify-end items-end'>
-        <div className='text-6xl flex text-white'><IoIosArrowDropleftCircle onClick={prevSlide} className='hover:scale-125'/> <IoIosArrowDroprightCircle onClick={nextSlide} className='hover:scale-125'/></div>
-          
+      <div className='h-[30vh] md:h-[70vh] mx-auto border rounded-lg md:flex gap-4 p-4'>
+        <div style={{backgroundImage:`url(${slides[currentIndx].url})`}} className='md:w-3/5 h-full  border border-gray-400 rounded-lg  bg-center bg-cover flex justify-end items-end'>
+           <div className='text-6xl flex text-white'><IoIosArrowDropleftCircle onClick={prevSlide} className='hover:scale-125'/> <IoIosArrowDroprightCircle onClick={nextSlide} className='hover:scale-125'/></div>
         </div>
         
-        <div className='w-2/5 border border-gray-400 rounded-lg bg-[url("https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg")] bg-center bg-cover grayscale'></div>
+        <div className='w-2/5 border border-gray-400 rounded-lg bg-[url("https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg")] bg-center bg-cover grayscale'>
+        </div>
       </div>
-      <div className='h-[100px] ml-[100px] mr-[100px] mt-6 border-b-2 border-t-2 flex p-5'>
+      <div className='h-[100px]  mt-6 border-b-2 border-t-2 flex p-5'>
         <div className='w-3/5  border-r-2 flex justify-between'>
             <div className='w-[196px] h-[60px] bg-slate-200 rounded-full py-2 px-6'>
                 <p className='text-xs font-gilroy_light'>Starts from</p>
@@ -77,7 +79,7 @@ function Details() {
             
         </div>
       </div>
-      <div className='h-[500px] mr-[100px] ml-[100px] border-b-2 border-gray-300 mb-10 flex flex-col gap-5 p-5'>
+      <div className='h-[500px] border-b-2 border-gray-300 mb-10 flex flex-col gap-5 p-5'>
       <div className='w-full h-3/5 bg-slate-100 rounded-3xl flex'>
         <div className='w-3/5 h-full flex flex-col'>
           <div className='py-5 px-10 font-gilroy_medium text-2xl'>Amenities</div>
