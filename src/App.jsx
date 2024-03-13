@@ -4,7 +4,7 @@ import Details from './components/Details';
 import Reserve1 from './components/Reserve1';
 import Reserve2 from './components/Reserve2';
 import Filters from "./components/Filters";
-import Checkout from "./components/Checkout";
+import Checkout from "./components/Check";
 import Home from './Home';
 
 const router = createBrowserRouter([

@@ -1,12 +1,10 @@
 import React from "react";
-import Card2 from "./Card2";
+import Multiselect from "multiselect-react-dropdown";
 import { data } from "../data.js";
 import { useState } from "react";
-import Arrow from "./Icons/Arrow.jsx";
-import Multiselect from "multiselect-react-dropdown";
-import FilterArrow from "./Icons/FilterArrow.jsx";
+import Card from "./Card.jsx";
 
-function Filters() {
+function Hero() {
   const [listedProperties, setListedProperties] = useState(data);
   const [filterData, setFilterData] = useState(data);
   const [priceValue, setPriceValue] = useState("");
@@ -17,11 +15,6 @@ function Filters() {
     "Borivali",
   ]);
 
-  // useEffect(() => {
-  //   const getLocationNames = data.map(item => item.location);
-  //   setLocation(getLocationNames);
-  // }, [data]);
-
   const handleLocationChange = (selectedLocations) => {
     const searchProperties = listedProperties.filter((property) =>
       selectedLocations.some((location) =>
@@ -31,12 +24,6 @@ function Filters() {
     setFilterData(searchProperties);
   };
 
-  //search filter input handler
-  const changeHandler = (e) => {
-    setInputText(e.target.value);
-  };
-
-  //price filter handler
   const priceChangeHandler = (e) => {
     const selectedRange = e.target.value;
     setPriceValue(selectedRange);
@@ -53,79 +40,73 @@ function Filters() {
   };
 
   return (
-    <div  className="">
-      
-      <div className="search w-11/12 mx-auto bg-[#FFFFFF]  flex flex-col xl:flex-row item-start lg:items-center justify-evenly space-y-4 xl:space-y-0 border-t-[1px] pt-2 border-black  ">
-        <div className="left h-full flex justify-start lg:justify-center items-start gap-4 md:gap-8">
-          <h1 className="text-3xl text-start font-['Gilroy-Medium'] text-zinc-800 font-medium tracking-tight">
+    <div className="py-16 px-6">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-6 ">
+        <div className="col-span-1 pt-2">
+          <h1 className='text-3xl font-medium font-["Gilroy Medium"] mt-6'>
             Mumbai,
           </h1>
+        </div>
+        <div className="col-span-3  sm:flex justify-start items-center  gap-4 my-6">
           <Multiselect
-            className="w-[300px] max-w-xs h-full"
+            className="rounded-full  border-none border-opacity-0 col-span-1"
             isObject={false}
             options={Location}
+            toggelOptionList={true}
             onSelect={handleLocationChange}
             onRemove={handleLocationChange}
             showCheckbox
           />
-
-          <div className="price flex justify-center items-center border-zinc-600 border-opacity-50 border-[1px] rounded-full ">
-            <select
-              value={priceValue}
-              onChange={priceChangeHandler}
-              className="py-3  px-4 rounded-full z-10 hover:scale-105 hover:bg-gradient-to-t from-zinc-300 ease-in-out duration-700 "
-            >
-              <option value="">Select Price</option>
-              <option value="2000 - 3000">2000 - 3000</option>
-              <option value="3500 - 5000">3500 - 5000</option>
-              <option value="5500 - 7000">5500 - 7000</option>
-              <option value="7500 - 9000">7500 - 9000</option>
-              <option value="9500 - 12000">9500 - 12000</option>
-              <option value="12500 - 15000">12500 - 15000</option>
-            </select>
-          </div>
+          <select
+            value={priceValue}
+            onChange={priceChangeHandler}
+            className="py-3 w-40 px-4 border-[1px] border-black z-10 ease-in-out duration-700 sm:mt-0  rounded-full shadow-xl my-4 sm:my-0"
+          >
+            <option value="">Select Price</option>
+            <option value="2000 - 3000">2000 - 3000</option>
+            <option value="3500 - 5000">3500 - 5000</option>
+            <option value="5500 - 7000">5500 - 7000</option>
+            <option value="7500 - 9000">7500 - 9000</option>
+            <option value="9500 - 12000">9500 - 12000</option>
+            <option value="12500 - 15000">12500 - 15000</option>
+          </select>
         </div>
 
-       
-        <div className="right h-full  flex justify-start lg:justify-center items-start gap-4 md:gap-8">
-          <div className="min-w-fit w-full flex justify-center items-center gap-6  rounded-full shadow-lg  p-1  ">
-            <h1 className="text-xl font-['Gilroy-Medium'] tracking-tight ">
+        <div className="col-span-2 flex justify-between items-center lg:ml-4 ">
+          <div className="flex justify-center items-center gap-8 lg:gap-4 shadow-2xl ">
+            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight  ">
               Mumbai
             </h1>
-            <h1 className="text-xl font-['Gilroy-Medium'] tracking-tight border-l-2 pl-4">
+            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight  ">
               1 BHK
             </h1>
-            <h1 className="text-xl font-['Gilroy-Medium'] tracking-tight border-l-2 pl-4">
+            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight  ">
               3 Mates
             </h1>
-            <button className="rounded-full shadow-lg bg-[#F1F1F1] w-10 h-10 flex justify-center items-center p-2">
-              <FilterArrow />
+            <button className="rounded-full md:text-lg sm:text-base text-sm shadow-lg bg-[#F1F1F1] w-10 h-10 flex justify-center items-center ">
+              check
             </button>
           </div>
-          <button className="bg-[#F45C2C] py-2 px-6 rounded-full flex justify-center items-center gap-2  text-white text-xl font-['Gilroy-Medium']">
-            Go <Arrow />
+          <button className="py-2 px-4 rounded-full bg-[#00df9a] text-black font-bold mx-auto">
+            Go
           </button>
         </div>
       </div>
 
-      <div>
-        <h1 className="text-[#F45C2C] font-semibold text-2xl  px-20 opacity-85">
+      <div className="max-w-7xl mx-auto ">
+        <h1 className="text-[#F45C2C] font-semibold text-2xl  opacity-85 my-6">
           <span className="text-zinc-700 opacity-50">Spaces near </span>
-          Metro Station
+          "Metro Station"
         </h1>
+      </div>
 
-        <a href="/details">
-        <div className=" card w-full  border-1 py-10  px-4">
-          <div className="w-full  bg-[#FFFFFF] pt-4 px-10  flex justify-center items-center flex-wrap ">
-            {filterData.map((item, index) => (
-            <Card2 key={item.id} data={item} />
-            ))}
-          </div>
-        </div>
-        </a>
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mt-10">
+        {filterData.map((item, index) => (
+          <Card key={item.id} data={item} />
+        ))}
       </div>
     </div>
   );
 }
 
-export default Filters;
+export default Hero;
