@@ -3,6 +3,8 @@ import Multiselect from "multiselect-react-dropdown";
 import { data } from "../data.js";
 import { useState } from "react";
 import Card from "./Card.jsx";
+import Arrow from "../components/Icons/Arrow.jsx";
+import FilterArrow from "../components/Icons/FilterArrow.jsx";
 
 function Hero() {
   const [listedProperties, setListedProperties] = useState(data);
@@ -41,7 +43,7 @@ function Hero() {
 
   return (
     <div className="py-16 px-6">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-6 ">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-6  ">
         <div className="col-span-1 pt-2">
           <h1 className='text-3xl font-medium font-["Gilroy Medium"] mt-6'>
             Mumbai,
@@ -49,7 +51,7 @@ function Hero() {
         </div>
         <div className="col-span-3  sm:flex justify-start items-center  gap-4 my-6">
           <Multiselect
-            className="rounded-full  border-none border-opacity-0 col-span-1"
+            className="rounded-full  border-none border-opacity-0 col-span-1 bg-[#F3F5F7]"
             isObject={false}
             options={Location}
             toggelOptionList={true}
@@ -84,11 +86,11 @@ function Hero() {
               3 Mates
             </h1>
             <button className="rounded-full md:text-lg sm:text-base text-sm shadow-lg bg-[#F1F1F1] w-10 h-10 flex justify-center items-center ">
-              check
+              <FilterArrow />
             </button>
           </div>
-          <button className="py-2 px-4 rounded-full bg-[#00df9a] text-black font-bold mx-auto">
-            Go
+          <button className="py-2 px-4 rounded-full bg-[#F45C2C] text-white font-medium mx-auto flex justify-between items-center gap-4">
+            Go <Arrow />
           </button>
         </div>
       </div>
