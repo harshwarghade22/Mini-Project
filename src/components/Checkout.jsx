@@ -1,5 +1,4 @@
 import React from "react";
-import Property1 from "../assets/Images/Property1";
 
 function Checkout() {
   return (

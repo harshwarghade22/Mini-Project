@@ -3,6 +3,24 @@ import { MdGroups } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import Fridge from './Icons/Fridge';
+import Wardrobe from './Icons/Wardrobe';
+import Tv from './Icons/Tv';
+import Desk from './Icons/Desk';
+import Curtains from './Icons/Curtains';
+import WM from './Icons/WM';
+import OfficeChair from './Icons/OfficeChair';
+import Dinning from './Icons/Dinning';
+import Bed from './Icons/Bed';
+import Tablelamp from './Icons/Tablelamp';
+import Lift from './Icons/Lift';
+import Water from './Icons/Water';
+import Security from './Icons/Security';
+import DeskTable from './Icons/DeskTable';
+import Metro from './Icons/Metro';
+
+import Bus from './Icons/Bus';
+
 
 
 
@@ -86,43 +104,64 @@ function Details() {
           <div className='py-5 px-10 font-gilroy_medium text-2xl'>Amenities</div>
           <div className='w-[643px] h-[193px] ml-10 mb-7 flex flex-wrap gap-9'>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                
+                <Fridge/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <Wardrobe/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full rounded-2xl'>
+                <Tv/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <Desk/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <Curtains/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <WM/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <OfficeChair/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <Dinning/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <Bed/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full  flex justify-center items-center rounded-2xl'>
+                <Tablelamp/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
            
@@ -140,19 +179,27 @@ function Details() {
           <div className='pt-5 pb-3 px-10 font-gilroy_medium text-2xl'>Features</div>       
           <div className='flex justify-start gap-7 px-10'>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <Lift/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <Water/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <Security/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <DeskTable/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
           </div>
@@ -161,15 +208,21 @@ function Details() {
           <div className='pt-5 pb-3 px-10 font-gilroy_medium text-2xl'>Mobility</div>
           <div className='flex justify-start gap-7 px-10'>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full'>
+                <Metro/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+              <Bus/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             <div className='w-[70px] h-[80px] flex flex-col justify-between items-center'>
-              <div className='h-5/6 bg-white w-full'></div>
+              <div className='h-5/6 bg-white w-full flex justify-center items-center rounded-2xl'>
+                <Bus/>
+              </div>
               <div className='text-xs'>Name</div>
             </div>
             
