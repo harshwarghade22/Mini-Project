@@ -1,6 +1,6 @@
 import React from "react";
 import Multiselect from "multiselect-react-dropdown";
-import { data } from "./data.js";
+import { data } from "../data.js";
 import { useState } from "react";
 import Card from "./Card.jsx";
 
