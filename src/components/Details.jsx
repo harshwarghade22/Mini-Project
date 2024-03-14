@@ -192,7 +192,7 @@ function Details() {
               Furnish your space by your hand
             </div>
             <a href="">
-              <div className="w-[20vw] h-[55px] border-black border rounded-lg font-gilroy_medium text-center py-3 hover:bg-black hover:text-white lg:text-xl text-sm mt-3">
+              <div className="w-[20vw] h-[55px] border-black border rounded-lg font-gilroy_medium text-center pt-3 hover:bg-black hover:text-white lg:text-lg text-sm">
                 Customize your avatar
               </div>
             </a>
