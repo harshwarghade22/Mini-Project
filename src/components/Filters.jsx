@@ -42,27 +42,29 @@ function Hero() {
   };
 
   return (
-    <div className="py-16 px-6">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-6  ">
+    <div className="py-8 px-4 ">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-12  ">
         <div className="col-span-1 pt-2">
-          <h1 className='text-3xl font-medium font-["Gilroy Medium"] mt-6'>
+          <h1 className='sm:textlg lg:text-xl md:text-2xl font-medium font-["Gilroy Medium"] mt-6'>
             Mumbai,
           </h1>
         </div>
-        <div className="col-span-3  sm:flex justify-start items-center  gap-4 my-6">
-          <Multiselect
-            className="rounded-full  border-none border-opacity-0 col-span-1 bg-[#F3F5F7]"
-            isObject={false}
-            options={Location}
-            toggelOptionList={true}
-            onSelect={handleLocationChange}
-            onRemove={handleLocationChange}
-            showCheckbox
-          />
+        <div className="col-span-7  sm:flex justify-start items-center gap-4 my-6 sm:px-4">
+          <div className="border-[1px] border-black/40  ">
+            <Multiselect
+              className="   col-span-1 bg-[#F3F5F7]"
+              isObject={false}
+              options={Location}
+              toggelOptionList={true}
+              onSelect={handleLocationChange}
+              onRemove={handleLocationChange}
+              showCheckbox
+            />
+          </div>
           <select
             value={priceValue}
             onChange={priceChangeHandler}
-            className="py-3 w-40 px-4 border-[1px] border-black z-10 ease-in-out duration-700 sm:mt-0  rounded-full shadow-xl my-4 sm:my-0"
+            className="py-3 w-40 px-4 border-[1px] border-black/50 z-10 ease-in-out duration-700 sm:mt-0  rounded-full  my-4 sm:my-0"
           >
             <option value="">Select Price</option>
             <option value="2000 - 3000">2000 - 3000</option>
@@ -74,15 +76,15 @@ function Hero() {
           </select>
         </div>
 
-        <div className="col-span-2 flex justify-between items-center lg:ml-4 ">
-          <div className="flex justify-center items-center gap-8 lg:gap-4 shadow-2xl ">
-            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight  ">
+        <div className="col-span-4 flex justify-between items-center lg:ml-4 ">
+          <div className="flex justify-center items-center gap-8 lg:gap-4 shadow-2xl  ">
+            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight border-r border-gray-500/50 px-2 text-center ">
               Mumbai
             </h1>
-            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight  ">
+            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight border-r border-gray-500/50 px-2 text-center ">
               1 BHK
             </h1>
-            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight  ">
+            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight border-r border-gray-500/50 px-2 text-center ">
               3 Mates
             </h1>
             <button className="rounded-full md:text-lg sm:text-base text-sm shadow-lg bg-[#F1F1F1] w-10 h-10 flex justify-center items-center ">

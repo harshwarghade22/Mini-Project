@@ -1,5 +1,6 @@
 import React from "react";
 import Icon from "./Icons/Icon";
+import { BsCurrencyRupee } from "react-icons/bs";
 
 function Card({ data }) {
   return (
@@ -15,9 +16,12 @@ function Card({ data }) {
           <h1 className="md:text-2xl sm:text-xl text-lg font-['Gilroy Medium'] font-bold border-b border-gray-800/50">
             {data.name}
           </h1>
-          <h1 className="md:text-xl sm:text-sm text-xs font-['Gilroy Medium'] font-semibold">
-            Rs. {data.price}
-          </h1>
+          <div className="flex justify-start items-center">
+            <BsCurrencyRupee className="text-xl" />
+            <h1 className="md:text-xl sm:text-sm text-xs font-['Gilroy Medium'] font-semibold ">
+              {data.price}
+            </h1>
+          </div>
         </div>
 
         <button className="col-span-2 ">
