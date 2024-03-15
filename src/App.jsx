@@ -1,23 +1,25 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Details from './components/Details';
-import Reserve1 from './components/Reserve1';
-import Reserve2 from './components/Reserve2';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Details from "./components/Details";
+import Reserve1 from "./components/Reserve1";
+import Reserve2 from "./components/Reserve2";
 import Filters from "./components/Filters";
-import Checkout from "./components/Check";
-import Home from './Home';
+import Check from "./components/Check";
+import Home from "./Home";
 
 const router = createBrowserRouter([
   {
     path: "/carts",
-    element: <>
-      <Filters />
-      <Checkout />
-    </>
+    element: (
+      <>
+        {/* <Filters /> */}
+        <Check />
+      </>
+    ),
   },
   {
-    path: '/',
-    element: <Home />
+    path: "/",
+    element: <Home />,
   },
   {
     path: "/details",
@@ -33,15 +35,14 @@ const router = createBrowserRouter([
   },
 ]);
 
-
 function App() {
   return (
     <>
       <Navbar />
       <RouterProvider router={router} />
     </>
-
   );
 }
 
 export default App;
+

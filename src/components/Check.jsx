@@ -5,12 +5,36 @@ function Check() {
   return (
     <div className="py-16 px-4">
       <div className="max-w-7xl  mx-auto grid lg:grid-cols-2  border-[1px] border-gray-700 ">
-        <div>
+        <div className="relative">
           <img
             className=" w-full h-full object-cover object-center"
             src="https://s3-alpha-sig.figma.com/img/553f/2e6a/a9776d21879cc686f573ce4296d0b322?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gYi47-56ApUi~7JmOEgGujxqQ6I0-71SlFyNkJlHv6TXUt7W798oeXJGVfI~eFhbbf99jMBxG1PSxYz7T~JqVxdDV4yN2C4-CScNHhO1kcujcIa7eGx8ysgY3xEWMS5ph4GvLQj~rrwjmMiGNtWoWnfKq-w8Wp4UwvZEN-kfPM8vA~FOsNP-DlEdcWeifJ3~wsX5d4Cjce0941q0m3gL4AwT0Qg386LR8DIj0MjuJ~X3JGmwB-c418ph1opv8~-AZtKyW9cPzA3f0yR9iqDn4jiqr1QkaPAKHEFlmc7kXCDynLfsnWFbmkiGIRcP3t1uXTJwtdGW1uORON79B0mlMA__"
             alt=""
           />
+          <div className="w-full h-full bg-black/30 absolute left-0 top-0 z-10"></div>
+          <div class="col flex justify-center items-center">
+            <div class="absolute left-[25%] top-[15%] flex flex-col justify-center items-center z-20">
+              <h1 class="sm:text-2xl md:text-3xl text-lg text-white font-bold">
+                Congratulation!
+              </h1>
+              <p class="sm:text-lg text-sm text-[#AFAFAF] font-medium text-center font-['Gilroy-regular'] my-4">
+                Flat has been successfully reserved
+              </p>
+            </div>
+          </div>
+
+          <div class="col flex justify-center items-center">
+            <div class="absolute left-[28%] top-[40%] flex flex-col justify-center items-center text-white z-20 my-8">
+              <button class="py-4 px-4 border-white border-2 sm:text-base lg:text-lg md:text-xl">
+                Reservation no : HSR10120LA
+              </button>
+            </div>
+          </div>
+
+          <div className="w-[30px] h-full bg-white/40 absolute sm:left-[18%] left-[16%]  top-0"></div>
+          <div className="w-[20px] h-full bg-white/40 absolute sm:left-[25%] left-[24%] top-0"></div>
+          <div className="w-[10px] h-full bg-white/40 absolute sm:left-[30%] left-[30%] top-0"></div>
+          <div className="w-[25px] h-full bg-white/40 absolute sm:right-[8%] right-[10%] top-0"></div>
         </div>
         <div className="grid sm:grid-rows-5 py-2">
           <div className="row-span-1 border-b border-black">

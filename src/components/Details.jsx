@@ -54,7 +54,7 @@ function Details() {
   };
 
   return (
-    <div className="md:px-14 px-14">
+    <div className="sm:px-14 ">
       <h1 className="mt-2 mb-3 font-gilroy_medium">Home/Flats/Description</h1>
 
       <div className="h-[30vh] md:h-[70vh] mx-auto border rounded-lg md:flex gap-4 p-4">
@@ -123,7 +123,7 @@ function Details() {
             <div className="py-5 px-10 font-gilroy_medium text-2xl">
               Amenities
             </div>
-            <div className="ml-10 mb-7 flex flex-wrap gap-4">
+            <div className="md:ml-10 ml-4 md:mb-7 flex flex-wrap gap-4">
               <div className="w-[70px] h-[80px] flex flex-col justify-between items-center">
                 <div className="h-5/6 bg-white w-full flex justify-center items-center rounded-2xl">
                   <Fridge />
@@ -192,7 +192,7 @@ function Details() {
               Furnish your space by your hand
             </div>
             <a href="">
-              <div className="w-[20vw] h-[55px] border-black border rounded-lg font-gilroy_medium text-center py-3 hover:bg-black hover:text-white lg:text-xl text-sm mt-3">
+              <div className="w-[20vw] h-[55px] border-black border rounded-lg font-gilroy_medium text-center pt-3 hover:bg-black hover:text-white lg:text-lg text-sm">
                 Customize your avatar
               </div>
             </a>
