@@ -337,7 +337,7 @@ export default function Home() {
             <div className='h-[65vh] w-full bg-zinc-50'>
                 <div className='h-[80%] w-full bg-zinc-100 flex flex-col md:flex-row'>
                     <div className='h-full w-full md:w-[40%] bg-zinc-50 flex flex-col md:justify-center md:items-start items-center pl-[5vw] gap-2 pt-6 md:pt-0'>
-                        <h1 className='h-[4vh] w-[6vw] rounded-full bg-orange-600 text-white text-center'>Logo</h1>
+                        <h1 className='h-[4vh]  rounded-full bg-orange-600 text-white text-center px-2 '>Logo</h1>
                         <div className='font-bold tracking-tight text-2xl'>
                             <h1>To make sure when you are </h1>
                             <h1>independent you live like a boss</h1>
