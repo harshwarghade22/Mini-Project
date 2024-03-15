@@ -4,7 +4,7 @@ import NavArrow from "./Icons/NavArrow";
 function Check() {
   return (
     <div className="py-12 px-4">
-      <div className="max-w-7xl  mx-auto grid lg:grid-cols-7  border-[1px] border-gray-700 ">
+      <div className="max-w-7xl  mx-auto grid lg:grid-cols-7  border-2 border-gray-700/50 ">
         <div className="relative col-span-4 ">
           <img
             className=" w-full h-full object-cover object-center"
@@ -25,7 +25,7 @@ function Check() {
               </div>
 
               <div className="">
-                <button className="sm:py-4  sm:px-4 px-3 py-3 border-white border-[1px] sm:text-base lg:text-xl md:text-lg lg:my-16   my-4 text-white font-bold">
+                <button className="sm:py-4  sm:px-4 px-3 py-3 border-white border-[1px] sm:text-base lg:text-xl md:text-lg lg:my-16   my-4 text-white font-bold hover:scale-105 ease-in-out duration-700">
                   {" "}
                   Reservation no : HSR10120LA
                 </button>
@@ -41,7 +41,7 @@ function Check() {
           <div className="w-[25px] h-full bg-white/40 absolute sm:right-[8%] right-[10%] top-0"></div>
         </div>
         <div className="grid sm:col-span-3 col-span-4 sm:grid-rows-5 py-2">
-          <div className="row-span-1 border-b border-black">
+          <div className="row-span-1 border-b-[3px] border-gray">
             <div className="sm:px-12 px-8 py-8 ">
               <h1 className="md:text-2xl sm:text-xl text-sm my-2 font-bold font-['Gilroy Medium']">
                 Nirvana J.
@@ -51,7 +51,7 @@ function Check() {
               </h3>
             </div>
           </div>
-          <div className="grid  row-span-1 border-b-4 border-gray  ">
+          <div className="grid  row-span-1 border-b-4 border-gray-200  ">
             <div className="sm:flex justify-between items-center sm:px-12 px-8  py-8">
               <div className="grid sm:grid-rows-6">
                 <div className="grid sm:grid-cols-2 row-span-2  ">

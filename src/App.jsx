@@ -12,8 +12,8 @@ const router = createBrowserRouter([
     path: "/carts",
     element: (
       <>
-        {/* <Filters /> */}
-        <Check />
+        <Filters />
+        {/* <Check /> */}
       </>
     ),
   },
@@ -32,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/reserve2",
     element: <Reserve2 />,
+  },
+  {
+    path: "/checkout",
+    element: <Check />,
   },
 ]);
 
