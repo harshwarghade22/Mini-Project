@@ -3,69 +3,90 @@ import { FaArrowRightLong, FaRegCopyright } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaApple } from "react-icons/fa";
 import { DiAndroid } from "react-icons/di";
+import { useState } from "react";
 
 export default function Home() {
+    const [where,setwhere]=useState(0)
+    const [size,setsize]=useState(0)
+    const [Mates,setMates]=useState(0)
+    const handleWhere=()=>{
+        setwhere(!where)
+        setsize(0)
+        setMates(0)
+    }
+    const handleSize=()=>{
+        setsize(!size)
+        setwhere(0)
+        setMates(0)
+        
+    }
+    const handleMates=()=>{
+        setMates(!Mates)
+        setsize(0)
+        setwhere(0)
+    }
     return (
         <div className='overflow-x-hidden font-gilroy_regular'>
-            <div className='bg-zinc-50 h-screen w-full'>
-                {/* <div className='bg-zinc-50 w-full h-[10vh] flex justify-between items-center border-b-2 border-zinc-300'>
-                    <div className='logo text-2xl font-semibold text-black ml-2'>Urban<span className='text-orange-400'>Rent...</span></div>
-                    <div className='links flex gap-10'>
-                        <a className='text-sm font-semibold text-zinc-600' href="#">Home</a>
-                        <a className='text-sm font-semibold text-zinc-600' href="#">Mates</a>
-                        <a className='text-sm font-semibold text-zinc-600' href="#">Rent More</a>
-                        <a className='text-sm font-semibold text-zinc-600' href="#">Service</a>
-                    </div>
-                    <div className='profile h-[5vh] w-[7vw] bg-zinc-50  rounded-xl mr-5 border-b-2 border-zinc-500 flex justify-evenly items-center'>
-                        <div className='h-[20px] w-[20px] rounded-full'><CgProfile className='h-full w-full' /></div>
-                        <h1>Profile</h1>
-                    </div>
-                </div> */}
-                <div className='central bg-zinc-50 h-[90vh] w-full grid grid-cols-10 grid-rows-3'>
-                    {/* Manually creating grid boxes */}
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>1</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>2</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex flex-col items-center  text-2xl pt-10' style={{ gridColumn: '3 / span 6' }}><h1>The Ideal search for flat share ends here!</h1>
-                        <h4 className='text-sm text-zinc-500'>discover your unique space with more than 100000 flats on rent</h4>
-                    </div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>9</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>10</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>11</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center '>
-                        <img className='h-full w-full object-cover position-center ' src="https://s3-alpha-sig.figma.com/img/aaf1/0737/7548d474584c66ddac61baecec0dddd1?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PkodptmllSzenZ2k8iThDpD2tacZVbVvKFTm1xLUhcs9eS59gr9-Lo8IijWTFhiRSoamZh3g1UYC4P8gfvac8IAA3QfzxXYFUpo5MaKQJzgywccCgaCoGtV1nmYvA4I-Y5ifz94x~RGpmBlhQoA~TYQ~nQec34YZ1Iifm4P4MRI-1WUyZJS7Vg62wQsTHu03DsHoQ2r31ggZNCIaXgW8RBIrVgvwEsHiq3x8PEP7jV1TT-AvKlB1VsCPqyO8RhuuU9a20kDYP54ItyAMjT2Abd2FErIE9KsBYpcPUohUaCDaCzoTqc5D57OFaZK1YavGxdRBGNee8nmgMCEOX1yVjg__" alt="" />
-                    </div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center ' style={{ gridColumn: '3 / span 6' }}>
-                        <div className='h-[8vh] w-[30vw] bg-zinc-50 rounded-full gap-5 drop-shadow-xl mt-[1vh] flex p-2 items-center justify-evenly'>
-                            <h1 className='text-[1em] font-semibold  '>Mumbai</h1>
-                            <div>|</div>
-                            <h1 className='text-[1em] font-semibold '>1BHK</h1>
-                            <div>|</div>
-                            <h1 className='text-[1em] font-semibold '>3 Mates</h1>
-                            <div className='h-[28px] w-[28px] bg-zinc-300 rounded-full flex items-center justify-center'><GiHamburgerMenu className='text-sm' /></div>
-                        </div>
-                        <a href="/carts">
-                            <div className='h-[7vh] w-[7vw] bg-orange-600 text-white rounded-full mt-[1.5vh] ml-3 flex items-center text-lg justify-center '>
-                                Go<FaArrowRightLong className='ml-2 text-sm' />
-                            </div>
-                        </a>
-
-                    </div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>19</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>20</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>21</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>22</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-end items-center p-4 ' style={{ gridColumn: '3 / span 3' }}>
-                        <img className='h-[15vh] w-[60vw] object-cover position-top grayscale ' src="https://s3-alpha-sig.figma.com/img/4546/2521/bb10066d5108ed30250d32f9bc9d5657?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=D6I1II7JfLQsrTah4tGPlp2rtkHwT04uDFbgbp~ysG0QxZ~pMDP6l8HBrQtc869NCxytuFLnymG58MVYioBbhvr6YM5BSf2qZ95NLVPLQZNJ1N1XQ3sneR15iFm4feVGs0qLmfkEyy083PpJNeMeJ3iQUYiCtpq0ve3cbKiZYRgXJISSz45hOMMFOv-BqvRtEIcaHv~CPiOkSyrIWSsewicxk2xLL0vkki2dPB7AQcg2iDt9xpyG1Zf-KOa9f1Uy8hsuHlIeeyLnqedp5e7KdM53GXqmPMYhqhSkQmcGs807LZgurOsstORTHu76NsM6kaJu8W1y2UWeaaqhpMEn6Q__" alt="" />
-                    </div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>26</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>27</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>
-                        <img className='w-full h-full object-cover position-center grayscale rounded-tr-full pb-4' src="https://s3-alpha-sig.figma.com/img/5470/783e/8b0f2707055ab143a8c2086d55b7b856?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gPVr39EUuc8k2XsxoVSAt5Xr6ZFTWEAmmRcv29UAavESxi5HUJ-Vtd6w09SboMWisbPCgiRImu0tVBFscbjZbDkft1F8UOwYVVZcDA33R02bN~zPTyQZg7T1F9o6C8T6bU0h0UFpTySR6fx3pX2vvztMqQ7CknUGscVV~XgL5eNK0rlqkMJAqh8QeCOS7Uajy9hPwOZlU0JIJChM-bAGNXne10LNP8LvyXx4cPpHVX4U6TIDQufcbj9NQhvcgDK0sx8I0SPVR4ku1RkQHxKV54-jDPBwef6aPjNHJlGt99KQZb6kDB3m-SUvmstWV7yH8mT~S0H3Rm2Rtq8au08Nkw__" alt="" />
-                    </div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>29</div>
-                    <div className='bg-white border-[1px] border-zinc-300  flex justify-center items-center'>30</div>
-                </div>
+ <div className='bg-zinc-500 h-screen w-full grid grid-cols-1 grid-rows-4 gap-[2px] mx-auto p-[1px] '>
+    <div className="Layout-1  md:grid md:grid-cols-6 gap-[2px] ">
+        <div className="bg-zinc-50 md:col-span-2"></div>
+        <div className="bg-zinc-50 md:col-span-2 text-center flex flex-col justify-center">
+            <h1 className="text-2xl font-semibold">
+            The ideal search for flat share ends here</h1>
+            <h1>discover your unique space with more than 10000 flats on rent</h1>
+        </div>
+        <div className="bg-zinc-50"></div>
+        <div className="bg-zinc-50"></div>
+    </div>
+    <div className="bg-zinc-500 grid md:grid-cols-6 md:row-span-2 gap-[2px] ">
+        <div className="bg-zinc-50"></div>
+        <div className="bg-zinc-50 md:col-span-4 flex justify-start items-center pt-[6vw] px-3 flex-col gap-[2px]">
+            <div className="bg-white px-2 mx-auto flex justify-evenly gap-2 shadow items-center h-[4vw] rounded-full top-[45%] ">
+                <input onClick={handleWhere} className="bg-zinc-200 rounded-full h-[80%] p-2 font-semibold text-base text-center" placeholder="Mumbai" type="text" />
+                <div className="font-bold">|</div>
+                <input onClick={handleSize} className="bg-zinc-200 rounded-full h-[80%] p-2 font-semibold text-base text-center" placeholder="1BHK" type="text" />
+                <div className="font-bold">|</div>
+                <input onClick={handleMates} className="bg-zinc-200 rounded-full h-[80%] p-2 font-semibold text-base text-center" placeholder="3 Mates" type="text" />
             </div>
+            <div className={`bg-zinc-200 p-5 mx-auto flex rounded-3xl h-[70%] w-[80%] ease-in-out duration-5 ${where?"":"hidden"}`}>
+                <ul className="font-semibold tracking-wide">
+                    <li className="hover:scale-105 p-1">Bangalore</li>
+                    <li className="hover:scale-105 p-1">Gurugram</li>
+                    <li className="hover:scale-105 p-1">Chennai</li>
+                    <li className="hover:scale-105 p-1">Mumbai</li>
+                </ul>
+            </div>
+            <div className={`bg-zinc-200 p-5 mx-auto flex rounded-3xl h-[70%] w-[80%] justify-center ease-in-out duration-5 ${size?"":"hidden"}`}>
+                <ul className="font-semibold tracking-wide">
+                    <li className="hover:scale-105 p-1">1bhk</li>
+                    <li className="hover:scale-105 p-1">2bhk</li>
+                    <li className="hover:scale-105 p-1">3bhk</li>
+                    <li className="hover:scale-105 p-1">1rk</li>
+                </ul>
+            </div>
+            <div className={`bg-zinc-200 p-5 mx-auto flex rounded-3xl h-[70%] w-[80%] justify-end text-left ease-in-out duration-5 ${Mates?"":"hidden"}`}>
+                <ul className="font-semibold tracking-wide">
+                    <li className="hover:scale-105 p-1">single</li>
+                    <li className="hover:scale-105 p-1">Double</li>
+                    <li className="hover:scale-105 p-1">Triple</li>
+                    <li className="hover:scale-105 p-1">Quadruple</li>
+                </ul>
+            </div>
+        </div>
+        <div className="bg-zinc-50"></div>
+        
+    </div>
+    
+    </div>
+    <div className="Layout-2 bg-zinc-500 min-[1000px]:hidden h-screen w-full grid-cols-1 grid-rows-4 gap-[2px] mx-auto p-[1px]">
+        <div className="bg-zinc-50"></div>
+        <div className="bg-zinc-50"></div>
+        <div className="bg-zinc-50"></div>
+        <div className="bg-zinc-50"></div>
+    </div>
+
+
+
             <div className='w-full h-[80vh] bg-zinc-100 flex flex-col'>
                 <div className='w-full h-[10vh] bg-zinc-100 flex flex-col justify-evenly'>
                     <div className='h-[1vh] w-full bg-zinc-200'></div>
