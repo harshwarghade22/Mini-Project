@@ -7,6 +7,7 @@ import { useState } from "react";
 import Design from "./components/Design";
 import Layout2 from "./components/Layout2";
 import Layout1 from "./components/Layout1";
+import Footer from "./components/Footer";
 export default function Home() {
    
     return (
@@ -200,22 +201,14 @@ export default function Home() {
             </div>
             <div className='message h-screen w-screen bg-zinc-200 mt-[0vh] grid grid-cols-6 grid-rows-5 gap-0'>
                 {/* Row 1, Column 1 */}
-                <div className="border border-zinc-500 bg-zinc-200 p-6"style={{ gridColumn: '1 / span 2' }}>
-                <div className='leading-none mb-3'>
-                        <h1 className='text-xl text-zinc-800 font-semibold '>Design your every</h1>
-                        <h1 className='text-xl text-zinc-800 font-semibold '>day food plate</h1>
+                {/* style={{ gridColumn: '1 / span 2' }} */}
+                <div className="border border-zinc-200 md:border-zinc-400  bg-zinc-200  col-span-2 ">
+                <div className='leading-none mb-3 text-center pb-3 pt-2 md:flex md:flex-col md:pt-4'>
+                        <h1 className='md:text-2xl text-lg text-zinc-800 font-semibold '>Design your every</h1>
+                        <h1 className='md:text-2xl text-lg text-zinc-800 font-semibold '>day food plate</h1>
                     </div>
                 </div>
-                {/* Row 1, Column 2 */}
-                {/* <div className="border border-zinc-400 bg-zinc-200 flex flex-col pl-3 pt-3">
-                    <div className='leading-none mb-3'>
-                        <h1 className='text-xl text-zinc-800 font-semibold '>Design your every</h1>
-                        <h1 className='text-xl text-zinc-800 font-semibold '>day food plate</h1>
-                    </div>
-                    <p className='text-sm text-zinc-400'>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-
-                </div> */}
-                {/* Row 1, Column 3 */}
+                
                 <div className="border border-zinc-400 bg-zinc-200"style={{ gridColumn: '3 / span 2' }}></div>
                 {/* Row 1, Column 4 */}
                 {/* Row 1, Columns 5 and 6 (merged) */}
@@ -224,49 +217,49 @@ export default function Home() {
                 </div>
 
                 {/* Row 2, Column 1 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
+                <div className="border border-zinc-400 bg-zinc-600 row-span-2 hidden  "></div>
                 {/* Row 2, Column 2 */}
-                <div className="border border-zinc-400 bg-zinc-200"style={{ gridRow: '2 / span 2' }}>
+                <div className="border border-zinc-400 bg-zinc-200 p-2 col-span-2 md:p-5"style={{ gridRow: '2 / span 2' }}>
                 <img className='h-full w-full object-cover grayscale' src="https://s3-alpha-sig.figma.com/img/77ff/30be/f7df0e98972d7fe3943ea08619056531?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kxk90ggKrCYpuZcwYdbDmRjpXj4mdVCtcogXI9nLwBLSAHA8c05u4BNcE3n0EFKSVjBrYBgWkeEPg639j2PKUnL6YXQgDtzhPKztUhAUUK6~uhEm8gT56oj6yYdXGOio32XELP63WKrqvKsAIJWgv~ek5c~TTITgOUc9hYEdkXxgFE5NbnQuZxXVKoBSDJ7VmAJMNsia-ReNiTk9k~9w0GPu9SgY-f053VUCowT7LNWfrK5oK4CwHvabxIHcJqGAYB0rNmb6hVmxYrsc713~m4ihm4aVk5X0RoT2dDp~XnNPUunBuYXqA9kY-zCbkFeaNHJASMLQJiDaHvgOYW~OJw__" alt="" />
 
                 </div>
                 {/* Row 2, Column 3 */}
-                <div className="border border-zinc-400 bg-zinc-200 pt-3 pl-3" style={{ gridColumn: '3 / span 2' }}>
-                    <h1 className='text-2xl text-zinc-800 font-semibold'>Unleash.</h1>
-                    <h1 className='text-2xl text-zinc-800 font-semibold'>The way of life.</h1>
-                    <h5 className='text-zinc-400'>/step a bit more of a beat</h5>
+                <div className="border border-zinc-400 bg-zinc-200 md:pt-3 pl-3 col-span-4 md:col-span-2 leading-none" >
+                    <h1 className='text-xl md:text-2xl text-zinc-800 font-semibold'>Unleash.</h1>
+                    <h1 className='text-xl md:text-2xl text-zinc-800 font-semibold'>The way of life.</h1>
+                    <h5 className='text-zinc-400 text-sm'>/step a bit more of a beat</h5>
                 </div>
                 {/* Row 2, Column 4 */}
                 {/* Row 2, Column 5 */}
-                <div className="border border-zinc-400 bg-zinc-200 p-3" style={{ gridColumn: '5 / span 2' }}>
+                <div className="border border-zinc-400 bg-zinc-200 p-3 hidden md:block col-span-2" >
                     <h1 className='text-xl font-semibold'>/ease commuting</h1>
                 </div>
                 {/* Row 2, Column 6 */}
 
                 {/* Row 3, Column 1 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
+                <div className="border border-zinc-400 bg-zinc-800 hidden row-span-2"></div>
                 {/* Row 3, Column 2 */}
                 {/* <div className="border border-zinc-400 bg-zinc-200">
                     <img className='h-full w-full object-cover grayscale' src="https://s3-alpha-sig.figma.com/img/77ff/30be/f7df0e98972d7fe3943ea08619056531?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kxk90ggKrCYpuZcwYdbDmRjpXj4mdVCtcogXI9nLwBLSAHA8c05u4BNcE3n0EFKSVjBrYBgWkeEPg639j2PKUnL6YXQgDtzhPKztUhAUUK6~uhEm8gT56oj6yYdXGOio32XELP63WKrqvKsAIJWgv~ek5c~TTITgOUc9hYEdkXxgFE5NbnQuZxXVKoBSDJ7VmAJMNsia-ReNiTk9k~9w0GPu9SgY-f053VUCowT7LNWfrK5oK4CwHvabxIHcJqGAYB0rNmb6hVmxYrsc713~m4ihm4aVk5X0RoT2dDp~XnNPUunBuYXqA9kY-zCbkFeaNHJASMLQJiDaHvgOYW~OJw__" alt="" />
                 </div> */}
                 {/* Row 3, Columns 3 and 4 (merged) */}
                 <div className="border border-zinc-400 bg-zinc-200 p-2" style={{ gridColumn: '3 / span 2' }}>
-                    <p className='text-zinc-800'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita magni natus aut, eos odit quod, inventore porro perspiciatis deleniti molestias, numquam tempore temporibus voluptas necessitatibus!</p>
+                    <p className='text-zinc-800 text-sm'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, doloremque tenetur! Quia fugit quam cumque.</p>
                 </div>
                 {/* Row 3, Column 5 */}
                 <div className="border border-zinc-400 bg-zinc-200"style={{ gridColumn: '5 / span 2' }}></div>
                 {/* Row 3, Column 6 */}
 
                 {/* Row 4, Column 1 */}
-                <div className="border border-zinc-400 bg-zinc-200"style={{ gridColumn: '1 / span 2',gridRow:'4/ span 2'  }}>
+                <div className="border border-zinc-400 bg-zinc-200 hidden md:col-span-2 md:row-span-2 md:block col-span-4 ">
                     {/* <img className='h-full w-full object-cover grayscale' src="https://i.pinimg.com/236x/19/67/dd/1967ddeb64c46314f41e085beafd12a8.jpg" alt="" /> */}
 
                 </div>
                 {/* Row 4, Column 2 */}
                 {/* <div className="border border-zinc-400 bg-zinc-200"></div> */}
                 {/* Row 4, Column 3 */}
-                <div className="border border-zinc-400 bg-zinc-200 p-5" style={{ gridColumn: '3 / span 2',gridRow:'4/ span 2' }}>
-                    <div className=' px-2 py-3 w-[50%]  font-semibold flex justify-center items-center rounded-full bg-orange-600 text-white'>Explore more<FaArrowRightLong className='ml-2 text-sm' /></div>
+                <div className="border border-zinc-400 bg-zinc-200 p-2" style={{ gridColumn: '3 / span 2',gridRow:'4/ span 2' }}>
+                    <div className=' px-2 py-3 min-w-[40%]  md:max-w-[70%] text-sm  font-semibold flex justify-center items-center rounded-full bg-orange-600 text-white'>Explore more<FaArrowRightLong className='ml-2 text-sm' /></div>
                 </div>
                 {/* Row 4, Column 4 */}
                 {/* Row 4, Column 5 */}
@@ -287,53 +280,7 @@ export default function Home() {
                 </div> */}
                 {/* Row 5, Column 6 */}
             </div>
-            <div className='h-[65vh] w-full bg-zinc-50'>
-                <div className='h-[80%] w-full bg-zinc-100 flex flex-col md:flex-row'>
-                    <div className='h-full w-full md:w-[40%] bg-zinc-50 flex flex-col md:justify-center md:items-start items-center pl-[5vw] gap-2 pt-6 md:pt-0'>
-                        <h1 className='h-[4vh]  rounded-full bg-orange-600 text-white text-center px-2 '>Logo</h1>
-                        <div className='font-bold tracking-tight text-2xl'>
-                            <h1>To make sure when you are </h1>
-                            <h1>independent you live like a boss</h1>
-                        </div>
-                        <h1 className='font-semibold text-lg tracking-tight mt-4'>Habit8,2023</h1>
-                    </div>
-                    <div className="h-full w-full md:w-[60%] bg-zinc-200 flex md:flex-row mx-5 md:mx-0 text-sm lg:text-xl">                                                                         
-                        <div className="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
-                            <h4 className="text-zinc-500">FAQ's</h4>
-                            <h4 className="text-zinc-900 font-semibold">How it works</h4>
-                            <h4 className="text-zinc-900 font-semibold">List your property</h4>
-                            <h4 className="text-zinc-900 font-semibold">See More</h4>
-                        </div>
-                        <div className="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
-                            <h4 className="text-zinc-500">Company</h4>
-                            <h4 className="text-zinc-900 font-semibold">Blogs</h4>
-                            <h4 className="text-zinc-900 font-semibold">Career</h4>
-                            <h4 className="text-zinc-900 font-semibold">News</h4>
-                        </div>
-                        <div className="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
-                            <h4 className="text-zinc-500">Insights</h4>
-                            <h4 className="text-zinc-900 font-semibold">Inventory</h4>
-                            <h4 className="text-zinc-900 font-semibold">Stats</h4>
-                            <h4 className="text-zinc-900 font-semibold">Investments</h4>
-                        </div>
-                        <div className="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2 mr-7 md:mr-0">
-                            <h4 className="text-zinc-500">Get the app</h4>
-                            <button className="w-fit px-4 py-1 font-semibold border-2 rounded-full border-zinc-500 flex justify-center items-center gap-1"><DiAndroid />Android</button>
-                            <button className="w-fit px-4 py-1 font-semibold border-2 rounded-full border-zinc-500 flex justify-center items-center gap-1"><FaApple />Apple</button>
-                        </div>
-                    </div>
-                </div>
-                <div className='h-[30%] md:h-[20%] w-full text-white bg-orange-600 flex flex-col md:flex-row items-center p-7'>
-                    <div className='md:w-[50%]'>
-                        <h4 className='font-semibold tracking-tight flex items-center '>Copyright <FaRegCopyright /> 2023 Techademy Campus</h4>
-                    </div>
-                    <div className='flex md:flex-row md:justify-end mt-4 md:mt-0 text-xs md:text-lg'>
-                        <h4 className='mr-2 md:mr-4'>Terms of Services</h4>
-                        <h4 className='mr-2 md:mr-4'>Privacy Policy</h4>
-                        <h4>Cookies</h4>
-                    </div>
-                </div>
-            </div>
+            <Footer/>
 
         </div>
     )
