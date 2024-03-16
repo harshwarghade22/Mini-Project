@@ -28,8 +28,8 @@ export default function Home() {
 
 
                 </div>
-                <div className='w-full h-[60vh] bg-zinc-200 pl-[10vw] pr-[10vw] flex gap-10 items-center flex-wrap '>
-                    <div className='h-[16vh] w-[7vw] bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
+                <div className='w-full h-[60vh] bg-zinc-200 pl-[10vw] pr-[10vw] flex gap-20 items-center flex-wrap justify-center '>
+                    {/* <div className='h-[16vh] w-[7vw] bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
                         <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
@@ -68,8 +68,8 @@ export default function Home() {
                         <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
-                    </div>
-                    <div className='h-[16vh] w-[7vw] bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
+                    </div> */}
+                    {/* <div className='h-[16vh] w-[7vw] bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
                         <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
@@ -88,7 +88,7 @@ export default function Home() {
                         <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
-                    </div>
+                    </div> */}
                     <div className='h-[16vh] w-[7vw] bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
                         <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
@@ -122,7 +122,7 @@ export default function Home() {
 
                 </div>
             </div>
-            <div className='bg-zinc-50 h-screen w-full p-5 fit'>
+            {/* <div className='bg-zinc-50 h-screen w-full p-5 fit'>
                 <div className='h-[20vh] w-full  flex  justify-evenly items-center bg-zinc-50'>
                     <img src="./src/assets/Group 48096305.png" alt="" />
                     <img src="./src/assets/Group.png" alt="" />
@@ -151,7 +151,7 @@ export default function Home() {
 
                 </div>
 
-            </div>
+            </div> */}
             <div className='message h-[90vh] w-screen bg-orange-600 mt-[12vh] grid grid-rows-3 md:grid-cols-3 grid-cols-2 gap-0'>
                 {/* Row 1, Column 1 */}
                 <div className="border border-zinc-50 bg-orange-600" style={{ gridRow: '1 / span 2' }}>
@@ -175,7 +175,7 @@ export default function Home() {
                 <div className="border border-zinc-50 bg-orange-600 hidden md:block"></div>
                 {/* Row 2, Column 2 */}
                 <div className="border border-zinc-50 bg-orange-600 flex justify-center items-start pt-5">
-                    <div className='px-5 py-3 w-[40%] rounded-full bg-white flex items-center justify-center'>Start now <FaArrowRightLong className='ml-2 text-sm' /></div>
+                    <div className='px-5 py-3 w-[40%] rounded-full bg-white flex items-center justify-center text-zinc-900 font-semibold'>Start now <FaArrowRightLong className='ml-2 text-sm' /></div>
                 </div>
                 {/* Row 2, Column 3 */}
                 <div className="border border-zinc-50 bg-orange-600 flex flex-end">

@@ -6,7 +6,7 @@ import { FaApple } from "react-icons/fa";
 import { DiAndroid } from "react-icons/di";
 function Footer() {
   return (
-    <div className='h-[65vh] w-full bg-zinc-50'>
+    <div className='h-[65vh] w-full bg-zinc-50 text-zinc-900'>
                 <div className='h-[80%] w-full bg-zinc-100 flex flex-col md:flex-row'>
                     <div className='h-full w-full md:w-[40%] bg-zinc-50 flex flex-col md:justify-center md:items-start items-center pl-[5vw] gap-2 pt-6 md:pt-0'>
                         <h1 className='h-[4vh]  rounded-full bg-orange-600 text-white text-center px-2 '>Logo</h1>
