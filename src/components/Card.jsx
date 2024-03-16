@@ -4,29 +4,29 @@ import { BsCurrencyRupee } from "react-icons/bs";
 
 function Card({ data }) {
   return (
-    <div className="w-full border shadow-xl  flex flex-col rounded-lg hover:scale-105 duration-300 my-6 p-1 ">
+    <div className="w-full border shadow-xl  flex flex-col rounded-lg hover:scale-105 duration-300 my-6 p-3 ">
       <img
-        className="w-full h-[260px] object-cover object-center rounded-lg"
+        className="w-full h-[260px] object-cover object-center rounded-xl"
         src={data.img}
         alt=""
       />
 
-      <div className="grid grid-cols-6 gap-20">
-        <div className="col-span-4">
-          <h1 className="md:text-2xl sm:text-xl text-lg font-['Gilroy Medium'] font-bold border-b border-gray-800/50">
-            {data.name}
+      <div className="grid grid-cols-6 gap-4 my-2">
+        <div className="col-span-5">
+          <h1 className="md:text-xl sm:text-lg text-base font-['Gilroy Medium']  border-b border-gray-800/70 my-2">
+            {data.name}, HSR Layout
           </h1>
-          <div className="flex justify-start items-center">
+          <div className="flex justify-start items-center ">
             <BsCurrencyRupee className="text-xl" />
-            <h1 className="md:text-xl sm:text-sm text-xs font-['Gilroy Medium'] font-semibold ">
-              {data.price}
+            <h1 className="md:text-xl sm:text-sm text-xs font-['Gilroy-SemiBold'] font-semibold ">
+              {data.price}/mo
             </h1>
           </div>
         </div>
 
-        <button className="col-span-2 ">
+        <div className="col-span-1 bg-[#FBFBFB] flex justify-center items-center">
           <Icon />
-        </button>
+        </div>
       </div>
     </div>
   );
