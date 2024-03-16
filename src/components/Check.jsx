@@ -35,10 +35,7 @@ function Check() {
             <div className="col-span-2"></div>
           </div>
 
-          <div className="w-[30px] h-full bg-white/40 absolute sm:left-[18%] left-[16%]  top-0"></div>
-          <div className="w-[20px] h-full bg-white/40 absolute sm:left-[25%] left-[24%] top-0"></div>
-          <div className="w-[10px] h-full bg-white/40 absolute sm:left-[30%] left-[30%] top-0"></div>
-          <div className="w-[25px] h-full bg-white/40 absolute sm:right-[8%] right-[10%] top-0"></div>
+          
         </div>
         <div className="grid sm:col-span-3 col-span-4 sm:grid-rows-5 py-2">
           <div className="row-span-1 border-b-[3px] border-gray">
