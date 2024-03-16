@@ -151,7 +151,7 @@ export default function Home() {
                 </div>
 
             </div>
-            <div className='message h-[90vh] w-screen bg-orange-600 mt-[12vh] grid grid-rows-3 grid-cols-3 gap-0'>
+            <div className='message h-[90vh] w-screen bg-orange-600 mt-[12vh] grid grid-rows-3 md:grid-cols-3 grid-cols-2 gap-0'>
                 {/* Row 1, Column 1 */}
                 <div className="border border-zinc-50 bg-orange-600" style={{ gridRow: '1 / span 2' }}>
                     <img className='h-full w-full object-cover position-center' src="https://s3-alpha-sig.figma.com/img/c3d8/0f88/98cb5bd63294bec18af8076109177703?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nxk5Q8fGdie8phaxUQE7wmGD944Mb63PmUm0xZe7GL2bAgucCvLBtz5hEFplrephvgGaOwFyHDb6VkZqLHExqK4ZcKziALqIiLVzHz-ikOF~u9blW9Yg3BtRkkQgXKNUBwQobCY6KjDGawUgO7SIHRuBnoaSBIzAJiyjahDFrJHjv~PAne9eTR~lyE1JtMLBCwlmdn2exiq3JHfFfQrbyaTc05EKd7HU7EmgF3pyqTonOn6aKuogBBIFb7MEGL2QV7L7fbS4fe4snvAQ84BXAYmLRBXapTyR-gJ8mJs~xLYIl3RAFOYr3jVkOVh8DVBj5-YXP1PuyVwGyViF8NrfcQ__" alt="" />
@@ -168,10 +168,10 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Row 1, Column 3 */}
-                <div className="border border-zinc-50 bg-orange-600" style={{ gridRow: '1 / span 2' }}></div>
+                <div className="border border-zinc-50 bg-orange-600 hidden md:block " style={{ gridRow: '1 / span 2' }}></div>
 
                 {/* Row 2, Column 1 */}
-                <div className="border border-zinc-50 bg-orange-600"></div>
+                <div className="border border-zinc-50 bg-orange-600 hidden md:block"></div>
                 {/* Row 2, Column 2 */}
                 <div className="border border-zinc-50 bg-orange-600 flex justify-center items-start pt-5">
                     <div className='px-5 py-3 w-[40%] rounded-full bg-white flex items-center justify-center'>Start now <FaArrowRightLong className='ml-2 text-sm' /></div>
