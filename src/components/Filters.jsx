@@ -45,7 +45,7 @@ function Hero() {
   };
 
   return (
-    <div className="py-8 px-4 ">
+    <div className="py-4 px-4 ">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12  ">
         <div className="col-span-1 pt-2">
           <h1 className='sm:textlg lg:text-xl md:text-2xl font-medium font-["Gilroy Medium"] mt-6'>
@@ -53,17 +53,6 @@ function Hero() {
           </h1>
         </div>
         <div className="col-span-7  sm:flex justify-start items-center gap-4 my-6 sm:px-4">
-          {/* <div className="border-[1px] border-black/40  ">
-            <Multiselect
-              className="   col-span-1 bg-[#F3F5F7]"
-              isObject={false}
-              options={Location}
-              toggelOptionList={true}
-              onSelect={handleLocationChange}
-              onRemove={handleLocationChange}
-              showCheckbox
-            />
-          </div> */}
           <LocationSelect />
           <PriceSelect />
           <FilterBtn />
@@ -104,7 +93,7 @@ function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto ">
-        <h1 className="text-[#F45C2C] font-semibold text-2xl  opacity-85 my-6">
+        <h1 className="text-orange-400 font-semibold text-2xl my-4">
           <span className="text-zinc-700 opacity-50">Spaces near </span>
           "Metro Station"
         </h1>

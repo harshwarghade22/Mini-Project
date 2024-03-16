@@ -30,8 +30,8 @@ function Layout1() {
     {/* Layout-1 */}
     <div className=" md:grid md:grid-cols-6 gap-[2px] ">
       <div className="bg-zinc-50 md:col-span-2"></div>
-      <div className="bg-zinc-50 md:col-span-2 text-center flex flex-col justify-center">
-        <h1 className="text-2xl font-semibold">
+      <div className="bg-zinc-50 md:col-span-2 text-center flex flex-col justify-center text-zinc-900">
+        <h1 className="text-2xl font-semibold ">
           The ideal search for flat share ends here
         </h1>
         <h1>discover your unique space with more than 10000 flats on rent</h1>
