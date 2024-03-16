@@ -7,6 +7,7 @@ import Arrow from "../components/Icons/Arrow.jsx";
 import FilterArrow from "../components/Icons/FilterArrow.jsx";
 import LocationSelect from "./location-select/LocationSelect.jsx";
 import PriceSelect from "./price-select/PriceSelect.jsx";
+import FilterBtn from "./filter-btn/FilterBtn.jsx";
 
 function Hero() {
   const [listedProperties, setListedProperties] = useState(data);
@@ -65,6 +66,7 @@ function Hero() {
           </div> */}
           <LocationSelect />
           <PriceSelect />
+          <FilterBtn />
           {/* <select
             value={priceValue}
             onChange={priceChangeHandler}
@@ -88,12 +90,12 @@ function Hero() {
             <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight border-r border-gray-500/50 px-2 text-center ">
               1 BHK
             </h1>
-            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight border-r border-gray-500/50 px-2 text-center ">
+            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight px-2 text-center ">
               3 Mates
             </h1>
-            <button className="rounded-full md:text-lg sm:text-base text-sm shadow-lg bg-[#F1F1F1] w-10 h-10 flex justify-center items-center ">
+            {/* <button className="rounded-full md:text-lg sm:text-base text-sm shadow-lg bg-[#F1F1F1] w-10 h-10 flex justify-center items-center ">
               <FilterArrow />
-            </button>
+            </button> */}
           </div>
           <button className="py-2 px-4 rounded-full bg-[#F45C2C] text-white font-medium mx-auto flex justify-between items-center gap-4">
             Go <Arrow />
