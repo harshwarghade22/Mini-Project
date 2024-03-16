@@ -1,10 +1,10 @@
-
-@tailwind base;
+@layer tailwind {
+    @tailwind base;
+}
 @tailwind components;
 @tailwind utilities;
 
 
-=======
 @font-face {
     font-family: "gilroy-bold";
     src: url("./fonts/Gilroy-Bold.ttf");

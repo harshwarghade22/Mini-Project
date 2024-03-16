@@ -4,89 +4,18 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaApple } from "react-icons/fa";
 import { DiAndroid } from "react-icons/di";
 import { useState } from "react";
-
+import Design from "./components/Design";
+import Layout2 from "./components/Layout2";
+import Layout1 from "./components/Layout1";
 export default function Home() {
-    const [where,setwhere]=useState(0)
-    const [size,setsize]=useState(0)
-    const [Mates,setMates]=useState(0)
-    const handleWhere=()=>{
-        setwhere(!where)
-        setsize(0)
-        setMates(0)
-    }
-    const handleSize=()=>{
-        setsize(!size)
-        setwhere(0)
-        setMates(0)
-        
-    }
-    const handleMates=()=>{
-        setMates(!Mates)
-        setsize(0)
-        setwhere(0)
-    }
+   
     return (
         <div className='overflow-x-hidden font-gilroy_regular'>
- <div className='bg-zinc-500 h-screen w-full grid grid-cols-1 grid-rows-4 gap-[2px] mx-auto p-[1px] '>
-    <div className="Layout-1  md:grid md:grid-cols-6 gap-[2px] ">
-        <div className="bg-zinc-50 md:col-span-2"></div>
-        <div className="bg-zinc-50 md:col-span-2 text-center flex flex-col justify-center">
-            <h1 className="text-2xl font-semibold">
-            The ideal search for flat share ends here</h1>
-            <h1>discover your unique space with more than 10000 flats on rent</h1>
-        </div>
-        <div className="bg-zinc-50"></div>
-        <div className="bg-zinc-50"></div>
+            <div className="h-screen w-full p-[1px] overflow-hidden">
+      <Layout2/>
+      <Layout1/>
+ 
     </div>
-    <div className="bg-zinc-500 grid md:grid-cols-6 md:row-span-2 gap-[2px] ">
-        <div className="bg-zinc-50"></div>
-        <div className="bg-zinc-50 md:col-span-4 flex justify-start items-center pt-[6vw] px-3 flex-col gap-[2px]">
-            <div className="bg-white px-2 mx-auto flex justify-evenly gap-2 shadow items-center h-[4vw] rounded-full top-[45%] ">
-                <input onClick={handleWhere} className="bg-zinc-200 rounded-full h-[80%] p-2 font-semibold text-base text-center" placeholder="Mumbai" type="text" />
-                <div className="font-bold">|</div>
-                <input onClick={handleSize} className="bg-zinc-200 rounded-full h-[80%] p-2 font-semibold text-base text-center" placeholder="1BHK" type="text" />
-                <div className="font-bold">|</div>
-                <input onClick={handleMates} className="bg-zinc-200 rounded-full h-[80%] p-2 font-semibold text-base text-center" placeholder="3 Mates" type="text" />
-            </div>
-            <div className={`bg-zinc-200 p-5 mx-auto flex rounded-3xl h-[70%] w-[80%] ease-in-out duration-5 ${where?"":"hidden"}`}>
-                <ul className="font-semibold tracking-wide">
-                    <li className="hover:scale-105 p-1">Bangalore</li>
-                    <li className="hover:scale-105 p-1">Gurugram</li>
-                    <li className="hover:scale-105 p-1">Chennai</li>
-                    <li className="hover:scale-105 p-1">Mumbai</li>
-                </ul>
-            </div>
-            <div className={`bg-zinc-200 p-5 mx-auto flex rounded-3xl h-[70%] w-[80%] justify-center ease-in-out duration-5 ${size?"":"hidden"}`}>
-                <ul className="font-semibold tracking-wide">
-                    <li className="hover:scale-105 p-1">1bhk</li>
-                    <li className="hover:scale-105 p-1">2bhk</li>
-                    <li className="hover:scale-105 p-1">3bhk</li>
-                    <li className="hover:scale-105 p-1">1rk</li>
-                </ul>
-            </div>
-            <div className={`bg-zinc-200 p-5 mx-auto flex rounded-3xl h-[70%] w-[80%] justify-end text-left ease-in-out duration-5 ${Mates?"":"hidden"}`}>
-                <ul className="font-semibold tracking-wide">
-                    <li className="hover:scale-105 p-1">single</li>
-                    <li className="hover:scale-105 p-1">Double</li>
-                    <li className="hover:scale-105 p-1">Triple</li>
-                    <li className="hover:scale-105 p-1">Quadruple</li>
-                </ul>
-            </div>
-        </div>
-        <div className="bg-zinc-50"></div>
-        
-    </div>
-    
-    </div>
-    <div className="Layout-2 bg-zinc-500 min-[1000px]:hidden h-screen w-full grid-cols-1 grid-rows-4 gap-[2px] mx-auto p-[1px]">
-        <div className="bg-zinc-50"></div>
-        <div className="bg-zinc-50"></div>
-        <div className="bg-zinc-50"></div>
-        <div className="bg-zinc-50"></div>
-    </div>
-
-
-
             <div className='w-full h-[80vh] bg-zinc-100 flex flex-col'>
                 <div className='w-full h-[10vh] bg-zinc-100 flex flex-col justify-evenly'>
                     <div className='h-[1vh] w-full bg-zinc-200'></div>
@@ -271,22 +200,24 @@ export default function Home() {
             </div>
             <div className='message h-screen w-screen bg-zinc-200 mt-[0vh] grid grid-cols-6 grid-rows-5 gap-0'>
                 {/* Row 1, Column 1 */}
-                <div className="border border-zinc-500 bg-zinc-200">
-                    <h1 className='text-xl text-zinc-800 font-semibold p-3'>/and finally</h1>
+                <div className="border border-zinc-500 bg-zinc-200 p-6"style={{ gridColumn: '1 / span 2' }}>
+                <div className='leading-none mb-3'>
+                        <h1 className='text-xl text-zinc-800 font-semibold '>Design your every</h1>
+                        <h1 className='text-xl text-zinc-800 font-semibold '>day food plate</h1>
+                    </div>
                 </div>
                 {/* Row 1, Column 2 */}
-                <div className="border border-zinc-400 bg-zinc-200 flex flex-col pl-3 pt-3">
+                {/* <div className="border border-zinc-400 bg-zinc-200 flex flex-col pl-3 pt-3">
                     <div className='leading-none mb-3'>
                         <h1 className='text-xl text-zinc-800 font-semibold '>Design your every</h1>
                         <h1 className='text-xl text-zinc-800 font-semibold '>day food plate</h1>
                     </div>
                     <p className='text-sm text-zinc-400'>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
 
-                </div>
+                </div> */}
                 {/* Row 1, Column 3 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
+                <div className="border border-zinc-400 bg-zinc-200"style={{ gridColumn: '3 / span 2' }}></div>
                 {/* Row 1, Column 4 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
                 {/* Row 1, Columns 5 and 6 (merged) */}
                 <div className="border border-zinc-400 bg-zinc-200" style={{ gridColumn: '5 / span 2' }}>
                     <img className='h-full w-full object-cover grayscale' src="https://s3-alpha-sig.figma.com/img/cc7a/390f/0a713b7a49582f0d37b2beaed3c0cf2f?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lgqXzIecVkhlsnu~Hga-Nx4reRoFvIiNWXRjjrapEzK1Jv8ljD6Q2nhsK5xFp5P7-8e9TBkATUOZdbN-JDABX2972W5szIjR~vCVUEpg48l4x91wP6PC4JYvl9eE2w1F93p09IfuVJjRA5pd7BE7bY5xCgl-iXrU~3ExoWDyYB7uYhlMD9bv70waaeAN4Lbvx1gX0lCxbfj8UleAsE-ZJIBOwudYrewtcAs1t0VCsU-mVnvt~W2e9daEvEIerLhe3PSJdm29S6p6UB45oYUmkb1uSuMyHkH2EzioXSowmRWLM8SBjTN421WY1ljihLw7fdgCFvMPHmxJJCMP2Cpxeg__" alt="" />
@@ -295,7 +226,10 @@ export default function Home() {
                 {/* Row 2, Column 1 */}
                 <div className="border border-zinc-400 bg-zinc-200"></div>
                 {/* Row 2, Column 2 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
+                <div className="border border-zinc-400 bg-zinc-200"style={{ gridRow: '2 / span 2' }}>
+                <img className='h-full w-full object-cover grayscale' src="https://s3-alpha-sig.figma.com/img/77ff/30be/f7df0e98972d7fe3943ea08619056531?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kxk90ggKrCYpuZcwYdbDmRjpXj4mdVCtcogXI9nLwBLSAHA8c05u4BNcE3n0EFKSVjBrYBgWkeEPg639j2PKUnL6YXQgDtzhPKztUhAUUK6~uhEm8gT56oj6yYdXGOio32XELP63WKrqvKsAIJWgv~ek5c~TTITgOUc9hYEdkXxgFE5NbnQuZxXVKoBSDJ7VmAJMNsia-ReNiTk9k~9w0GPu9SgY-f053VUCowT7LNWfrK5oK4CwHvabxIHcJqGAYB0rNmb6hVmxYrsc713~m4ihm4aVk5X0RoT2dDp~XnNPUunBuYXqA9kY-zCbkFeaNHJASMLQJiDaHvgOYW~OJw__" alt="" />
+
+                </div>
                 {/* Row 2, Column 3 */}
                 <div className="border border-zinc-400 bg-zinc-200 pt-3 pl-3" style={{ gridColumn: '3 / span 2' }}>
                     <h1 className='text-2xl text-zinc-800 font-semibold'>Unleash.</h1>
@@ -312,47 +246,45 @@ export default function Home() {
                 {/* Row 3, Column 1 */}
                 <div className="border border-zinc-400 bg-zinc-200"></div>
                 {/* Row 3, Column 2 */}
-                <div className="border border-zinc-400 bg-zinc-200">
+                {/* <div className="border border-zinc-400 bg-zinc-200">
                     <img className='h-full w-full object-cover grayscale' src="https://s3-alpha-sig.figma.com/img/77ff/30be/f7df0e98972d7fe3943ea08619056531?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kxk90ggKrCYpuZcwYdbDmRjpXj4mdVCtcogXI9nLwBLSAHA8c05u4BNcE3n0EFKSVjBrYBgWkeEPg639j2PKUnL6YXQgDtzhPKztUhAUUK6~uhEm8gT56oj6yYdXGOio32XELP63WKrqvKsAIJWgv~ek5c~TTITgOUc9hYEdkXxgFE5NbnQuZxXVKoBSDJ7VmAJMNsia-ReNiTk9k~9w0GPu9SgY-f053VUCowT7LNWfrK5oK4CwHvabxIHcJqGAYB0rNmb6hVmxYrsc713~m4ihm4aVk5X0RoT2dDp~XnNPUunBuYXqA9kY-zCbkFeaNHJASMLQJiDaHvgOYW~OJw__" alt="" />
-                </div>
+                </div> */}
                 {/* Row 3, Columns 3 and 4 (merged) */}
                 <div className="border border-zinc-400 bg-zinc-200 p-2" style={{ gridColumn: '3 / span 2' }}>
                     <p className='text-zinc-800'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita magni natus aut, eos odit quod, inventore porro perspiciatis deleniti molestias, numquam tempore temporibus voluptas necessitatibus!</p>
                 </div>
                 {/* Row 3, Column 5 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
+                <div className="border border-zinc-400 bg-zinc-200"style={{ gridColumn: '5 / span 2' }}></div>
                 {/* Row 3, Column 6 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
 
                 {/* Row 4, Column 1 */}
-                <div className="border border-zinc-400 bg-zinc-200">
-                    <img className='h-full w-full object-cover grayscale' src="https://i.pinimg.com/236x/19/67/dd/1967ddeb64c46314f41e085beafd12a8.jpg" alt="" />
+                <div className="border border-zinc-400 bg-zinc-200"style={{ gridColumn: '1 / span 2',gridRow:'4/ span 2'  }}>
+                    {/* <img className='h-full w-full object-cover grayscale' src="https://i.pinimg.com/236x/19/67/dd/1967ddeb64c46314f41e085beafd12a8.jpg" alt="" /> */}
 
                 </div>
                 {/* Row 4, Column 2 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
+                {/* <div className="border border-zinc-400 bg-zinc-200"></div> */}
                 {/* Row 4, Column 3 */}
-                <div className="border border-zinc-400 bg-zinc-200 p-5" style={{ gridColumn: '3 / span 2' }}>
+                <div className="border border-zinc-400 bg-zinc-200 p-5" style={{ gridColumn: '3 / span 2',gridRow:'4/ span 2' }}>
                     <div className=' px-2 py-3 w-[50%]  font-semibold flex justify-center items-center rounded-full bg-orange-600 text-white'>Explore more<FaArrowRightLong className='ml-2 text-sm' /></div>
                 </div>
                 {/* Row 4, Column 4 */}
                 {/* Row 4, Column 5 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
-                {/* Row 4, Column 6 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
-
-                {/* Row 5, Column 1 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
-                {/* Row 5, Column 2 */}
-                <div className="border border-zinc-400 bg-zinc-200"></div>
-                {/* Row 5, Column 3 */}
-                <div className="border border-zinc-400 bg-zinc-200" style={{ gridColumn: '3 / span 2' }}></div>
-                {/* Row 5, Column 4 */}
-                {/* Row 5, Column 5 */}
-                <div className="border border-zinc-400 bg-zinc-200" style={{ gridColumn: '5 / span 2' }}>
-                    <img className='h-full w-full object-cover grayscale' src="https://s3-alpha-sig.figma.com/img/ced3/9348/ae8f7a20ce4618ab1387cef5f727441f?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qQUx-8h8KNIFafN8o-3LWcRrIBls1CfjXDgilYQsxcMpeW2iuini5GpIscHRQRQUrGOD4l3V8FdTmgWjPljg6gAF8ZYwJqJuyTRD7IYOgyvhTM2zUjNSY8nuWeJiLSg5uP5rgotpMvLHj2P2~7z~KzoQcy3VY6crDYLGaSroBxnhin-R-Jq2-zeGEbGHh3ML-mv0SWf54~RxM0EFNAMe9vfUrqYviKb1zsy4PuM3oig3QEpwIKEDvoHTWGTLY584fVXqhdT1BOBO5yUKo0sPy76h9WblfJFPQ7MLJnFV7Cx97DuhhFvkAXnu68pDYHkvPQ5cSBQQwPxX4~3AKnh26g_" alt="" />
+                <div className="border border-zinc-400 bg-zinc-200"style={{ gridColumn: '5 / span 2',gridRow:'4/ span 2' }}>
+                <img className='h-full w-full object-cover grayscale' src="https://s3-alpha-sig.figma.com/img/ced3/9348/ae8f7a20ce4618ab1387cef5f727441f?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qQUx-8h8KNIFafN8o-3LWcRrIBls1CfjXDgilYQsxcMpeW2iuini5GpIscHRQRQUrGOD4l3V8FdTmgWjPljg6gAF8ZYwJqJuyTRD7IYOgyvhTM2zUjNSY8nuWeJiLSg5uP5rgotpMvLHj2P2~7z~KzoQcy3VY6crDYLGaSroBxnhin-R-Jq2-zeGEbGHh3ML-mv0SWf54~RxM0EFNAMe9vfUrqYviKb1zsy4PuM3oig3QEpwIKEDvoHTWGTLY584fVXqhdT1BOBO5yUKo0sPy76h9WblfJFPQ7MLJnFV7Cx97DuhhFvkAXnu68pDYHkvPQ5cSBQQwPxX4~3AKnh26g_" alt="" />
 
                 </div>
+                {/* Row 4, Column 6 */}
+
+                {/* Row 5, Column 1 */}
+                {/* Row 5, Column 2 */}
+                {/* Row 5, Column 3 */}
+                {/* Row 5, Column 4 */}
+                {/* Row 5, Column 5 */}
+                {/* <div className="border border-zinc-400 bg-zinc-200" style={{ gridColumn: '5 / span 2' }}>
+                    <img className='h-full w-full object-cover grayscale' src="https://s3-alpha-sig.figma.com/img/ced3/9348/ae8f7a20ce4618ab1387cef5f727441f?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qQUx-8h8KNIFafN8o-3LWcRrIBls1CfjXDgilYQsxcMpeW2iuini5GpIscHRQRQUrGOD4l3V8FdTmgWjPljg6gAF8ZYwJqJuyTRD7IYOgyvhTM2zUjNSY8nuWeJiLSg5uP5rgotpMvLHj2P2~7z~KzoQcy3VY6crDYLGaSroBxnhin-R-Jq2-zeGEbGHh3ML-mv0SWf54~RxM0EFNAMe9vfUrqYviKb1zsy4PuM3oig3QEpwIKEDvoHTWGTLY584fVXqhdT1BOBO5yUKo0sPy76h9WblfJFPQ7MLJnFV7Cx97DuhhFvkAXnu68pDYHkvPQ5cSBQQwPxX4~3AKnh26g_" alt="" />
+
+                </div> */}
                 {/* Row 5, Column 6 */}
             </div>
             <div className='h-[65vh] w-full bg-zinc-50'>
