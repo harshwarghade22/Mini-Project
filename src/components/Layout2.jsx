@@ -15,7 +15,10 @@ function Layout2() {
                     <h1>|</h1>
                     <h1>Mates</h1>
                     <h1>|</h1>
+                    <a href="/carts">
                     <button className="bg-orange-600 text-white d rounded-full flex justify-evenly gap-2 p-1 items-center">GO <FaArrowRightLong/></button>
+                    </a>
+                    
         </div>
         </div>
         <div className="bg-zinc-500 grid grid-cols-3 gap-[2px] row-span-2">
