@@ -15,7 +15,7 @@ function LocationSelect() {
             checkIconPosition='right'
             rightSection={<IoMdAdd fontSize={24} />}
             placeholder=""
-            data={['Borivali', 'Malad', 'Dahisar']}
+            data={['Borivali', 'Malad', 'Dahisar', 'Kurla', 'Bhanyandar Southern West', 'Bandra']}
         />
     );
 }
