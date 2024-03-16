@@ -5,6 +5,8 @@ import { useState } from "react";
 import Card from "./Card.jsx";
 import Arrow from "../components/Icons/Arrow.jsx";
 import FilterArrow from "../components/Icons/FilterArrow.jsx";
+import LocationSelect from "./location-select/LocationSelect.jsx";
+import PriceSelect from "./price-select/PriceSelect.jsx";
 
 function Hero() {
   const [listedProperties, setListedProperties] = useState(data);
@@ -50,7 +52,7 @@ function Hero() {
           </h1>
         </div>
         <div className="col-span-7  sm:flex justify-start items-center gap-4 my-6 sm:px-4">
-          <div className="border-[1px] border-black/40  ">
+          {/* <div className="border-[1px] border-black/40  ">
             <Multiselect
               className="   col-span-1 bg-[#F3F5F7]"
               isObject={false}
@@ -60,8 +62,10 @@ function Hero() {
               onRemove={handleLocationChange}
               showCheckbox
             />
-          </div>
-          <select
+          </div> */}
+          <LocationSelect />
+          <PriceSelect />
+          {/* <select
             value={priceValue}
             onChange={priceChangeHandler}
             className="py-3 w-40 px-4 border-[1px] border-black/50 z-10 ease-in-out duration-700 sm:mt-0  rounded-full  my-4 sm:my-0"
@@ -73,7 +77,7 @@ function Hero() {
             <option value="7500 - 9000">7500 - 9000</option>
             <option value="9500 - 12000">9500 - 12000</option>
             <option value="12500 - 15000">12500 - 15000</option>
-          </select>
+          </select> */}
         </div>
 
         <div className="col-span-4 flex justify-between items-center lg:ml-4 ">
