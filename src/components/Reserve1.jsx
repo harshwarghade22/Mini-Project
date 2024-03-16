@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from './Navbar'
 import { IoBed } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
+import Reserve from './Reserve';
 
 
 
@@ -27,56 +28,11 @@ function Reserve1() {
 
 
   return (
-    <div>
-      <div className='h-[600px] mr-[100px] ml-[100px] mt-5  flex gap-48'>
-        <div className='w-[370px] border-gray-200 shadow-2xl rounded-xl p-4'>
-            <div className='w-full h-[200px] rounded-md bg-[url("https://d2blna3sxzw742.cloudfront.net/Property-Photos/46-Thumbnail_1.jpg")] bg-center bg-cover'>
-            </div>
-            <div className='w-full h-[40px] mt-3 flex gap-3'>
-                <div className='w-3/5 bg-slate-200 rounded-full font-gilroy_regular  text-center py-3 text-sm'>
-                    Icon <span className='underline'>Banglore,HSR Layout</span>
-                </div>
-                <div className='w-2/5 bg-slate-200 rounded-full text-center py-2 font-gilroy_bold text-lg'>
-                 ₹7000/mo
-                </div>
-            </div>
-            <div className='h-[200px] bg-slate-200 rounded-3xl mt-2'>
-                <p className='pt-5 px-7 font-gilroy_medium text-lg text-gray-700'>Ameneties</p>
-                <div className='px-7 pt-5 flex flex-wrap gap-2'>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                </div>
-            </div>
-            <div className='w-full h-[50px] bg-slate-200 mt-3 rounded-full flex'>
-                <p className='font-gilroy_medium text-lg text-gray-700 py-3 pl-4'>Features</p>
-                <div className='pl-5 pt-1 flex flex-wrap gap-2'>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                </div>
-            </div>
-            <div className='w-full h-[50px] bg-slate-200 mt-3 rounded-full flex'>
-                <p className='font-gilroy_medium text-lg text-gray-700 py-3 pl-4'>Connectivity</p>
-                <div className='pl-5 pt-1 flex flex-wrap gap-2'>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    
-                </div>
-            </div>
-        </div>
-
-        <div className='w-[530px]  flex flex-col'>
-            <div className='h-[70px]  flex justify-between'>
+    <>
+      <div className='2xl:w-full mx-auto mt-20 md:mt-5 flex justify-between space-y-10 flex-col lg:flex-row'>
+        <Reserve/>
+        <div className='w-[70%] lg:w-[35%] mx-auto flex flex-col'>
+            <div className=' flex justify-between'>
                 <div className='w-[100px] h-full  flex flex-col justify-center items-center gap-2'>
                     <p className='font-gilroy_semi_bold text-center text-sm'>Select pricing</p>
                     <div className='w-[45px] h-[45px] rounded-full border-black border flex justify-center items-center text-2xl bg-black text-white'>
@@ -94,23 +50,18 @@ function Reserve1() {
             </div>
             <div className='h-[107px] mt-6'>
                 <p className='font-gilroy_semi_bold text-gray-600 text-xl'>Select Occupancy</p>
-                <div className='flex justify-between mt-2'>
-                    
-                        <div className={`w-[145px] h-[63px] border border-black rounded-xl ${sharing === 'triple' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'}`} onClick={priceTriple} >
-                            <p className='font-gilroy_regular pt-2 pl-3'>Triple Sharing</p>
-                            <p className='font-gilroy_bold pl-3' >₹7000/mo</p>
+                <div className='flex justify-between mt-2 gap-4 lg:gap-0 text-sm lg:text-base'>
+                        <div className={` border border-black rounded-xl ${sharing === 'triple' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'} p-2`} onClick={priceTriple} >
+                            <p className='font-gilroy_regular'>Triple Sharing</p>
+                            <p className='font-gilroy_bold' >₹7000/mo</p>
+                        </div> 
+                        <div className={`border border-black rounded-xl ${sharing === 'double' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'} p-2`} onClick={priceDouble}>
+                            <p className='font-gilroy_regular'>Double Sharing</p>
+                            <p className='font-gilroy_bold'>₹11000/mo</p>
                         </div>
-                   
-                    
-                        <div className={`w-[145px] h-[63px] border border-black rounded-xl ${sharing === 'double' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'}`} onClick={priceDouble}>
-                            <p className='font-gilroy_regular pt-2 pl-3'>Double Sharing</p>
-                            <p className='font-gilroy_bold pl-3'>₹11000/mo</p>
-                        </div>
-                    
-                    
-                        <div className={`w-[145px] h-[63px] border border-black rounded-xl ${sharing === 'private' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'}`} onClick={pricePrivate}>
-                            <p className='font-gilroy_regular pt-2 pl-3'>Private Sharing</p>
-                            <p className='font-gilroy_bold pl-3'>₹18000/mo</p>
+                        <div className={`border border-black rounded-xl ${sharing === 'private' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'} p-2`} onClick={pricePrivate}>
+                            <p className='font-gilroy_regular'>Private Sharing</p>
+                            <p className='font-gilroy_bold'>₹18000/mo</p>
                         </div>
                 </div>
             </div>
@@ -142,9 +93,10 @@ function Reserve1() {
                 </a>
             </div>
         </div>
-
+        
+        
       </div>
-    </div>
+    </>
   )
 }
 

@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { IoBed } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 import { BsCalendarDateFill } from "react-icons/bs";
+import Reserve from './Reserve';
 
 
 
@@ -21,51 +22,7 @@ function Reserve2() {
   return (
     <div>
       <div className='h-[600px] mr-[100px] ml-[100px] mt-5  flex gap-48'>
-        <div className='w-[400px] border-gray-200 shadow-2xl rounded-xl p-4'>
-            <div className='w-full h-[200px] rounded-md bg-[url("https://d2blna3sxzw742.cloudfront.net/Property-Photos/46-Thumbnail_1.jpg")] bg-center bg-cover'>
-            </div>
-            <div className='w-full h-[40px] mt-3 flex gap-3'>
-                <div className='w-3/5 bg-slate-200 rounded-full font-gilroy_regular  text-center py-3 text-sm'>
-                    Icon <span className='underline'>Banglore,HSR Layout</span>
-                </div>
-                <div className='w-2/5 bg-slate-200 rounded-full text-center py-2 font-gilroy_bold text-lg'>
-                 ₹7000/mo
-                </div>
-            </div>
-            <div className='h-[200px] bg-slate-200 rounded-3xl mt-2'>
-                <p className='pt-5 px-7 font-gilroy_medium text-lg text-gray-700'>Ameneties</p>
-                <div className='px-7 pt-5 flex flex-wrap gap-2'>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                    <div className='w-[45px] h-[45px] bg-white rounded-xl'></div>
-                </div>
-            </div>
-            <div className='w-full h-[50px] bg-slate-200 mt-3 rounded-full flex'>
-                <p className='font-gilroy_medium text-lg text-gray-700 py-3 pl-4'>Features</p>
-                <div className='pl-5 pt-1 flex flex-wrap gap-2'>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                </div>
-            </div>
-            <div className='w-full h-[50px] bg-slate-200 mt-3 rounded-full flex'>
-                <p className='font-gilroy_medium text-lg text-gray-700 py-3 pl-4'>Connectivity</p>
-                <div className='pl-5 pt-1 flex flex-wrap gap-2'>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    <div className='w-[40px] h-[40px] bg-white rounded-xl'></div>
-                    
-                </div>
-            </div>
-        </div>
+        <Reserve/>
         <div className='w-[450px]  flex flex-col'>
         <div className='h-[75px]  flex justify-between'>
             <div className='w-[100px] h-full  flex flex-col justify-center items-center gap-2'>
