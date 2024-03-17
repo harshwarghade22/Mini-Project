@@ -31,7 +31,7 @@ function Reserve1() {
     <>
       <div className='2xl:w-full mx-auto mt-20 md:mt-5 flex justify-between space-y-10 flex-col lg:flex-row'>
         <Reserve/>
-        <div className='w-[70%] lg:w-[35%] mx-auto flex flex-col'>
+        <div className='w-[90%] sm:w-[80%] lg:w-[35%] mx-auto flex flex-col'>
             <div className=' flex justify-between'>
                 <div className='w-[100px] h-full  flex flex-col justify-center items-center gap-2'>
                     <p className='font-gilroy_semi_bold text-center text-sm'>Select pricing</p>
@@ -93,8 +93,6 @@ function Reserve1() {
                 </a>
             </div>
         </div>
-        
-        
       </div>
     </>
   )
