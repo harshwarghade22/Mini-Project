@@ -11,7 +11,7 @@ function Navbar() {
         <a href="/">
           <div className="hover:text-black text-sm">Home</div>
         </a>
-        <a href="">
+        <a href="/roomates">
           <div className="hover:text-black text-sm">Mates</div>
         </a>
         <a href="">

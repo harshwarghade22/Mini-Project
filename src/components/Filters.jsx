@@ -8,6 +8,7 @@ import FilterArrow from "../components/Icons/FilterArrow.jsx";
 import LocationSelect from "./location-select/LocationSelect.jsx";
 import PriceSelect from "./price-select/PriceSelect.jsx";
 import FilterBtn from "./filter-btn/FilterBtn.jsx";
+import { Link } from "react-router-dom";
 
 function Hero() {
   const [listedProperties, setListedProperties] = useState(data);
@@ -101,7 +102,8 @@ function Hero() {
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mt-10">
         {filterData.map((item, index) => (
-          <Card key={item.id} data={item} />
+          <Link to="/details"><Card key={item.id} data={item} /></Link>
+          
         ))}
       </div>
     </div>

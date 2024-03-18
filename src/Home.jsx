@@ -8,6 +8,7 @@ import Design from "./components/Design";
 import Layout2 from "./components/Layout2";
 import Layout1 from "./components/Layout1";
 import Footer from "./components/Footer";
+import { Link } from "react-router-dom";
 export default function Home() {
    
     return (
@@ -116,7 +117,9 @@ export default function Home() {
                 <div className="border border-zinc-50 bg-orange-600 hidden md:block"></div>
                 {/* Row 2, Column 2 */}
                 <div className="border border-zinc-50 bg-orange-600 flex md:justify-center items-start md:pt-5  pl-10 pt-16">
-                    <div className='px-5 py-3 md:w-[40%] rounded-full bg-white flex items-center justify-center text-zinc-900 font-semibold'>Start now <FaArrowRightLong className='ml-2 text-sm' /></div>
+                    <Link to="/roomates" className='px-5 py-3 md:w-[40%] rounded-full bg-white flex items-center justify-center text-zinc-900 font-semibold'>Start now <FaArrowRightLong className='ml-2 text-sm' />
+                    </Link>
+                    
                 </div>
                 {/* Row 2, Column 3 */}
                 <div className="border border-zinc-50 bg-orange-600 flex flex-end sm:p-0 pr-8">
