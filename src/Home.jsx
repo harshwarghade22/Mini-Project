@@ -29,24 +29,24 @@ export default function Home() {
 
 
                 </div>
-                <div className='w-full h-[60vh] bg-zinc-200 pl-[10vw] pr-[10vw] flex md:gap-20 gap-5 items-center flex-wrap justify-center'>
+                <div className='w-full bg-zinc-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4'>
                     
-                    <div className='h-[16vh] w-[7vw] bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
+                    <div className='h-[16vh] mx-auto min-w-56 bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
                         <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
                     </div>
-                    <div className='h-[16vh] w-[7vw] bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
+                    <div className='h-[16vh] mx-auto min-w-56 bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
                         <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
                     </div>
-                    <div className='h-[16vh] w-[7vw] bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
+                    <div className='h-[16vh] mx-auto min-w-56 bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
                         <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
                     </div>
-                    <div className='h-[16vh] w-[7vw] bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
+                    <div className='h-[16vh] mx-auto min-w-56 bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
                         <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
