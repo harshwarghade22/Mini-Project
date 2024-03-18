@@ -6,16 +6,12 @@ import Reserve2 from "./components/Reserve2";
 import Filters from "./components/Filters";
 import Check from "./components/Check";
 import Home from "./Home";
+import RoomatesListing from "./components/RoomatesListing";
 
 const router = createBrowserRouter([
   {
     path: "/carts",
-    element: (
-      <>
-        <Filters />
-        {/* <Check /> */}
-      </>
-    ),
+    element: <Filters />
   },
   {
     path: "/",
@@ -36,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/checkout",
     element: <Check />,
+  },
+  {
+    path: "/roomates",
+    element: <RoomatesListing/>,
   },
 ]);
 

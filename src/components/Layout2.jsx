@@ -1,6 +1,7 @@
 import React from 'react'
 import Design from './Design'
 import { FaArrowRightLong, FaRegCopyright } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 function Layout2() {
   return (
@@ -15,9 +16,11 @@ function Layout2() {
                     <h1>|</h1>
                     <h1>Mates</h1>
                     <h1>|</h1>
-                    <a href="/carts">
-                    <button className="bg-orange-600 text-white d rounded-full flex justify-evenly gap-2 p-1 items-center">GO <FaArrowRightLong/></button>
-                    </a>
+                    <Link to="/carts" className="bg-orange-600 text-white d rounded-full flex justify-evenly gap-2 p-1 items-center">
+                    GO <FaArrowRightLong/>
+                    </Link>
+                    
+                    
                     
         </div>
         </div>

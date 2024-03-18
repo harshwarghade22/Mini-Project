@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaApple } from "react-icons/fa";
 import { DiAndroid } from "react-icons/di";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 function Layout1() {
     const [where,setwhere]=useState(0)
     const [size,setsize]=useState(0)
@@ -52,7 +53,8 @@ function Layout1() {
   <div className="font-bold hidden md:block">|</div>
   <input onClick={handleMates} className="bg-zinc-200 max-w-[125px] rounded-full h-[80%] p-2 font-semibold text-base text-center mb-2 flex-grow md:flex-grow-0" placeholder="3 Mates" type="text" />
   {/* <GiHamburgerMenu/> */}
-  <button className="bg-orange-600 flex justify-evenly gap-2 items-center px-2 py-1 font-semibold rounded-full text-white mb-2 flex-grow md:flex-grow-0">GO<FaArrowRightLong/></button>
+
+  <Link to="/carts" className="bg-orange-600 flex justify-evenly gap-2 items-center px-2 py-1 font-semibold rounded-full text-white mb-2 flex-grow md:flex-grow-0">GO<FaArrowRightLong/></Link>
 </div>
 
 
