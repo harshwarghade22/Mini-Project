@@ -20,6 +20,7 @@ import DeskTable from "./Icons/DeskTable";
 import Metro from "./Icons/Metro";
 
 import Bus from "./Icons/Bus";
+import { Link } from "react-router-dom";
 
 function Details() {
   const slides = [
@@ -99,12 +100,12 @@ function Details() {
           </div>
         </div>
         <div className="w-3/5 lg:border-r-2 md:flex justify-center gap-5 lg:px-10 font-gilroy_medium md:p-0 p-5">
-          <a
-            href=""
+          <Link
+            to="/reservedate"
             className="md:w-1/2 w-full md:h-full border h-1/2 rounded-md border-black flex justify-center items-center hover:bg-black hover:text-white mx-auto mb-2"
           >
             Scedule a visit
-          </a>
+          </Link>
 
           <a
             href="/reserve1"
@@ -191,11 +192,11 @@ function Details() {
             <div className="font-gilroy_semi_bold text-2xl  text-center mt-5">
               Furnish your space by your hand
             </div>
-            <a href="">
+            <Link to="">
               <div className="w-[20vw] h-[55px] border-black border rounded-lg font-gilroy_medium text-center pt-3 hover:bg-black hover:text-white lg:text-lg text-sm">
                 Customize your avatar
               </div>
-            </a>
+            </Link>
           </div>
         </div>
 

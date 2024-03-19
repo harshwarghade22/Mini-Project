@@ -14,10 +14,9 @@ export default function Home() {
     return (
         <div className='overflow-x-hidden font-gilroy_regular'>
             <div className="h-screen w-full p-[1px] overflow-hidden">
-      <Layout2/>
-      <Layout1/>
- 
-    </div>
+                <Layout2/>
+                <Layout1/>
+            </div>
             <div className='w-full h-[80vh] bg-zinc-100 flex flex-col'>
                 <div className='w-full h-[10vh] bg-zinc-100 flex flex-col justify-evenly'>
                     <div className='h-[1vh] w-full bg-zinc-200'></div>
@@ -68,14 +67,14 @@ export default function Home() {
                 <div className='h-[20vh] w-full  flex  justify-evenly items-center bg-zinc-50'>
                     <img src="./src/assets/Group 48096305.png" alt="" />
                     <img src="./src/assets/Group.png" alt="" />
-                    <div className='text-3xl font-semibold text-zinc-800 text-center flex flex-col items-center '>
+                    <div className='text-3xl font-semibold text-zinc-800 text-center flex flex-col items-center'>
                         <h1>Keep the standard of living</h1>
                         <h1><span className='text-orange-600'>alive</span> at any location</h1>
                         <div className='w-[15vw] h-[2px] bg-zinc-300 mt-5'></div>
                     </div>
                     <img className="-rotate-[300deg]" src="./src/assets/Group.png" alt="" />
                     <img src="./src/assets/Isolation Mode.png" alt="" />
-
+                
                 </div>
                 <div className='h-[50vh] w-full bg-zinc-100 flex justify-center items-center space-x-10 '>
                     <img src="./src/assets/Group 48096313.png" alt="" />

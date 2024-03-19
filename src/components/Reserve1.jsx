@@ -51,7 +51,7 @@ function Reserve1() {
             <div className='h-[107px] mt-6'>
                 <p className='font-gilroy_semi_bold text-gray-600 text-xl'>Select Occupancy</p>
                 <div className='flex justify-between mt-2 gap-4 lg:gap-0 text-sm lg:text-base'>
-                        <div className={` border border-black rounded-xl ${sharing === 'triple' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'} p-2`} onClick={priceTriple} >
+                        <div className={` border border-black rounded-xl ${sharing === 'triple' ? 'bg-black text-white' : 'hover:bg-black hover:text-white'} p-2`} onClick={priceTriple}>
                             <p className='font-gilroy_regular'>Triple Sharing</p>
                             <p className='font-gilroy_bold' >₹7000/mo</p>
                         </div> 
