@@ -15,6 +15,8 @@ import icon7 from "../Images/Group 48096361 (1).png";
 import icon8 from "../Images/Layer_1 (5).png";
 import icon9 from "../Images/548-Bed, Hotel, Single, Sleep, Frame.png";
 import icon10 from "../Images/Group 48096362img10.png";
+import { GoHeart } from "react-icons/go";
+import { IoMdCall } from "react-icons/io";
 
 function Right() {
   return (
@@ -119,8 +121,12 @@ function Right() {
           </div>
         </div>
         <div className="flex lg:justify-end  justify-center items-center gap-4 ">
-          <button className="p-2 border border-[#434343]">like</button>
-          <button className="p-2 border border-[#434343]">contact</button>
+          <button className="p-2 border border-[#434343]">
+            {<GoHeart className="text-2xl" />}
+          </button>
+          <button className="p-2 border border-[#434343]">
+            {<IoMdCall className="text-2xl" />}
+          </button>
           <button className="rounded-xl px-12 py-2 bg-black text-white">
             connect
           </button>
