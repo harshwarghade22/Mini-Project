@@ -7,11 +7,12 @@ import Filters from "./components/Filters";
 import Check from "./components/Check";
 import Home from "./Home";
 import RoomatesListing from "./components/RoomatesListing";
+import MateDetails from "./components/mateDetails/MateDetails";
 
 const router = createBrowserRouter([
   {
     path: "/carts",
-    element: <Filters />
+    element: <Filters />,
   },
   {
     path: "/",
@@ -32,10 +33,15 @@ const router = createBrowserRouter([
   {
     path: "/checkout",
     element: <Check />,
+    
   },
   {
     path: "/roomates",
-    element: <RoomatesListing/>,
+    element: <RoomatesListing />,
+  },
+  {
+    path: "/mateDetails",
+    element: <MateDetails />,
   },
 ]);
 
