@@ -58,9 +58,9 @@ function ReserveDate() {
   };
 
   return (
-    <div className="w-[90%] flex justify-evenly mt-4 p-5 font-gilroy_regular">
+    <div className="w-[90%] mx-auto flex flex-col lg:flex-row justify-evenly mt-4 p-5 font-gilroy_regular">
       <Reserve />
-      <div className="w-[40%]  flex flex-col">
+      <div className="lg:w-[40%] w-full mt-5 lg:mt-0 flex flex-col">
         <p className="text-xl">Schedule Date & Visiting Time</p>
         <div className="w-full h-[22%] bg-slate-100 mt-5 rounded-lg">
           <div className="flex gap-2 px-5 py-3 border-b border-b-slate-400 text-black">
@@ -70,9 +70,9 @@ function ReserveDate() {
             <DateLeft />
             <DateRight />
           </div>
-          <div className="flex justify-around pt-4 px-2">
+          <div className="flex justify-between lg:justify-around pt-4 px-2">
             <div
-              className="h-[8vh] w-[4vw] bg-white rounded-lg flex items-center justify-center text-lg text-black hover:bg-black hover:text-white"
+              className="h-[8vh] w-[6vw] bg-white rounded-lg flex items-center justify-center text-lg text-black hover:bg-black hover:text-white"
               onClick={() => {
                 handleDateChange({ day });
               }}
@@ -127,7 +127,7 @@ function ReserveDate() {
             </div>
           </div>
         </div>
-        <div className="w-full h-[18%] bg-slate-100 mt-3 rounded-md flex gap-3 justify-center items-center text-black">
+        <div className="w-full h-full lg:h-[18%] bg-slate-100 mt-3 rounded-md flex gap-3 lg:justify-center justify-around items-center text-black">
           <div
             className="w-[7vw] h-[10vh] bg-white rounded-lg text-center text-sm  pt-3 hover:bg-black hover:text-white"
             onClick={morning}
