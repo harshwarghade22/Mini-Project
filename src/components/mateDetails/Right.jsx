@@ -49,7 +49,7 @@ function Right() {
       </div>
 
       <div className="md:row-span-6 my-8 px-4">
-        <div className="grid sm:grid-cols-4 grid-cols-2 sm:flex justify-start items-center md:gap-12 sm:gap-8 gap-4 ">
+        <div className="grid sm:grid-cols-4 my-8 grid-cols-2 sm:flex justify-start items-center md:gap-12 sm:gap-8 gap-4 ">
           <div className="rounded-full px-4 py-2   bg-[#F3F5F7] font-['Gilroy-SemiBold'] md:tect-lg text-base ">
             Ammenities
           </div>
@@ -68,51 +68,51 @@ function Right() {
           <div className="icons lg:col-span-8 md:col-span-12 lg:border-r  border-[#B3B3B3] md:my-4  p-2">
             <div className="flex flex-wrap  items-center gap-8">
               <div className="">
-                <img src={fridge} alt="" />
+                <img src={fridge} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">Refrigerator</h3>
               </div>
 
               <div className="">
-                <img src={layer1} alt="" />
+                <img src={layer1} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">Wardrobe</h3>
               </div>
               <div className="">
-                <img src={icon3} alt="" />
+                <img src={icon3} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">TV</h3>
               </div>
               <div className="">
-                <img src={icon4} alt="" />
+                <img src={icon4} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">Desk Table</h3>
               </div>
               <div className="">
-                <img src={icon5} alt="" />
+                <img src={icon5} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">Curtains</h3>
               </div>
               <div className="">
-                <img src={icon6} alt="" />
+                <img src={icon6} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">Washing..</h3>
               </div>
               <div className="">
-                <img src={icon7} alt="" />
+                <img src={icon7} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">Office chair</h3>
               </div>
               <div className="">
-                <img src={icon8} alt="" />
+                <img src={icon8} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">Dining Table</h3>
               </div>
               <div className="">
-                <img src={icon9} alt="" />
+                <img src={icon9} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">Single Bed</h3>
               </div>
               <div className="">
-                <img src={icon10} alt="" />
+                <img src={icon10} alt="" className="mx-auto" />
                 <h3 className="text-sm text-center">Table Lamp</h3>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-4 md:col-span-12 m-auto flex flex-col justify-center items-center ">
-            <h1 className="font-['Gilroy-SemiBold'] md:text-base font-bold text-center ">
+            <h1 className="font-['Gilroy-SemiBold'] md:text-base font-bold text-center mx-auto ">
               Furnish your space by your Hand
             </h1>
             <button className="px-4 py-2 font-['Gilroy-Medium'] border border-[#262626] my-4">
