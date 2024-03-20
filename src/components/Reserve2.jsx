@@ -21,7 +21,7 @@ function Reserve2() {
 
 
   return (
-    <div className='flex justify-center'>
+    <div className=''>
         <ReserveDate/>
     </div>
   )
