@@ -1,5 +1,6 @@
 import React from "react";
 import Fridge from "./Icons/Fridge";
+import { Link } from "react-router-dom";
 
 function Reserve() {
   return (
@@ -17,7 +18,7 @@ function Reserve() {
           </div>
         </div>
 
-        <div className="h-[200px] md:h-full lg:h-[200px]  md:w-[75%] lg:w-full bg-slate-200 rounded-3xl mt-2 pb-4">
+        <div className="h-[200px] md:h-full lg:h-[200px]  md:w-[75%] lg:w-full bg-slate-200 rounded-3xl mt-2 pb-4 hidden md:block">
           <p className="pt-5 px-7 font-gilroy_medium text-lg text-gray-700">
             Ameneties
           </p>
@@ -34,7 +35,8 @@ function Reserve() {
             <div className="w-[45px] h-[45px] bg-white rounded-xl"></div>
           </div>
         </div>
-        <div className="">
+        
+        <div className="hidden md:block">
           <div className="md:w-[200px] lg:w-full w-full md:h-[50%] lg:h-[50px] h-[50px] bg-slate-200 mt-3 rounded-full md:rounded-3xl flex md:flex-col lg:flex-row px-1 pb-10">
             <p className="font-gilroy_medium text-lg text-gray-700 py-3 pl-4">
               Features
@@ -56,6 +58,10 @@ function Reserve() {
               <div className="w-[40px] h-[40px] bg-white rounded-xl"></div>
             </div>
           </div>
+          
+        </div>
+        <div className="mt-4 text-xl underline block md:hidden">
+          <Link to="">More Details</Link>
         </div>
       </div>
     </div>
