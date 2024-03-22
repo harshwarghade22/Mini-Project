@@ -29,7 +29,7 @@ function Reserve1() {
 
   return (
     <>
-      <div className='2xl:w-full mx-auto mt-20 md:mt-5 flex justify-between space-y-10 flex-col lg:flex-row'>
+      <div className='max-w-screen-2xl mx-auto mt-20 md:mt-5 flex justify-between space-y-10 flex-col lg:flex-row'>
         <Reserve/>
         <div className='w-[90%] sm:w-[80%] lg:w-[35%] mx-auto flex flex-col'>
             <div className=' flex justify-between'>
