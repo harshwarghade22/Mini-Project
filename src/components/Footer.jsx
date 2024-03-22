@@ -10,30 +10,30 @@ function Footer() {
                 <div className='h-[80%] w-full bg-zinc-100 flex flex-col md:flex-row'>
                     <div className='h-full w-full md:w-[40%] bg-zinc-50 flex flex-col md:justify-center md:items-start items-center pl-[5vw] gap-2 pt-6 md:pt-0'>
                         <h1 className='h-[4vh]  rounded-full bg-orange-600 text-white text-center px-2 '>Logo</h1>
-                        <div className='font-bold tracking-tight text-2xl'>
+                        <div className='font-bold tracking-tight lg:text-2xl text-lg'>
                             <h1>To make sure when you are </h1>
                             <h1>independent you live like a boss</h1>
                         </div>
                         <h1 className='font-semibold text-lg tracking-tight mt-4'>Habit8,2023</h1>
                     </div>
-                    <div className="h-full w-full md:w-[60%] bg-zinc-200 flex md:flex-row mx-5 md:mx-0 text-sm lg:text-xl">                                                                         
+                    <div className="h-full w-full md:w-[60%] bg-zinc-200 flex  md:flex-row mx-5 md:mx-0 text-sm lg:text-xl  ">                                                                 
                         <div className="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
-                            <h4 className="text-zinc-500">FAQ's</h4>
-                            <h4 className="text-zinc-900 font-semibold">How it works</h4>
-                            <h4 className="text-zinc-900 font-semibold">List your property</h4>
-                            <h4 className="text-zinc-900 font-semibold">See More</h4>
+                            <h4 className="text-zinc-500 pt-4 sm:pt-0">FAQ's</h4>
+                            <h4 className="text-zinc-900 font-gilroy_regular">How it works</h4>
+                            <h4 className="text-zinc-900 font-gilroy_regular">List your property</h4>
+                            <h4 className="text-zinc-900 font-gilroy_regular">See More</h4>
                         </div>
                         <div className="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
                             <h4 className="text-zinc-500">Company</h4>
-                            <h4 className="text-zinc-900 font-semibold">Blogs</h4>
-                            <h4 className="text-zinc-900 font-semibold">Career</h4>
-                            <h4 className="text-zinc-900 font-semibold">News</h4>
+                            <h4 className="text-zinc-900 font-gilroy_regular">Blogs</h4>
+                            <h4 className="text-zinc-900 font-gilroy_regular">Career</h4>
+                            <h4 className="text-zinc-900 font-gilroy_regular">News</h4>
                         </div>
                         <div className="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2">
                             <h4 className="text-zinc-500">Insights</h4>
-                            <h4 className="text-zinc-900 font-semibold">Inventory</h4>
-                            <h4 className="text-zinc-900 font-semibold">Stats</h4>
-                            <h4 className="text-zinc-900 font-semibold">Investments</h4>
+                            <h4 className="text-zinc-900 font-gilroy_regular">Inventory</h4>
+                            <h4 className="text-zinc-900 font-gilroy_regular">Stats</h4>
+                            <h4 className="text-zinc-900 font-gilroy_regular">Investments</h4>
                         </div>
                         <div className="w-full md:w-[25%] bg-zinc-50 flex flex-col justify-center space-y-2 mr-7 md:mr-0">
                             <h4 className="text-zinc-500">Get the app</h4>
