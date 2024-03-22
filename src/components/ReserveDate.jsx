@@ -74,7 +74,7 @@ function ReserveDate() {
 
 
   return (
-    <div className='2xl:w-full mx-auto mt-20 md:mt-5 flex justify-between flex-col lg:flex-row'>
+    <div className='max-w-screen-2xl mx-auto mt-20 md:mt-5 flex justify-between flex-col lg:flex-row'>
         <Reserve/>
         <div className="lg:w-[40%] w-[90%]  mx-auto flex flex-col mt-4 md:mt-0">
         <p className="text-xl">Schedule Date & Visiting Time</p>
