@@ -7,6 +7,7 @@ import Filters from "./components/Filters";
 import Check from "./components/Check";
 import Home from "./Home";
 import RoomatesListing from "./components/RoomatesListing";
+import Map from "./components/Map";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
   {
     path: "/roomates",
     element: <RoomatesListing/>,
+  },
+
+  {
+    path: "/map",
+    element: <Map/>,
   },
 ]);
 
