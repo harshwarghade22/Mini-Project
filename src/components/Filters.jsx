@@ -47,63 +47,65 @@ function Hero() {
 
   return (
     <div className="py-4 px-4 ">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-12  ">
-        <div className="col-span-1 pt-2">
-          <h1 className='sm:textlg lg:text-xl md:text-2xl font-medium font-["Gilroy Medium"] mt-6'>
+      <div className="max-w-7xl mx-auto  grid md:grid-cols-12">
+        <div className="xl:col-span-1 col-span-1 my-4 lg:px-2 px-4">
+          <h1 className='lg:text-xl md:text-2xl text-2xl font-medium font-["Gilroy Medium"]'>
             Mumbai,
           </h1>
         </div>
-        <div className="col-span-7  sm:flex justify-start items-center gap-4 my-6 sm:px-4">
-          <LocationSelect />
-          <PriceSelect />
-          <FilterBtn />
-          {/* <select
-            value={priceValue}
-            onChange={priceChangeHandler}
-            className="py-3 w-40 px-4 border-[1px] border-black/50 z-10 ease-in-out duration-700 sm:mt-0  rounded-full  my-4 sm:my-0"
-          >
-            <option value="">Select Price</option>
-            <option value="2000 - 3000">2000 - 3000</option>
-            <option value="3500 - 5000">3500 - 5000</option>
-            <option value="5500 - 7000">5500 - 7000</option>
-            <option value="7500 - 9000">7500 - 9000</option>
-            <option value="9500 - 12000">9500 - 12000</option>
-            <option value="12500 - 15000">12500 - 15000</option>
-          </select> */}
+
+        <div className="xl:col-span-8  md:col-span-12 px-4 lg:flex lg:justify-between justify-start ">
+          <div className="my-4">
+            <LocationSelect />
+          </div>
+          <div className="my-4">
+            <PriceSelect />
+          </div>
+          <div className="my-4">
+            {" "}
+            <FilterBtn />
+          </div>
         </div>
 
-        <div className="col-span-4 flex justify-between items-center lg:ml-4 ">
-          <div className="flex justify-center items-center gap-8 lg:gap-4 shadow-2xl  ">
-            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight border-r border-gray-500/50 px-2 text-center ">
-              Mumbai
-            </h1>
-            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight border-r border-gray-500/50 px-2 text-center ">
-              1 BHK
-            </h1>
-            <h1 className="md:text-lg sm:text-base text-sm font-['Gilroy-Medium'] tracking-tight px-2 text-center ">
-              3 Mates
-            </h1>
-            {/* <button className="rounded-full md:text-lg sm:text-base text-sm shadow-lg bg-[#F1F1F1] w-10 h-10 flex justify-center items-center ">
-              <FilterArrow />
-            </button> */}
-          </div>
-          <button className="py-2 px-4 rounded-full bg-[#F45C2C] text-white font-medium mx-auto flex justify-between items-center gap-4">
+        <div className="xl:col-span-1 md:col-span-4 xl:p-4 py-10 px-4">
+          <button className="py-2 px-4  rounded-full bg-[#F45C2C] text-white font-medium  flex justify-between items-center">
             Go <Arrow />
           </button>
+        </div>
+
+        <div className="xl:col-span-2 md:col-span-6 lg:px-0 px-4 py-2">
+          <div className="flex justify-between items-center  md:my-4  shadow-xl rounded-full xl:px-0 xl:py-0 py-4 px-8 ">
+            <div className="">
+              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-2xl text-2xl  font-['Gilroy-Medium'] tracking-tight ">
+                Mumbai
+              </h1>
+            </div>
+            <div className="">
+              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-xl text-2xl  font-['Gilroy-Medium'] tracking-tight  ">
+                1 BHK
+              </h1>
+            </div>
+            <div className="">
+              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-xl text-2xl  font-['Gilroy-Medium'] tracking-tight  ">
+                3 Mates
+              </h1>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto ">
-        <h1 className="text-orange-400 font-semibold text-2xl my-4">
-          <span className="text-zinc-700 opacity-50">Spaces near </span>
+        <h1 className="text-[#9B9B9B]  font-semibold text-2xl my-4">
+          <span className="">Spaces near </span>
           "Metro Station"
         </h1>
       </div>
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-3 sm:grid-cols-2 gap-8 mt-10">
+      <div className="max-w-7xl mx-auto  xl:grid-cols-3 lg:grid-cols-2 grid gap-8 mt-4">
         {filterData.map((item, index) => (
-          <Link to="/details"><Card key={item.id} data={item} /></Link>
-          
+          <Link to="/details">
+            <Card key={item.id} data={item} />
+          </Link>
         ))}
       </div>
     </div>
