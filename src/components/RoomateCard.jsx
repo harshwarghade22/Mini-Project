@@ -1,6 +1,6 @@
-import React from 'react'
-import Contact from './Icons/Contact'
-import Fav from './Icons/Fav'
+import React from "react";
+import Contact from "./Icons/Contact";
+import Fav from "./Icons/Fav";
 
 function RoomateCard() {
   return (
@@ -29,17 +29,16 @@ function RoomateCard() {
               <p>Flatmate</p>
             </div>
           </div>
-          <div className='w-full h-[13%] mt-3 border-t pt-3 flex gap-2'>
-            <div className='w-[25%] border-black border rounded-lg flex justify-center items-center '><Fav/></div>
-            <div className='w-[25%] border-black border rounded-lg flex justify-center items-center'>
-              <Contact/>
-            </div>
-            <div className='w-[50%] border-black border rounded-lg text-center pt-1 bg-black text-white'>Connect</div>
+          <div className="w-[25%] border-black border rounded-lg flex justify-center items-center">
+            <Contact />
           </div>
-
+          <div className="w-[50%] border-black border rounded-lg text-center pt-1 bg-black text-white">
+            Connect
+          </div>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default RoomateCard
+export default RoomateCard;
