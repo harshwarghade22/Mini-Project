@@ -73,15 +73,15 @@ function Hero() {
           </button>
         </div>
 
-        <div className="xl:col-span-2 md:col-span-6 lg:px-0 px-4 py-2">
-          <div className="flex justify-between items-center  md:my-4  shadow-xl rounded-full xl:px-0 xl:py-0 py-4 px-8 ">
-            <div className="">
-              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-2xl text-2xl  font-['Gilroy-Medium'] tracking-tight ">
+        <div className="xl:col-span-2 md:col-span-6 lg:px-0 px-4">
+          <div className="flex justify-between items-center  md:my-4  shadow-xl rounded-full xl:p-2 sm:px-8 px-6 py-4 ">
+            <div className=" ">
+              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-2xl text-2xl  text-center  font-['Gilroy-Medium'] tracking-tight ">
                 Mumbai
               </h1>
             </div>
-            <div className="">
-              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-xl text-2xl  font-['Gilroy-Medium'] tracking-tight  ">
+            <div className="border-r border-l  border-[#6F6F6F] xl:px-1 lg:px-16 md:px-4 sm:px-16 xs:px-2 px-2">
+              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-xl text-2xl text-center  font-['Gilroy-Medium'] tracking-tight  ">
                 1 BHK
               </h1>
             </div>
@@ -94,7 +94,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto ">
+      <div className="max-w-7xl mx-auto xl:px-4 px-2 ">
         <h1 className="text-[#9B9B9B]  font-semibold text-2xl my-4">
           <span className="">Spaces near </span>
           "Metro Station"
