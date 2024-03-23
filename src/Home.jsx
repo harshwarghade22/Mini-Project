@@ -28,25 +28,25 @@ export default function Home() {
 
 
                 </div>
-                <div className='w-full bg-zinc-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4'>
+                <div className='w-full  bg-zinc-200 grid grid-cols-1 sm:grid-cols-2 min-[950px]:grid-cols-4 lg:grid-cols-4 gap-3 p-4'>
                     
-                    <div className='h-[16vh] mx-auto min-w-56 bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
-                        <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
+                    <div className='h-[16vh] mx-auto min-w-56  bg-zinc-50 flex flex-col flex-shrink-0 flex-wrap justify-evenly items-center rounded-md'>
+                        <img className='h-1/2 w-1/2  object-contain position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
                     </div>
                     <div className='h-[16vh] mx-auto min-w-56 bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
-                        <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
+                        <img className='h-1/2 w-1/2  object-contain position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
                     </div>
                     <div className='h-[16vh] mx-auto min-w-56 bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
-                        <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
+                        <img className='h-1/2 w-1/2  object-contain position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
                     </div>
                     <div className='h-[16vh] mx-auto min-w-56 bg-zinc-50 flex flex-col justify-center items-center rounded-md'>
-                        <img className='h-1/2 w-1/2  object-cover position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
+                        <img className='h-1/2 w-1/2  object-contain position-center' src="https://cdn-icons-png.flaticon.com/128/1283/1283983.png" alt="" />
                         <div className='w-[80%] h-[1px] bg-black mt-3'></div>
                         <h5 className='tracking-tight font-semibold text-sm'>Mumbai</h5>
                     </div>
@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
 
             </div> */}
-            <div className='message h-[90vh] w-screen  mt-[12vh] grid grid-rows-3 md:grid-cols-3 grid-cols-2 gap-0'>
+<div className='message h-[70vh] md:h-[90vh] w-screen  mt-[12vh] grid grid-rows-3 md:grid-cols-3 grid-cols-2 gap-0'>
                 {/* Row 1, Column 1 */}
                 <div className="border border-zinc-500 bg-orange-600 flex items-center" style={{ gridRow: '1 / span 2' }}>
                     <img className='lg:h-full lg:w-full object-cover position-center' src="https://s3-alpha-sig.figma.com/img/c3d8/0f88/98cb5bd63294bec18af8076109177703?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nxk5Q8fGdie8phaxUQE7wmGD944Mb63PmUm0xZe7GL2bAgucCvLBtz5hEFplrephvgGaOwFyHDb6VkZqLHExqK4ZcKziALqIiLVzHz-ikOF~u9blW9Yg3BtRkkQgXKNUBwQobCY6KjDGawUgO7SIHRuBnoaSBIzAJiyjahDFrJHjv~PAne9eTR~lyE1JtMLBCwlmdn2exiq3JHfFfQrbyaTc05EKd7HU7EmgF3pyqTonOn6aKuogBBIFb7MEGL2QV7L7fbS4fe4snvAQ84BXAYmLRBXapTyR-gJ8mJs~xLYIl3RAFOYr3jVkOVh8DVBj5-YXP1PuyVwGyViF8NrfcQ__" alt="" />
@@ -106,7 +106,7 @@ export default function Home() {
                         <h1 className=' font-semibold text-left'>Roommates</h1>
                     </div>
                     <div className='text-left text-sm md:text-xl mt-8 '>
-                        <p className='align-center w-[90%] md:ml-7 ml-0 px-4 md:px-0'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates numquam blanditiis, quis laboriosam facere similique aliquid illum. Recusandae, ex voluptatem.</p>
+                        <p className='align-center w-[90%] md:ml-7 ml-0 px-4 md:px-0 text-[14px] md:text-lg'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates numquam blanditiis, quis laboriosam facere similique aliquid illum. Recusandae, ex voluptatem.</p>
                     </div>
                 </div>
                 {/* Row 1, Column 3 */}
@@ -116,8 +116,8 @@ export default function Home() {
                 <div className="border border-zinc-50 bg-orange-600 hidden md:block"></div>
                 {/* Row 2, Column 2 */}
                 <div className="border border-zinc-50 bg-orange-600 flex md:justify-center items-start md:pt-5  pl-10 pt-16">
-                    <Link to="/roomates" className='px-5 py-3 md:w-[40%] rounded-full bg-white flex items-center justify-center text-zinc-900 font-semibold'>Start now <FaArrowRightLong className='ml-2 text-sm' />
-                    </Link>
+                  <div  className='px-5 py-3 md:w-[40%] rounded-full bg-white flex items-center justify-center text-zinc-900 font-semibold'>Start now <FaArrowRightLong className='ml-2 text-sm' />
+                    </div>
                     
                 </div>
                 {/* Row 2, Column 3 */}
@@ -134,21 +134,21 @@ export default function Home() {
                     <img src="" alt="" />
                 </div> {/* Adjust height for row 3 */}
             </div>
-            <div className='h-[30vh] w-full bg-zinc-50 flex flex-col justify-evenly'>
-                <div className='h-[3vh] w-full bg-zinc-300'></div>
-                <div className='h-[3vh] w-full bg-zinc-300'></div>
-                <div className='h-[3vh] w-full bg-zinc-300'></div>
-                <div className='h-[3vh] w-full bg-zinc-300'></div>
-                <div className='h-[3vh] w-full bg-zinc-300'></div>
-                <div className='h-[3vh] w-full bg-zinc-300'></div>
+            <div className='h-[10vh] md:h-[30vh] w-full bg-zinc-50 flex flex-col justify-evenly'>
+                <div className='h-[1vh] md:h-[3vh] w-full bg-zinc-300'></div>
+                <div className='h-[1vh] md:h-[3vh] w-full bg-zinc-300'></div>
+                <div className='h-[1vh] md:h-[3vh] w-full bg-zinc-300'></div>
+                <div className='h-[1vh] md:h-[3vh] w-full bg-zinc-300'></div>
+                <div className='h-[1vh] md:h-[3vh] w-full bg-zinc-300'></div>
+                <div className='h-[1vh] md:h-[3vh] w-full bg-zinc-300'></div>
             </div>
-            <div className='message h-screen w-screen bg-zinc-200 mt-[0vh] grid grid-cols-6 grid-rows-5 gap-0'>
+            <div className='message h-[60vh] md:h-[100vh] w-screen bg-zinc-200 mt-[0vh] grid grid-cols-6 grid-rows-5 gap-0'>
                 {/* Row 1, Column 1 */}
                 {/* style={{ gridColumn: '1 / span 2' }} */}
                 <div className="border border-zinc-200 md:border-zinc-400  bg-zinc-200  col-span-2 ">
                 <div className='leading-none mb-3 text-center pb-3 pt-2 md:flex md:flex-col md:pt-4'>
-                        <h1 className='md:text-2xl text-lg text-zinc-800 font-semibold '>Design your every</h1>
-                        <h1 className='md:text-2xl text-lg text-zinc-800 font-semibold '>day food plate</h1>
+                        <h1 className='md:text-2xl text-lg text-zinc-800 font-semibold tracking-tighter'>Design your every</h1>
+                        <h1 className='md:text-2xl text-lg text-zinc-800 font-semibold tracking-tighter '>day food plate</h1>
                     </div>
                 </div>
                 
@@ -187,7 +187,7 @@ export default function Home() {
                 </div> */}
                 {/* Row 3, Columns 3 and 4 (merged) */}
                 <div className="border border-zinc-400 bg-zinc-200 p-2" style={{ gridColumn: '3 / span 2' }}>
-                    <p className='text-zinc-800 text-sm'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, doloremque tenetur! Quia fugit quam cumque.</p>
+                    <p className='text-zinc-800 text-[10px] sm:text-sm '>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, doloremque tenetur! Quia fugit quam cumque.</p>
                 </div>
                 {/* Row 3, Column 5 */}
                 <div className="border border-zinc-400 bg-zinc-200"style={{ gridColumn: '5 / span 2' }}></div>
@@ -202,7 +202,7 @@ export default function Home() {
                 {/* <div className="border border-zinc-400 bg-zinc-200"></div> */}
                 {/* Row 4, Column 3 */}
                 <div className="border border-zinc-400 bg-zinc-200 p-2" style={{ gridColumn: '3 / span 2',gridRow:'4/ span 2' }}>
-                    <div className=' px-2 py-3 min-w-[40%]  md:max-w-[70%] text-sm  font-semibold flex justify-center items-center rounded-full bg-orange-600 text-white'>Explore more<FaArrowRightLong className='ml-2 text-sm' /></div>
+                    <div className=' px-1 md:px-2 py-2 md:py-4 min-w-[40%]  md:max-w-[70%] text-[11px] sm:text-sm  font-semibold flex  gap-2 items-center rounded-full bg-orange-600 text-white'><h1 className="pl-3 ">Explore more</h1><FaArrowRightLong className='ml-2 text-sm' /></div>
                 </div>
                 {/* Row 4, Column 4 */}
                 {/* Row 4, Column 5 */}
@@ -222,7 +222,7 @@ export default function Home() {
 
                 </div> */}
                 {/* Row 5, Column 6 */}
-            </div>
+            </div>            
             <Footer/>
 
         </div>
