@@ -48,7 +48,7 @@ function Hero() {
   return (
     <div className="py-4 px-4 ">
       <div className="max-w-7xl mx-auto  grid md:grid-cols-12">
-        <div className="xl:col-span-1 col-span-1 my-4 lg:px-2 px-4">
+        <div className="xl:col-span-1 col-span-1 my-6 lg:px-2 px-4">
           <h1 className='lg:text-xl md:text-2xl text-2xl font-medium font-["Gilroy Medium"]'>
             Mumbai,
           </h1>

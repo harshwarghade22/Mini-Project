@@ -4,7 +4,7 @@ import { BsCurrencyRupee } from "react-icons/bs";
 
 function Card({ data }) {
   return (
-    <div className=" w-full min-h-96 border shadow-xl flex flex-col my-4  rounded-lg  p-3 ">
+    <div className="w-full min-h-96 border shadow-xl flex flex-col my-4  rounded-lg  p-3">
       <img
         className="w-full h-[260px] object-cover object-center rounded-xl"
         src={data.img}
