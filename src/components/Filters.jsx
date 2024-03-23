@@ -67,13 +67,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="xl:col-span-1 md:col-span-4 xl:p-4 py-10 px-4">
-          <button className="py-2 px-4  rounded-full bg-[#F45C2C] text-white font-medium  flex justify-between items-center">
-            Go <Arrow />
-          </button>
-        </div>
-
-        <div className="xl:col-span-2 md:col-span-6 lg:px-0 px-4">
+        <div className="xl:col-span-3 md:col-span-6 lg:px-0 px-4">
           <div className="flex justify-between items-center  md:my-4  shadow-xl rounded-full xl:p-2 sm:px-8 px-6 py-4 ">
             <div className=" ">
               <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-2xl text-2xl  text-center  font-['Gilroy-Medium'] tracking-tight ">
