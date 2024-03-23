@@ -376,10 +376,4 @@ export default function Home() {
       <Footer />
     </div>
   );
-        {/* Row 5, Column 6 */}
-      </div>
-      <Footer />
-    </div>
-  );
 }
-

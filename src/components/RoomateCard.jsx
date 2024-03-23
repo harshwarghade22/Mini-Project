@@ -37,7 +37,7 @@ function RoomateCard() {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 
