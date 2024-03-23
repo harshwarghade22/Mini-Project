@@ -148,30 +148,30 @@ function ReserveDate() {
             </div>
           </div>
         </div>
-        <div className="w-full h-full lg:h-[18%] bg-slate-100 mt-3 rounded-md flex gap-3 lg:justify-center justify-around items-center text-black">
+        <div className="w-full h-[20vh] lg:h-[18%] bg-slate-100 mt-3 rounded-md flex gap-3 lg:justify-center justify-around flex-wrap items-center text-black">
           <div
-            className="w-[7vw] h-[10vh] bg-white rounded-lg text-center text-sm  pt-3 hover:bg-black hover:text-white"
+            className="lg:w-[7vw] lg:h-[10vh] bg-white rounded-lg text-center text-sm  pt-3 hover:bg-black hover:text-white"
             onClick={morning}
           >
             <p>Morning</p>
             <p className="text-slate-400">9am to 12pm</p>
           </div>
           <div
-            className="w-[7vw] h-[10vh] bg-white rounded-lg text-center text-sm  pt-3 hover:bg-black hover:text-white"
+            className="lg:w-[7vw] lg:h-[10vh] bg-white rounded-lg text-center text-sm  pt-3 hover:bg-black hover:text-white"
             onClick={afternoon}
           >
             <p>Afternoon</p>
             <p className="text-slate-400">12pm to 4pm</p>
           </div>
           <div
-            className="w-[7vw] h-[10vh] bg-white rounded-lg text-center text-sm  pt-3 hover:bg-black hover:text-white"
+            className="lg:w-[7vw] lg:h-[10vh] bg-white rounded-lg text-center text-sm  pt-3 hover:bg-black hover:text-white"
             onClick={evening}
           >
             <p>Evening</p>
             <p className="text-slate-400">4pm to 7pm</p>
           </div>
           <div
-            className="w-[7vw] h-[10vh] bg-white rounded-lg text-center text-sm  pt-3 hover:bg-black hover:text-white"
+            className="lg:w-[7vw] lg:h-[10vh] bg-white rounded-lg text-center text-sm  pt-3 hover:bg-black hover:text-white"
             onClick={night}
           >
             <p>Night</p>

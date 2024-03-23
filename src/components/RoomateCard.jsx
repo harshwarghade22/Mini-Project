@@ -5,8 +5,9 @@ import Fav from './Icons/Fav'
 function RoomateCard() {
   return (
     <div>
-        <div className='w-full h-[400px]  flex flex-col border rounded-lg p-3 font-gilroy_light hover:scale-105 duration-300'>
-          <div className='w-full h-[50%]  border rounded-lg'>
+        <div className='w-full flex flex-col border rounded-lg p-3 font-gilroy_light hover:scale-105 duration-300'>
+
+          <div className='w-full md:h-[40vh] h-[70vh]  border rounded-lg'>
             <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='object-cover object-center  h-full w-full rounded-lg' />
           </div>
           
