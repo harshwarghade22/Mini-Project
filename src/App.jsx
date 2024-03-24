@@ -7,6 +7,7 @@ import Filters from "./components/Filters";
 import Check from "./components/Check";
 import Home from "./Home";
 import RoomatesListing from "./components/RoomatesListing";
+import Map from "./components/Map";
 import ReserveDate from "./components/ReserveDate";
 import MateDetails from "./components/mateDetails/MateDetails";
 
@@ -38,19 +39,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/roomates",
-    element: <RoomatesListing />,
+    element: <RoomatesListing/>,
   },
+
   {
-    path: "/mateDetails",
-    element: <MateDetails />,
-  },
-  {
-    path: "/reservedate",
-    element: <ReserveDate/>,
-  },
-  {
-    path: "/reservedate",
-    element: <ReserveDate/>,
+    path: "/map",
+    element: <Map/>,
   },
 ]);
 
