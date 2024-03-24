@@ -13,12 +13,12 @@ function Card({ data }) {
 
       <div className="grid grid-cols-6 gap-4 my-2">
         <div className="col-span-5">
-          <h1 className="md:text-lg sm:text-xl text-xl font-['Gilroy Medium'] border-b border-gray-800/70 my-2">
+          <h1 className="md:text-lg sm:text-xl text-xl font-gilroy_medium border-b border-gray-800/70 my-2">
             {data.name}, HSR Layout
           </h1>
           <div className="flex justify-start items-center ">
             <BsCurrencyRupee className="text-xl" />
-            <h1 className="text-xl font-['Gilroy-SemiBold'] font-semibold ">
+            <h1 className="text-xl font-gilroy_semi_bold  font-semibold ">
               {data.price}/mo
             </h1>
           </div>

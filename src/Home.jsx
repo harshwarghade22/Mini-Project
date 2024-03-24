@@ -1,4 +1,3 @@
-import { FaArrowRightLong, FaRegCopyright } from "react-icons/fa6";
 import Layout2 from "./components/Layout2";
 import Layout1 from "./components/Layout1";
 import Footer from "./components/Footer";

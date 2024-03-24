@@ -7,6 +7,17 @@ export default {
   theme: {
 
     extend: {
+
+      colors: {
+        customGray: '#D9D9D9',
+        textGray: '#A9A9A9',
+        iconsWhite: '#F3F5F7',
+        borderGray: '#9B9B9B',
+        borderGray2: '#B3B3B3',
+        borderGray3 : '#BBBBBB',
+        borderblack: '#262626',
+        iconborder: '#434343'
+      },
       fontFamily:{
         gilroy_bold:["gilroy-bold","sans-serif"],
         gilroy_semi_bold:["gilroy-semi-bold","sans-serif"],
