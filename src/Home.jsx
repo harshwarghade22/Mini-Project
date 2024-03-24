@@ -9,14 +9,14 @@ export default function Home() {
         <Layout2 />
         <Layout1 />
       </div>
-      <div className="w-full h-[80vh] bg-zinc-100 flex flex-col">
+      <div className="w-full bg-zinc-100 flex flex-col">
         <div className="w-full h-[10vh] bg-zinc-100 flex flex-col justify-evenly">
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
         </div>
         <div className="w-full  bg-zinc-200 grid grid-cols-1 sm:grid-cols-2 min-[950px]:grid-cols-4 lg:grid-cols-4 gap-3 p-4">
           <div className="h-[16vh] mx-auto min-w-56  bg-zinc-50 flex flex-col flex-shrink-0 flex-wrap justify-evenly items-center rounded-md">
@@ -57,12 +57,12 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-[10vh] bg-zinc-100 flex flex-col justify-evenly">
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
-          <div className="h-[1vh] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
+          <div className="h-[7px] w-full bg-zinc-200"></div>
         </div>
       </div>
       {/* <div className='bg-zinc-50 h-screen w-full p-5 fit'>
@@ -95,7 +95,7 @@ export default function Home() {
                 </div>
 
             </div> */}
-      <div className="message h-[70vh] md:h-[90vh] w-screen  mt-[12vh] grid grid-rows-3 md:grid-cols-3 grid-cols-2 gap-0">
+      <div className="message h-[70vh] md:h-[90vh] w-screen grid grid-rows-3 md:grid-cols-3 grid-cols-2 gap-0">
         {/* Row 1, Column 1 */}
         <div
           className="border border-zinc-500 bg-orange-600 flex items-center"
