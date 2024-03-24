@@ -2,6 +2,8 @@ import React from "react";
 import Design from "./Design";
 import { FaArrowRightLong, FaRegCopyright } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import bed from "../icons/Beds-single-beds-open-graph-image 1.png";
+import kari from "../icons/kari-shea-tOVmshavtoo-unsplash 1.png";
 
 function Layout2() {
   return (
@@ -26,19 +28,11 @@ function Layout2() {
       </div>
       <div className="bg-zinc-500 grid grid-cols-3 gap-[2px] row-span-2">
         <div className="bg-zinc-50">
-          <img
-            className="object-contain p-2 h-full grayscale"
-            src="https://images.unsplash.com/photo-1665686377065-08ba896d16fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJpZW5kc3xlbnwwfHwwfHx8MA%3D%3D"
-            alt=""
-          />
+          <img className="object-contain h-full grayscale" src={bed} alt="" />
         </div>
         <div className="bg-zinc-50"></div>
         <div className="bg-zinc-50">
-          <img
-            className="object-cover p-2 h-full grayscale"
-            src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3ltfGVufDB8fDB8fHww"
-            alt=""
-          />
+          <img className="object-cover  h-full grayscale" src={kari} alt="" />
         </div>
       </div>
     </div>
