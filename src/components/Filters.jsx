@@ -1,10 +1,7 @@
 import React from "react";
-import Multiselect from "multiselect-react-dropdown";
 import { data } from "../data.js";
 import { useState } from "react";
 import Card from "./Card.jsx";
-import Arrow from "../components/Icons/Arrow.jsx";
-import FilterArrow from "../components/Icons/FilterArrow.jsx";
 import LocationSelect from "./location-select/LocationSelect.jsx";
 import PriceSelect from "./price-select/PriceSelect.jsx";
 import FilterBtn from "./filter-btn/FilterBtn.jsx";
@@ -49,7 +46,7 @@ function Hero() {
     <div className="py-4 px-4 ">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12">
         <div className="xl:col-span-1 col-span-1 my-4 lg:px-2 px-4">
-          <h1 className='lg:text-xl md:text-2xl text-2xl font-medium font-["Gilroy Medium"]'>
+          <h1 className="lg:text-xl md:text-2xl text-2xl font-medium font-gilroy_medium">
             Mumbai,
           </h1>
         </div>
@@ -95,7 +92,7 @@ function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto xl:px-4 px-2 ">
-        <h1 className="text-[#9B9B9B]  font-semibold text-2xl my-4">
+        <h1 className="text-borderGray font-semibold text-2xl my-4">
           <span className="">Spaces near </span>
           "Metro Station"
         </h1>
