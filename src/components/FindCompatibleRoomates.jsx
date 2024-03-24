@@ -3,7 +3,7 @@ import React from 'react'
 
 function FindCompatibleRoomates() {
   return (
-    <div><div className="message h-[70vh] md:h-[90vh] w-screen  mt-[12vh] grid grid-rows-3 md:grid-cols-3 grid-cols-2 gap-0">
+    <div><div className="message h-[70vh] md:h-[90vh] w-screen grid grid-rows-3 md:grid-cols-3 grid-cols-2 gap-0">
     {/* Row 1, Column 1 */}
     <div
       className="border border-zinc-500 bg-orange-600 flex items-center"
