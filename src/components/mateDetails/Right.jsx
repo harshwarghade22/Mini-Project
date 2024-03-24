@@ -24,14 +24,14 @@ import { IoMdCall } from "react-icons/io";
 function Right() {
   return (
     <div className="right lg:col-span-8 md:col-span-12  grid md:grid-rows-10 sm:my-0 my-8 px-4">
-      <div className="grid grid-cols-3  md:row-span-4 gap-4  border border-[#BBBBBB] p-4">
+      <div className="grid grid-cols-3  md:row-span-4 gap-4  border border-borderGray3 p-4">
         {/* //left col */}
         <div className="col-span-1 ">
           <img src={home1} alt="" />
 
           <div className="row-span-1 flex justify-center items-center gap-4 md:my-4 my-2 ">
             <img src={location} alt="" />
-            <h1 className="font-['Gilroy-Regular'] md:text-sm text-xs border-b border-black">
+            <h1 className="font-gilroy_regular md:text-sm text-xs border-b border-black">
               Bangalore,HSR Layout B40 001 10
             </h1>
           </div>
@@ -53,22 +53,22 @@ function Right() {
 
       <div className="md:row-span-6 my-8 px-4">
         <div className="grid sm:grid-cols-4 my-8 grid-cols-2 sm:flex justify-start items-center md:gap-12 sm:gap-8 gap-4 ">
-          <div className="rounded-full px-4 py-2   bg-[#F3F5F7] font-['Gilroy-SemiBold'] md:tect-lg text-base ">
+          <div className="rounded-full px-4 py-2   bg-iconsWhite font-gilroy_semi_bold md:tect-lg text-base ">
             Ammenities
           </div>
-          <div className="rounded-full px-4 py-2 bg-[#F3F5F7]  font-['Gilroy-SemiBold'] md:text-lg border-[#9B9B9B] border">
+          <div className="rounded-full px-4 py-2 bg-iconsWhite  font-gilroy_semi_bold md:text-lg border-borderGray border">
             Features
           </div>
-          <div className="rounded-full px-4 py-2 bg-[#F3F5F7]  font-['Gilroy-SemiBold'] md:text-lg border-[#9B9B9B] border">
+          <div className="rounded-full px-4 py-2 bg-iconsWhite  font-gilroy_semi_bold md:text-lg border-borderGray border">
             Mobility
           </div>
-          <div className="rounded-full px-4 py-2  bg-[#F3F5F7] font-['Gilroy-SemiBold'] md:text-lg border-[#9B9B9B] border">
+          <div className="rounded-full px-4 py-2  bg-iconsWhite font-gilroy_semi_bold md:text-lg border-borderGray border">
             Connectivity
           </div>
         </div>
 
-        <div className="grid md:grid-cols-12  gap-4 my-16 border-b border-[#9B9B9B] pb-12 bg-[#F3F5F7]">
-          <div className="icons lg:col-span-8 md:col-span-12 lg:border-r  border-[#B3B3B3] md:my-4  p-2">
+        <div className="grid md:grid-cols-12  gap-4 my-16 border-b border-borderGray pb-12 bg-iconsWhite">
+          <div className="icons lg:col-span-8 md:col-span-12 lg:border-r  border-borderGray2 md:my-4  p-2">
             <div className="flex flex-wrap  items-center gap-8">
               <div className="">
                 <img src={fridge} alt="" className="mx-auto" />
@@ -115,19 +115,19 @@ function Right() {
           </div>
 
           <div className="lg:col-span-4 md:col-span-12 m-auto flex flex-col justify-center items-center ">
-            <h1 className="font-['Gilroy-SemiBold'] md:text-base font-bold text-center mx-auto ">
+            <h1 className="font-gilroy_semi_bold md:text-base font-bold text-center mx-auto ">
               Furnish your space by your Hand
             </h1>
-            <button className="px-4 py-2 font-['Gilroy-Medium'] border border-[#262626] my-4">
+            <button className="px-4 py-2 font-gilroy_medium border border-borderblack my-4">
               Customize with avatar
             </button>
           </div>
         </div>
         <div className="flex lg:justify-end  justify-center items-center gap-4 ">
-          <button className="p-2 border border-[#434343]">
+          <button className="p-2 border border-iconborder">
             {<GoHeart className="text-2xl" />}
           </button>
-          <button className="p-2 border border-[#434343]">
+          <button className="p-2 border border-iconborder">
             {<IoMdCall className="text-2xl" />}
           </button>
           <button className="rounded-xl px-12 py-2 bg-black text-white">

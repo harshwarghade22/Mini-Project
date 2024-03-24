@@ -54,7 +54,7 @@ function Hero() {
           </h1>
         </div>
 
-        <div className="xl:col-span-8  md:col-span-12 px-4 lg:flex lg:justify-between justify-start ">
+        <div className="xl:col-span-11  md:col-span-12 px-4 lg:flex lg:justify-between justify-start ">
           <div className="my-4">
             <LocationSelect />
           </div>
