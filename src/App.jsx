@@ -8,7 +8,6 @@ import Check from "./components/Check";
 import Home from "./Home";
 import RoomatesListing from "./components/RoomatesListing";
 import Map from "./components/Map";
-import ReserveDate from "./components/ReserveDate";
 import MateDetails from "./components/mateDetails/MateDetails";
 
 const router = createBrowserRouter([
@@ -40,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/roomates",
     element: <RoomatesListing/>,
+  },
+  {
+    path: "/mateDetails",
+    element: <MateDetails/>,
   },
 
   {
