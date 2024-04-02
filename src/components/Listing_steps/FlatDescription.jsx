@@ -57,10 +57,15 @@ const FlatDescription = () => {
           <h1 className="font-gilroy_semi_bold text-lg text-[#2D2D2D] mt-4 mb-2">
             Size
           </h1>
-          <input
-            className="md:w-9/12  w-10/12 h-12 border-black border"
-            type="text"
-          />
+          <div className="relative">
+            <input
+              className="md:w-9/12 w-10/12 h-12 border-black border px-4"
+              type="text"
+            />
+            <span className="absolute top-0 lg:right-32 md:right-20  sm:right-28 right-20 p-3">
+              (sqs)
+            </span>
+          </div>
         </div>
 
         <div className="lg:col-span-7 md:col-span-8 col-span-12 md:my-0 my-8 ">
