@@ -100,9 +100,9 @@ function Hero() {
 
       <div className="max-w-7xl mx-auto  xl:grid-cols-3 lg:grid-cols-2 grid gap-8 mt-4">
         {filterData.map((item, index) => (
-          <Link to="/details">
+          <div >
             <Card key={item.id} data={item} />
-          </Link>
+          </div>
         ))}
       </div>
     </div>
