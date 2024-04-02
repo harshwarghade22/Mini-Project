@@ -32,7 +32,7 @@ function Card({ data }) {
       /> */}
       <div
         style={{ backgroundImage: `url(${carousel[currentIndx].url})` }}
-        className="w-full  h-[260px]  border border-gray-400 rounded-lg  bg-center bg-cover flex justify-end items-end rounded-xl"
+        className="w-full  h-[260px]  border border-gray-400   bg-center bg-cover flex justify-end items-end rounded-xl"
       >
         <div className=" w-full text-3xl flex justify-between items-center text-white opacity-60 px-4 mb-4">
           <IoIosArrowDropleftCircle

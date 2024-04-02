@@ -1,16 +1,10 @@
 import React from "react";
-import {
- 
-  icon7,
-  icon8,
-  icon9,
-  icon10,
-} from "../mateDetails/Icons";
+import { icon7, icon8, icon9, icon10 } from "../mateDetails/Icons";
 
 const SelectFeatureIcon = () => {
   return (
-    <div className="max-w-2xl md:my-4 my-6 bg-[#F3F5F7] p-2 ">
-      <h1 className="text-xl font-gilroy_semi_bold text-[#434343] mt-8 mb-4">
+    <div className="max-w-2xl md:my-4 my-6 bg-[#F3F5F7] p-4 ">
+      <h1 className="text-xl font-gilroy_semi_bold text-[#434343] sm:my-4 sm:mt-0 mt-4 mb-8 ">
         Select Features
       </h1>
       <div className="flex flex-wrap  items-center gap-8 ">

@@ -43,14 +43,14 @@ const Hero1 = () => {
         </h1>
       </div>
 
-      <div className="grid lg:grid-cols-12 gap-4 border rounded-lg border-[#9B9B9B] pl-4 py-2 my-8 ">
-        <div className="lg:col-span-8 md:col-span-6  col-span-full grid-rows-2 lg:px-0 px-4 ">
+      <div className="max-w-6xl grid lg:grid-cols-12 gap-4 border rounded-lg border-[#9B9B9B] px-2 py-2 my-8 ">
+        <div className="lg:col-span-8 md:col-span-6  col-span-full grid-rows-2 lg:px-1 px-4">
           <img
             className="rounded-lg md:w-full md:h-[268px] sm:w-[628px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 "
             src={item1}
             alt=""
           />
-          <div className="grid grid-cols-2 lg:gap-1  md:gap-2 gap-4">
+          <div className="grid grid-cols-2 lg:gap-1  md:gap-2 gap-2">
             <img
               className="rounded-lg lg:w-[358px] lg:h-[226px] md:w-[358px] md:h-[226px] sm:w-[358px] sm:h-[196px] w-[200px] h-[178px] md:object-cover object-scale-down"
               src={item2}
@@ -65,7 +65,7 @@ const Hero1 = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-4 md:col-span-6 col-span-full  grid grid-cols-2 lg:gap-0 md:gap-2 gap-4 lg:grid-cols-1  lg:pr-0 px-4 lg:my-0 my-8">
+        <div className="lg:col-span-4 md:col-span-6 col-span-full  grid grid-cols-2 lg:gap-0 md:gap-2 gap-4 lg:grid-cols-1  lg:px-1 px-4 lg:my-0 md:my-8 my-2">
           <img
             className="rounded-lg lg:w-[358px] lg:h-[265px] md:w-[358px] md:h-[226px] sm:w-[358px] sm:h-[196px] w-[200px] h-[178px] mb-3 md:object-cover object-scale-down"
             src={item3}
@@ -79,7 +79,7 @@ const Hero1 = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center my-8">
+      <div className="max-w-6xl flex justify-between items-center my-8">
         <button className="px-8 py-2 border-[#2C2C2C] border rounded-full flex justify-center items-center gap-2">
           <img src={arrow2} alt="" />
           Back
