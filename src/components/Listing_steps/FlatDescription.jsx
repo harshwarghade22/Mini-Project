@@ -19,17 +19,17 @@ const FlatDescription = () => {
         </div>
 
         <img className="" src={line} alt="" />
-       <Link to="/addImage">
-       <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
-          2
-        </div>
-       </Link>
+        <Link to="/addImage">
+          <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
+            2
+          </div>
+        </Link>
         <img className="" src={line} alt="" />
-       <Link to="/addDetails">
-       <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
-          3
-        </div>
-       </Link>
+        <Link to="/addDetails">
+          <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
+            3
+          </div>
+        </Link>
         <img className="" src={line} alt="" />
 
         <button className="px-4 py-2 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
@@ -45,19 +45,25 @@ const FlatDescription = () => {
       </div>
 
       <div className="grid md:grid-cols-12  my-4 px-4">
-        <div className="lg:col-span-5 md:col-span-4 col-span-4  grid ">
+        <div className="lg:col-span-5 md:col-span-4 col-span-12  grid ">
           <h1 className="font-gilroy_semi_bold text-lg text-[#2D2D2D] mb-2">
             Flat rent
           </h1>
-          <input className="w-10/12 h-12 border-black border" type="text" />
+          <input
+            className="md:w-10/12 w-full h-12 border-black border"
+            type="text"
+          />
 
           <h1 className="font-gilroy_semi_bold text-lg text-[#2D2D2D] mt-4 mb-2">
             Size
           </h1>
-          <input className="w-8/12 h-12 border-black border" type="text" />
+          <input
+            className="md:w-9/12  w-10/12 h-12 border-black border"
+            type="text"
+          />
         </div>
 
-        <div className="lg:col-span-7 md:col-span-8 col-span-8 md:my-0 my-8 ">
+        <div className="lg:col-span-7 md:col-span-8 col-span-12 md:my-0 my-8 ">
           <div className="">
             <h1 className="font-gilroy_semi_bold text-lg text-[#2D2D2D] mb-2">
               Flat
