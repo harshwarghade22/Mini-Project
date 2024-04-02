@@ -9,6 +9,9 @@ import Home from "./Home";
 import RoomatesListing from "./components/RoomatesListing";
 import Map from "./components/Map";
 import MateDetails from "./components/mateDetails/MateDetails";
+import Hero1 from "./components/Listing_steps/Hero1";
+import AddDetails from "./components/Listing_steps/AddDetails";
+import FlatDescription from "./components/Listing_steps/FlatDescription";
 
 const router = createBrowserRouter([
   {
@@ -34,20 +37,31 @@ const router = createBrowserRouter([
   {
     path: "/checkout",
     element: <Check />,
-    
   },
   {
     path: "/roomates",
-    element: <RoomatesListing/>,
+    element: <RoomatesListing />,
   },
   {
     path: "/mateDetails",
-    element: <MateDetails/>,
+    element: <MateDetails />,
   },
 
   {
     path: "/map",
-    element: <Map/>,
+    element: <Map />,
+  },
+  {
+    path: "/addImage",
+    element: <Hero1 />,
+  },
+  {
+    path: "/addDetails",
+    element: <AddDetails />,
+  },
+  {
+    path: "/flatDescription",
+    element: <FlatDescription />,
   },
 ]);
 
