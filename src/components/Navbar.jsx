@@ -36,7 +36,7 @@ function Navbar() {
         </a>
       </div>
       <div className="md:hidden">
-      <Dropdown/>
+       <Dropdown/>
       </div>
       
     </div>
