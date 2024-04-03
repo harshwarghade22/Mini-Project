@@ -14,9 +14,11 @@ const FlatDescription = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="top  flex justify-start items-center gap-1">
-        <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
-          1
-        </div>
+        <Link to="/addLocation">
+          <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
+            1
+          </div>
+        </Link>
 
         <img className="" src={line} alt="" />
         <Link to="/addImage">

@@ -11,9 +11,9 @@ function Map() {
     
 
     <div >
-      <MapContainer center={[18.435065 ,73.126017]} zoom={15} className='h-[480px]'> 
+      <MapContainer center={[19.124444791868637, 72.83796917369591]} zoom={17} className='h-[700px]'> 
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"/>
-        <Marker position={[18.435065 ,73.126017]}>
+        <Marker position={[19.124444791868637, 72.83796917369591]}>
             <Popup>
                 Your current position
             </Popup>

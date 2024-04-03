@@ -14,9 +14,11 @@ const Hero1 = () => {
   return (
     <div className="max-w-7xl  mx-auto py-4 px-4">
       <div className="top  flex justify-start items-center gap-1">
-        <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
-          1
-        </div>
+        <Link to="/addLocation">
+          <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
+            1
+          </div>
+        </Link>
         <img className="" src={line} alt="" />
         <button className="px-4 py-2 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           2 Images
@@ -36,14 +38,14 @@ const Hero1 = () => {
         </Link>
       </div>
 
-      <div className="flex justify-start items-baseline lg:mt-12 md:mt-10 mt-8  gap-4 ">
+      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-8 gap-4 ">
         <img className="w-10 h-10" src={home2} alt="" />
         <h1 className="text-3xl font-gilroy_semi_bold text-[#262626]">
           ADD IMAGES
         </h1>
       </div>
 
-      <div className="max-w-6xl grid lg:grid-cols-12 gap-4 border rounded-lg border-[#9B9B9B] px-2 py-2 my-8 ">
+      <div className="max-w-6xl grid lg:grid-cols-12 gap-4 border rounded-lg border-[#9B9B9B] px-2 py-2 my-8">
         <div className="lg:col-span-8 md:col-span-6  col-span-full grid-rows-2 lg:px-1 px-4">
           <img
             className="rounded-lg md:w-full md:h-[268px] sm:w-[628px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 "
@@ -80,10 +82,13 @@ const Hero1 = () => {
       </div>
 
       <div className="max-w-6xl flex justify-between items-center my-8">
-        <button className="px-8 py-2 border-[#2C2C2C] border rounded-full flex justify-center items-center gap-2">
-          <img src={arrow2} alt="" />
-          Back
-        </button>
+        <Link to="/addLocation">
+          <button className="px-8 py-2 border-[#2C2C2C] border rounded-full flex justify-center items-center gap-2">
+            <img src={arrow2} alt="" />
+            Back
+          </button>
+        </Link>
+        
         <Link to="/addDetails">
           {" "}
           <button className="px-8 py-2 bg-[#F45C2C] rounded-full text-white flex justify-center items-center gap-2">
