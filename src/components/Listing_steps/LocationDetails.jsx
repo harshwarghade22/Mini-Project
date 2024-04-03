@@ -6,6 +6,8 @@ import arrow1 from "../Images/Arrow 2.png";
 import arrow2 from "../Images/Arrow 21234.png";
 import Map from '../Map';
 import Find from '../../assets/Find';
+import { SearchLocation } from './IPComponents/SearchLocation';
+import { FlatName } from './IPComponents/FlatName';
 
 function LocationDetails() {
   return (
@@ -45,9 +47,11 @@ function LocationDetails() {
         <div className='relative h-full overflow-hidden'>
          <Map/>
         </div>
-        <div className='search w-[60%] h-[10%] mx-auto bg-slate-300 rounded-full flex items-center gap-3 pl-6'>
+        <div className='search w-[60%] h-[10%] mx-auto bg-slate-100 rounded-full flex items-center gap-3 pl-6'>
             <Find/>
-            <div className='font-gilroy_regular'>Search Location</div>
+            <div className='font-gilroy_regular'>
+              <SearchLocation/>
+            </div>
         </div>
       </div>
 

@@ -6,6 +6,10 @@ import line from "../Images/Line 98dash.png";
 import arrow1 from "../Images/Arrow 2.png";
 import arrow2 from "../Images/Arrow 21234.png";
 import Map from '../Map';
+import { FlatName } from './IPComponents/FlatName';
+import { Street } from './IPComponents/Street';
+import { LandMarks } from './IPComponents/LandMarks';
+import { SelectCountry } from './IPComponents/SelectCountry';
 
 function ConfirmAddress() {
   return (
@@ -39,25 +43,28 @@ function ConfirmAddress() {
           <h1 className='font-gilroy_semi_bold text-4xl'>Confirm Address</h1>
           <div className='h-[85%] mt-12 border border-black rounded-md flex-col'>
             <div className='h-[16.7%] border-b border-black flex items-center pl-5'>
-              <h1 className=''>FlatNo.</h1>
+              <div className='font-gilroy_regular'>
+                <FlatName />
+              </div>
             </div>
             <div className='h-[16.7%] border-b border-black flex items-center pl-5'>
-              <h1 className=''>Street/Locality etc</h1>
+              <Street/>
             </div>
             <div className='h-[16.7%] border-b border-black flex items-center pl-5'>
-              <h1 className=''>Landmarks</h1>
+              <LandMarks/>
             </div>
             <div className='h-[16.7%] border-b border-black flex-col pt-4 pl-5'>
-              <h1 className=''>City/District</h1>
-              <h1 className=''>Mumbai</h1>
+              <h1 className='font-gilroy_regular text-xs'>City/District</h1>
+              <h1 className='font-gilroy_bold text-lg'>Mumbai</h1>
             </div>
             <div className='h-[16.7%] border-b border-black flex-col pt-4 pl-5'>
-              <h1 className=''>State/UT</h1>
-              <h1 className=''>Maharashtra</h1>
+              <h1 className='font-gilroy_regular text-xs'>State/UT</h1>
+              <h1 className='font-gilroy_bold text-lg'>Maharashtra</h1>
             </div>
             <div className='h-[16.7%] flex-col pt-4 pl-5'>
-              <h1 className=''>Country</h1>
-              <h1 className=''>India</h1>
+              <h1 className='font-gilroy_regular text-xs'>Country</h1>
+              <h1 className='font-gilroy_bold text-lg'>India</h1>
+              {/* <SelectCountry/> */}
             </div>
           </div>
         </div>
