@@ -14,6 +14,7 @@ import AddDetails from "./components/Listing_steps/AddDetails";
 import FlatDescription from "./components/Listing_steps/FlatDescription";
 import LocationDetails from "./components/Listing_steps/LocationDetails";
 import ConfirmAddress from "./components/Listing_steps/ConfirmAddress";
+import Hero2 from "./components/Listing_steps/Hero2";
 
 const router = createBrowserRouter([
   {
@@ -55,16 +56,16 @@ const router = createBrowserRouter([
   },
   {
     path: "/addLocation",
-    element: <LocationDetails/>,
+    element: <LocationDetails />,
   },
   {
     path: "/addLocation/confirmAddress",
-    element: <ConfirmAddress/>,
+    element: <ConfirmAddress />,
   },
 
   {
     path: "/addImage",
-    element: <Hero1 />,
+    element: <Hero2 />,
   },
   {
     path: "/addDetails",

@@ -9,7 +9,6 @@ import Map from '../Map';
 import { FlatName } from './IPComponents/FlatName';
 import { Street } from './IPComponents/Street';
 import { LandMarks } from './IPComponents/LandMarks';
-import { SelectCountry } from './IPComponents/SelectCountry';
 
 function ConfirmAddress() {
   return (
