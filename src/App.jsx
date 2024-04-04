@@ -12,6 +12,8 @@ import MateDetails from "./components/mateDetails/MateDetails";
 import Hero1 from "./components/Listing_steps/Hero1";
 import AddDetails from "./components/Listing_steps/AddDetails";
 import FlatDescription from "./components/Listing_steps/FlatDescription";
+import LocationDetails from "./components/Listing_steps/LocationDetails";
+import ConfirmAddress from "./components/Listing_steps/ConfirmAddress";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,15 @@ const router = createBrowserRouter([
     path: "/map",
     element: <Map />,
   },
+  {
+    path: "/addLocation",
+    element: <LocationDetails/>,
+  },
+  {
+    path: "/addLocation/confirmAddress",
+    element: <ConfirmAddress/>,
+  },
+
   {
     path: "/addImage",
     element: <Hero1 />,
