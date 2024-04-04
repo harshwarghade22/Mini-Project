@@ -32,12 +32,12 @@ function Card({ data }) {
       /> */}
       <div
         style={{ backgroundImage: `url(${carousel[currentIndx].url})` }}
-        className="w-full  h-[260px]  border border-gray-400   bg-center bg-cover flex justify-end items-end rounded-xl"
+        className="w-full  h-[260px]  border border-gray-400   bg-center bg-cover flex justify-end items-end rounded-xl ease-in-out duration-500"
       >
         <div className=" w-full text-3xl flex justify-between items-center text-white opacity-60 px-4 mb-4">
           <IoIosArrowDropleftCircle
             onClick={prevSlide}
-            className="hover:scale-125  "
+            className="hover:scale-125   "
           />{" "}
           <IoIosArrowDroprightCircle
             onClick={nextSlide}
@@ -49,7 +49,7 @@ function Card({ data }) {
       <div className="grid grid-cols-6 gap-4 my-2">
         <div className="col-span-5">
           <Link to="/details">
-            <h1 className="md:text-lg sm:text-xl text-xl font-gilroy_medium border-b border-gray-800/70 my-2 hover:text-blue-600 ease-in-out duration-300 hover:scale-105">
+            <h1 className="md:text-lg sm:text-xl text-xl font-gilroy_medium border-b border-gray-800/70 my-2 hover:text-blue-400 ease-in-out duration-500 hover:scale-105">
               {data.name}, HSR Layout
             </h1>
           </Link>
