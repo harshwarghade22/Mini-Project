@@ -13,7 +13,7 @@ import FileUpload from "../File-upload/FileUpload";
 
 const Hero2 = () => {
   return (
-    <div className="max-w-7xl  mx-auto py-4 px-4">
+    <div className="max-w-5xl  mx-auto py-4 px-4">
       <div className="top  flex justify-start items-center gap-1">
         <Link to="/addLocation">
           <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">

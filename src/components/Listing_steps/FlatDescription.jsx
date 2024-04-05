@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const FlatDescription = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="max-w-5xl mx-auto px-4 py-8">
       <div className="top  flex justify-start items-center gap-1">
         <Link to="/addLocation">
           <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
