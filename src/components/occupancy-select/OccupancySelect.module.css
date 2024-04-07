@@ -1,0 +1,10 @@
+.root {
+    color: var(--btnBorderGray);
+    border-color: var(--btnBorderGray);
+    &:hover {
+        color: var(--btnBorderGray);
+    }
+    &[data-selected=true] {
+        border-width: 2px;
+    }
+}

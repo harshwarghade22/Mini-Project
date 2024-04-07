@@ -6,7 +6,7 @@ import DesignEveryday from "./components/DesignEveryday";
 import PlacesAvailable from "./components/PlacesAvailable";
 export default function Home() {
   return (
-    <div className="overflow-x-hidden font-gilroy_regular">
+    <div className="overflow-hidden font-gilroy_regular">
       <div className="h-screen w-full p-[1px] overflow-hidden">
         <Layout2 />
         <Layout1 />

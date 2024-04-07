@@ -15,6 +15,7 @@ import FlatDescription from "./components/Listing_steps/FlatDescription";
 import LocationDetails from "./components/Listing_steps/LocationDetails";
 import ConfirmAddress from "./components/Listing_steps/ConfirmAddress";
 import Hero2 from "./components/Listing_steps/Hero2";
+import MainSearch from "./MainSearch";
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
   {
     path: "/flatDescription",
     element: <FlatDescription />,
+  },
+  {
+    path: "/search",
+    element: <MainSearch />,
   },
 ]);
 

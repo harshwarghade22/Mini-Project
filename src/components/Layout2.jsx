@@ -1,6 +1,5 @@
-import React from "react";
 import Design from "./Design";
-import { FaArrowRightLong, FaRegCopyright } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import bed from "../icons/Beds-single-beds-open-graph-image 1.png";
 import kari from "../icons/kari-shea-tOVmshavtoo-unsplash 1.png";
@@ -11,18 +10,22 @@ function Layout2() {
       {/* Layout-2 */}
       <Design />
       <div className="bg-zinc-50 row-span-2 pt-4 ">
-        <div className="px-2 py-2 bg-zinc-200 drop-shadow-xl flex justify-evenly items-center mx-auto font-semibold max-w-[500px] rounded-full ">
-          <h1>Mumbai</h1>
-          <h1>|</h1>
-          <h1>1bhk</h1>
-          <h1>|</h1>
-          <h1>Mates</h1>
-          <h1>|</h1>
+        <div className="text-xs flex  justify-between bg-zinc-200 drop-shadow-xl max-w-[500px] mx-auto rounded-full px-2 py-1">
+          <div className="flex flex-col ml-3">
+            <h1 className="text-xl font-bold">Search location</h1>
+            <div className="flex gap-1 text-zinc-600 font-semibold">
+              <h1 className="">Mumbai</h1>
+              <h1>|</h1>
+              <h1>1bhk</h1>
+              <h1>|</h1>
+              <h1>Mates</h1>
+            </div>
+          </div>
           <Link
-            to="/carts"
-            className="bg-orange-600 text-white d rounded-full flex justify-evenly gap-2 p-1 items-center"
+            to="/search"
+            className="bg-orange-600 flex items-center font-bold text-white px-4 py-2 rounded-full"
           >
-            GO <FaArrowRightLong />
+            GO <FaArrowRightLong className="ml-2" />
           </Link>
         </div>
       </div>
