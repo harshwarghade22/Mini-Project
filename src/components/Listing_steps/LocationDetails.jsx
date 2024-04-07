@@ -36,14 +36,14 @@ function LocationDetails() {
         </Link>
       </div>
 
-      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-8  gap-4 ">
-        <img className="w-10 h-10" src={home2} alt="" />
+      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-4 gap-4 ">
+        <img className="w-10 h-10 hidden md:block" src={home2} alt="" />
         <h1 className="text-4xl font-gilroy_semi_bold text-[#262626]">
-          WHERE IS YOUR PLACE LOCATED ?
+          Where's your place located ?
         </h1>
       </div>
 
-      <div className='w-[936px] h-[480px] bg-slate-300 my-8'>
+      <div className='md:max-w-5xl h-[480px] bg-slate-300 my-4 md:my-8'>
         <div className='relative h-full overflow-hidden'>
          <Map/>
         </div>

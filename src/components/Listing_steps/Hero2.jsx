@@ -46,7 +46,7 @@ const Hero2 = () => {
         </h1>
       </div>
 
-      <div className="max-w-6xl grid lg:grid-cols-12 gap-4  border rounded-lg border-[#9B9B9B] px-4 py-4  my-8">
+      <div className="max-w-6xl grid lg:grid-cols-12 gap-4  border rounded-lg border-[#9B9B9B] px-4 py-4 my-8">
         <div className="lg:col-span-8 md:col-span-6  col-span-12 grid-rows-2 lg:px-1 px-4">
           <img
             className="rounded-lg md:w-full md:h-[268px] sm:w-[628px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 mb-4 "
