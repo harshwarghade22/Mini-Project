@@ -46,7 +46,7 @@ const FlatDescription = () => {
         </h1>
       </div>
 
-      <div className="grid md:grid-cols-12  my-4 px-4">
+      <div className="h-[300px] grid md:grid-cols-12  my-4 px-4">
         <div className="lg:col-span-5 md:col-span-4 col-span-12  grid ">
           <h1 className="font-gilroy_semi_bold text-lg text-[#2D2D2D] mb-2">
             Flat rent

@@ -39,14 +39,14 @@ const AddDetails = () => {
         </Link>
       </div>
 
-      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-8 gap-6 ">
+      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-9 gap-6 ">
         <img className="w-8 h-8" src={home2} alt="" />
         <h1 className="text-4xl font-gilroy_semi_bold text-[#262626]">Add Details</h1>
       </div>
 
   
 
-      <ScrollArea h={400} type="never" >
+      <ScrollArea h={520} type="never" >
         <SelectAmmenitiesIcons/>
         <SelectFeatureIcon/>
         <SelectFeatureIcon/>
@@ -56,13 +56,13 @@ const AddDetails = () => {
       
       <div className="max-w-5xl flex justify-between items-center my-8">
         <Link to="/addImage">
-          <button className="px-8 py-2 border-[#2C2C2C] border rounded-full flex justify-center items-center gap-2">
+          <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
             <img src={arrow2} alt="" />
             Back
           </button>
         </Link>
         <Link to="/flatDescription">
-          <button className="px-8 py-2 bg-[#F45C2C] rounded-full text-white flex justify-center items-center gap-2">
+          <button className="px-14 py-3 bg-[#F45C2C] rounded-lg text-white flex justify-center items-center gap-2">
             Next
             <img src={arrow1} alt="" />
           </button>

@@ -11,6 +11,7 @@ import Map from "./components/Map";
 import MateDetails from "./components/mateDetails/MateDetails";
 import Hero1 from "./components/Listing_steps/Hero1";
 import AddDetails from "./components/Listing_steps/AddDetails";
+import FlatDescription2 from "./components/Listing_steps/FlatDescription2";
 import FlatDescription from "./components/Listing_steps/FlatDescription";
 import LocationDetails from "./components/Listing_steps/LocationDetails";
 import ConfirmAddress from "./components/Listing_steps/ConfirmAddress";
@@ -74,7 +75,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/flatDescription",
-    element: <FlatDescription />,
+    element: <FlatDescription2 />,
   },
   {
     path: "/search",
