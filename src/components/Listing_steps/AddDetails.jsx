@@ -7,14 +7,20 @@ import arrow2 from "../Images/Arrow 21234.png";
 import { Link } from "react-router-dom";
 import SelectAmmenitiesIcons from "./SelectAmmenitiesIcons";
 import SelectFeatureIcon from "./SelectFeatureIcon";
+import NearbyPlaces from "./NearbyPlaces";
+import { ScrollArea } from '@mantine/core';
+import { MdNorthEast } from "react-icons/md";
+
 
 const AddDetails = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <div className="top  flex justify-start items-center gap-1">
-        <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
-          1
-        </div>
+    <div className="max-w-5xl mx-auto px-4 py-4">
+      <div className="top flex justify-start items-center gap-1">
+        <Link to="/addLocation">
+          <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
+            1
+          </div>
+        </Link>
         <img className="" src={line} alt="" />
         <Link to="/addImage">
           <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
@@ -33,14 +39,21 @@ const AddDetails = () => {
         </Link>
       </div>
 
-      <div className="flex justify-start items-baseline lg:mt-12 md:mt-10 mt-8  gap-4 ">
-        <img className="w-10 h-10" src={home2} alt="" />
-        <h1 className="text-3xl font-bold">ADD DETAILS</h1>
+      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-8 gap-6 ">
+        <img className="w-8 h-8" src={home2} alt="" />
+        <h1 className="text-4xl font-gilroy_semi_bold text-[#262626]">Add Details</h1>
       </div>
 
-      <SelectAmmenitiesIcons />
-      <SelectFeatureIcon />
+  
 
+      <ScrollArea h={400} type="never" >
+        <SelectAmmenitiesIcons/>
+        <SelectFeatureIcon/>
+        <SelectFeatureIcon/>
+        {/* <NearbyPlaces/> */}
+        {/* <NearbyPlaces/> */}
+      </ScrollArea>
+      
       <div className="max-w-5xl flex justify-between items-center my-8">
         <Link to="/addImage">
           <button className="px-8 py-2 border-[#2C2C2C] border rounded-full flex justify-center items-center gap-2">

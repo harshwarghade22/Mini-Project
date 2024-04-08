@@ -9,10 +9,11 @@ import item5 from "../Images/Group 48096859imgadd1212.png";
 import arrow1 from "../Images/Arrow 2.png";
 import arrow2 from "../Images/Arrow 21234.png";
 import { Link } from "react-router-dom";
+import FileUpload from "../File-upload/FileUpload";
 
-const Hero1 = () => {
+const Hero2 = () => {
   return (
-    <div className="max-w-7xl  mx-auto py-4 px-4">
+    <div className="max-w-5xl  mx-auto py-4 px-4">
       <div className="top  flex justify-start items-center gap-1">
         <Link to="/addLocation">
           <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
@@ -45,39 +46,32 @@ const Hero1 = () => {
         </h1>
       </div>
 
-      <div className="max-w-6xl grid lg:grid-cols-12 gap-4 border rounded-lg border-[#9B9B9B] px-2 py-2 my-8">
-        <div className="lg:col-span-8 md:col-span-6  col-span-full grid-rows-2 lg:px-1 px-4">
+      <div className="max-w-6xl grid lg:grid-cols-12 gap-4  border rounded-lg border-[#9B9B9B] px-4 py-4  my-8">
+        <div className="lg:col-span-8 md:col-span-6  col-span-12 grid-rows-2 lg:px-1 px-4">
           <img
-            className="rounded-lg md:w-full md:h-[268px] sm:w-[628px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 "
+            className="rounded-lg md:w-full md:h-[268px] sm:w-[628px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 mb-4 "
             src={item1}
             alt=""
           />
-          <div className="grid grid-cols-2 lg:gap-1  md:gap-2 gap-2">
+          <div className="grid grid-cols-2  gap-4">
             <img
-              className="rounded-lg lg:w-[358px] lg:h-[226px] md:w-[358px] md:h-[226px] sm:w-[358px] sm:h-[196px] w-[200px] h-[178px] md:object-cover object-scale-down"
+              className="rounded-lg w-full h-full  md:object-cover object-scale-down"
               src={item2}
               alt=""
             />
-
-            <img
-              className="rounded-lg lg:w-[358px] lg:h-[226px] md:w-[358px] md:h-[226px] sm:w-[358px] sm:h-[196px] w-[200px] h-[178px] md:object-cover object-scale-down"
-              src={item4}
-              alt=""
-            />
+            <FileUpload />
           </div>
         </div>
 
-        <div className="lg:col-span-4 md:col-span-6 col-span-full  grid grid-cols-2 lg:gap-0 md:gap-2 gap-4 lg:grid-cols-1  lg:px-1 px-4 lg:my-0 md:my-8 my-2">
+        <div className="lg:col-span-4 md:col-span-6 col-span-12  grid  lg:grid-cols-1 grid-cols-2 gap-4 px-4">
           <img
-            className="rounded-lg lg:w-[358px] lg:h-[265px] md:w-[358px] md:h-[226px] sm:w-[358px] sm:h-[196px] w-[200px] h-[178px] mb-3 md:object-cover object-scale-down"
+            className=" rounded-lg w-full h-full mb-6  md:object-cover object-scale-down"
             src={item3}
             alt=""
           />
-          <img
-            className="rounded-lg lg:w-[358px] lg:h-[226px] md:w-[358px] md:h-[226px] sm:w-[358px] sm:h-[196px] w-[200px] h-[178px] md:object-cover object-scale-down"
-            src={item5}
-            alt=""
-          />
+          <div className=" w-full h-full ">
+            <FileUpload />
+          </div>
         </div>
       </div>
 
@@ -88,7 +82,7 @@ const Hero1 = () => {
             Back
           </button>
         </Link>
-        
+
         <Link to="/addDetails">
           {" "}
           <button className="px-8 py-2 bg-[#F45C2C] rounded-full text-white flex justify-center items-center gap-2">
@@ -101,4 +95,4 @@ const Hero1 = () => {
   );
 };
 
-export default Hero1;
+export default Hero2;

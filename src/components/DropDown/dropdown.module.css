@@ -1,0 +1,9 @@
+/* styles.css */
+.dropdownMenu {
+    max-height: calc(100vh - 20px); /* Adjust the value according to your needs */
+  }
+  
+  .menuItem {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  }
+  

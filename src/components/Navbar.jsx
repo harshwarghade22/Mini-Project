@@ -22,6 +22,9 @@ function Navbar() {
         <a href="">
           <div className="hover:text-black text-sm">Services</div>
         </a>
+        <a href="/addLocation">
+          <div className="hover:text-black text-sm">ListProperty</div>
+        </a>
       </div>
       <div className="hidden md:block">
         <a href="">
@@ -36,7 +39,7 @@ function Navbar() {
         </a>
       </div>
       <div className="md:hidden">
-      <Dropdown/>
+       <Dropdown/>
       </div>
       
     </div>

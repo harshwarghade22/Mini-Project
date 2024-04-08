@@ -19,33 +19,15 @@ function RoomatesListing() {
         <FilterBtn />
       </div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4  md:grid-cols-3 gap-8 mt-10">
-        <Link to="/mateDetails">
-          <RoomateCard />
-        </Link>
-        <Link to="/mateDetails">
-          <RoomateCard />
-        </Link>
-        <Link to="/mateDetails">
-          <RoomateCard />
-        </Link>
-        <Link to="/mateDetails">
-          <RoomateCard />
-        </Link>
-        <Link to="/mateDetails">
-          <RoomateCard />
-        </Link>
-        <Link to="/mateDetails">
-          <RoomateCard />
-        </Link>
-        <Link to="/mateDetails">
-          <RoomateCard />
-        </Link>
-        <Link to="/mateDetails">
-          <RoomateCard />
-        </Link>
-        <Link to="/mateDetails">
-          <RoomateCard />
-        </Link>
+        <RoomateCard/>
+        <RoomateCard/>
+        <RoomateCard/>
+        <RoomateCard/>
+        <RoomateCard/>
+        <RoomateCard/>
+        <RoomateCard/>
+        <RoomateCard/>
+        
       </div>
     </div>
   );

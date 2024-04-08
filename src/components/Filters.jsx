@@ -1,21 +1,19 @@
 import React, { useEffect } from "react";
-import { data } from "../data.js";
 import { useState } from "react";
 import Card from "./Card.jsx";
 import LocationSelect from "./location-select/LocationSelect.jsx";
 import PriceSelect from "./price-select/PriceSelect.jsx";
 import FilterBtn from "./filter-btn/FilterBtn.jsx";
-import { Link } from "react-router-dom";
-
-import { getAllFlats } from "../serverAPI/flats/api.js";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 
 function Hero() {
     const serverURL = import.meta.env.VITE_SERVER_URL
     const readAuthToken = import.meta.env.VITE_STRAPI_READ_AUTH_TOKEN
+    const params = useLocation()
 
-    const [listedProperties, setListedProperties] = useState(data);
-    const [filterData, setFilterData] = useState(data);
+    const [listedProperties, setListedProperties] = useState([]);
+    const [filterData, setFilterData] = useState([]);
     const [priceValue, setPriceValue] = useState("");
     const [Location, setLocation] = useState([
         "Mumbai",
@@ -27,10 +25,13 @@ function Hero() {
     useEffect(() => {
         async function fetchFlats() {
             try {
+                let { city, flatSize, occupancy } = params.state
+                let url = `flats?${city && `filters[$and][0][city][$eq]=${city}&`}${flatSize && `filters[$and][0][flatSize][$eq]=${flatSize}&`}${occupancy && `filters[$and][0][occupancy][$eq]=${occupancy}&`}populate=*`
+
                 let config = {
                     method: 'get',
                     maxBodyLength: Infinity,
-                    url: `${serverURL}/${getAllFlats}`,
+                    url: `${serverURL}/api/${url}`,
                     headers: {
                         'Authorization': readAuthToken
                     }
@@ -38,7 +39,13 @@ function Hero() {
 
                 const res = await axios.request(config)
 
-                console.log(res.data)
+                res.data.data.forEach(item => {
+                    item.attributes.slides = item.attributes.slides.data.map(slide => ({ url: serverURL + slide.attributes.url }));
+                });
+
+
+                console.log(res.data.data)
+                setFilterData(res.data.data)
 
             } catch (err) {
                 console.log(err)
@@ -46,7 +53,7 @@ function Hero() {
         }
 
         fetchFlats();
-    })
+    }, [params])
 
 
     const handleLocationChange = (selectedLocations) => {
@@ -94,32 +101,6 @@ function Hero() {
                         <FilterBtn />
                     </div>
                 </div>
-
-                {/* <div className="xl:col-span-1 md:col-span-4 xl:p-4 py-10 px-4">
-          <button className="py-2 px-4  rounded-full bg-[#F45C2C] text-white font-medium  flex justify-between items-center">
-            Go <Arrow />
-          </button>
-        </div> */}
-
-                {/* <div className="xl:col-span-2 md:col-span-6 lg:px-0">
-          <div className="flex justify-between items-center  md:my-4  shadow-xl rounded-full xl:p-2 sm:px-8 px-6 py-4 ">
-            <div className=" ">
-              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-2xl text-2xl  text-center  font-['Gilroy-Medium'] tracking-tight ">
-                Mumbai
-              </h1>
-            </div>
-            <div className="border-r border-l  border-[#6F6F6F] xl:px-1 lg:px-16 md:px-4 sm:px-16 xs:px-2 px-2">
-              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-xl text-2xl text-center  font-['Gilroy-Medium'] tracking-tight  ">
-                1 BHK
-              </h1>
-            </div>
-            <div className="">
-              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-xl text-2xl  font-['Gilroy-Medium'] tracking-tight  ">
-                3 Mates
-              </h1>
-            </div>
-          </div>
-        </div> */}
             </div>
 
             <div className="max-w-7xl mx-auto xl:px-4 px-2 ">
@@ -131,9 +112,9 @@ function Hero() {
 
             <div className="max-w-7xl mx-auto  xl:grid-cols-3 lg:grid-cols-2 grid gap-8 mt-4">
                 {filterData.map((item, index) => (
-                    <Link to="/details">
-                        <Card key={item.id} data={item} />
-                    </Link>
+                    <div >
+                        <Card key={index} data={item} />
+                    </div>
                 ))}
             </div>
         </div>
