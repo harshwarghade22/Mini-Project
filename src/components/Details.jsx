@@ -78,7 +78,7 @@ function Details() {
 
         {/* <div className='w-2/5 border border-gray-400 rounded-lg bg-[url("https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg")] bg-center bg-cover grayscale'></div> */}
 
-        <div className='w-2/5 border border-gray-400 rounded-lg overflow-hidden'>
+        <div className='hidden md:block w-2/5 border border-gray-400 rounded-lg overflow-hidden'>
           <Map/>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Reserve2 from "./components/Reserve2";
 import Filters from "./components/Filters";
 import Check from "./components/Check";
 import Home from "./Home";
-import RoomatesListing from "./components/RoomatesListing";
+import RoomatesListing from "./components/mateDetails/RoomatesListing";
 import Map from "./components/Map";
 import MateDetails from "./components/mateDetails/MateDetails";
 import Hero1 from "./components/Listing_steps/Hero1";
