@@ -17,6 +17,9 @@ import LocationDetails from "./components/Listing_steps/LocationDetails";
 import ConfirmAddress from "./components/Listing_steps/ConfirmAddress";
 import Hero2 from "./components/Listing_steps/Hero2";
 import MainSearch from "./MainSearch";
+import Page1 from "./components/OnboardingPages/Page1";
+import Page2 from "./components/OnboardingPages/Page2";
+import Footer from "./components/Footer";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +83,14 @@ const router = createBrowserRouter([
   {
     path: "/search",
     element: <MainSearch />,
+  },
+  {
+    path: "/login1",
+    element: <Page1 />,
+  },
+  {
+    path: "/login2",
+    element: <Page2 />,
   },
 ]);
 

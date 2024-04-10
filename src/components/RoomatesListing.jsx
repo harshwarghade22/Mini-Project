@@ -18,7 +18,7 @@ function RoomatesListing() {
         <GenderSelect />
         <FilterBtn />
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4  md:grid-cols-3 gap-8 mt-10">
+      <div className="w-[85%] mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4  md:grid-cols-3 gap-8 mt-10">
         <RoomateCard/>
         <RoomateCard/>
         <RoomateCard/>

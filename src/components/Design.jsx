@@ -40,9 +40,6 @@ function Design() {
             <div className="h-full w-[2%] bg-zinc-200"></div>
             <div className="h-full w-[2%] bg-zinc-200"></div>
             <div className="h-full w-[2%] bg-zinc-200"></div>
-
-
-
         </div>
   )
 }
