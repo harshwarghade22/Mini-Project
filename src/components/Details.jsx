@@ -80,39 +80,39 @@ function Details() {
 
                 {/* <div className='w-2/5 border border-gray-400 rounded-lg bg-[url("https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg")] bg-center bg-cover grayscale'></div> */}
 
-                <div className='w-2/5 border border-gray-400 rounded-lg overflow-hidden'>
-                    <Map />
-                </div>
+        <div className='hidden md:block w-2/5 border border-gray-400 rounded-lg overflow-hidden'>
+          <Map/>
+        </div>
+      </div>
+      <div className="md:h-[100px] h-[200px] max-w-full mx-auto mt-6 border-b-2 border-t-2 flex p-5">
+        <div className="md:w-full w-[50vw] border-r-2 md:flex md:justify-between">
+          <div className="lg:w-[196px] h-[60px] bg-slate-200 rounded-full py-2 px-6 mb-4">
+            <p className="text-xs font-gilroy_light">Starts from</p>
+            <p className="text-xl font-gilroy_bold">Rs.10,000/mo</p>
+          </div>
+          <div className="h-[60px] bg-slate-200 rounded-full mr-4 flex md:justify-between justify-center items-center px-4 gap-2 ml-3">
+            <div className="text-3xl">
+              <MdGroups />
             </div>
-            <div className="md:h-[100px] h-[200px] max-w-full mx-auto mt-6 border-b-2 border-t-2 flex p-5">
-                <div className="md:w-full w-[50vw] border-r-2 md:flex md:justify-between">
-                    <div className="lg:w-[196px] h-[60px] bg-slate-200 rounded-full py-2 px-6 mb-4">
-                        <p className="text-xs font-gilroy_light">Starts from</p>
-                        <p className="text-xl font-gilroy_bold">Rs.{flat.attributes.price}/mo</p>
-                    </div>
-                    <div className="h-[60px] bg-slate-200 rounded-full mr-4 flex md:justify-between justify-center items-center px-4 gap-2 ml-3">
-                        <div className="text-3xl">
-                            <MdGroups />
-                        </div>
-                        <div className="text-gray-800">Roomates</div>
-                        <div className="gap-1 hidden md:flex">
-                            <div className='md:w-[50px] md:h-[50px] border border-black rounded-full bg-[url("https://images.unsplash.com/photo-1554126807-6b10f6f6692a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg")] bg-center bg-cover'></div>
-                            <div className='w-[50px] h-[50px] border border-black rounded-full bg-[url("https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg")] bg-center bg-cover'></div>
-                            <div className="w-[50px] h-[50px] border border-black rounded-full bg-gray-800">
-                                <p className="flex justify-center py-3 text-xl font-gilroy_light text-white">
-                                    VAC
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="w-3/5 lg:border-r-2 md:flex justify-center gap-5 lg:px-10 font-gilroy_medium md:p-0 p-5">
-                    <Link
-                        to="/reservedate"
-                        className="md:w-1/2 w-full md:h-full border h-1/2 rounded-md border-black flex justify-center items-center hover:bg-black hover:text-white mx-auto mb-2"
-                    >
-                        Scedule a visit
-                    </Link>
+            <div className="text-gray-800">Roomates</div>
+            <div className="gap-1 hidden md:flex">
+              <div className='md:w-[50px] md:h-[50px] border border-black rounded-full bg-[url("https://images.unsplash.com/photo-1554126807-6b10f6f6692a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg")] bg-center bg-cover'></div>
+              <div className='w-[50px] h-[50px] border border-black rounded-full bg-[url("https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg")] bg-center bg-cover'></div>
+              <div className="w-[50px] h-[50px] border border-black rounded-full bg-gray-800">
+                <p className="flex justify-center py-3 text-xl font-gilroy_light text-white">
+                  VAC
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-3/5 lg:border-r-2 md:flex justify-center gap-5 lg:px-10 font-gilroy_medium md:p-0 p-5">
+          <Link
+            to="/reservedate"
+            className="md:w-1/2 w-full md:h-full border h-1/2 rounded-md border-black flex justify-center items-center hover:bg-black hover:text-white mx-auto mb-2"
+          >
+            Scedule a visit
+          </Link>
 
                     <a
                         href="/reserve1"

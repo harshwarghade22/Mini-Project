@@ -74,6 +74,7 @@ const Hero2 = () => {
           </div>
         </div>
       </div>
+     
 
       <div className="max-w-6xl flex justify-between items-center my-5">
         <Link to="/addLocation">

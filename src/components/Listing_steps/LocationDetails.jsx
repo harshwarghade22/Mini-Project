@@ -12,7 +12,7 @@ import { FlatName } from './IPComponents/FlatName';
 function LocationDetails() {
   return (
     <div className="max-w-5xl mx-auto py-4 px-4">
-      <div className="top  flex justify-start items-center gap-1">
+      <div className="top flex justify-start items-center gap-1">
         <button className="px-4 py-2 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           1 Location
         </button>
@@ -36,7 +36,7 @@ function LocationDetails() {
         </Link>
       </div>
 
-      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-4 gap-4 ">
+      <div className="flex justify-start items-center md:mt-10 mt-4 gap-4 ">
         <img className="w-10 h-10 hidden md:block" src={home2} alt="" />
         <h1 className="text-4xl font-gilroy_semi_bold text-[#262626]">
           Where's your place located ?
