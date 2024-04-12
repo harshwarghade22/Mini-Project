@@ -28,8 +28,8 @@ const AddDetails = () => {
           </div>
         </Link>
         <img className="" src={line} alt="" />
-        <button className="px-4 py-2 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
-          3 Add Details
+        <button className="px-6 py-3 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
+          3 Details
         </button>
         <img className="" src={line} alt="" />
         <Link to="/flatDescription">
@@ -46,7 +46,7 @@ const AddDetails = () => {
 
   
 
-      <ScrollArea h={520} type="never" >
+      <ScrollArea h={520} >
         <SelectAmmenitiesIcons/>
         <SelectFeatureIcon/>
         <SelectFeatureIcon/>

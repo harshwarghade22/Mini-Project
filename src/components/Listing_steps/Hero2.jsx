@@ -21,7 +21,7 @@ const Hero2 = () => {
           </div>
         </Link>
         <img className="" src={line} alt="" />
-        <button className="px-4 py-2 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
+        <button className="px-5 py-3 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           2 Images
         </button>
         <img className="" src={line} alt="" />
