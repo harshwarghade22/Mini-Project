@@ -1,0 +1,29 @@
+.iconWrapper {
+    display: none !important;
+}
+
+.label {
+    padding-inline: 12px !important;
+    padding-block: 18px !important;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1B1B1B;
+    background-color: var(--background-chip);
+}
+
+.label:hover {
+    background-color: var(--background-chip);
+}
+
+.label[data-checked=true]:hover {
+    background-color: var(--mantine-color-gray-1);
+}
+
+.label[data-checked=true] {
+    color: #1B1B1B;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--mantine-color-gray-1);
+    border: 2px solid var(--borderGray);
+
+}

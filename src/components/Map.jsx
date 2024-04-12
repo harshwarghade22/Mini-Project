@@ -10,7 +10,7 @@ function Map() {
   return (
     
 
-    <div >
+    <div className='bg-center'>
       <MapContainer center={[19.124444791868637, 72.83796917369591]} zoom={17} className='h-[700px]'> 
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"/>
         <Marker position={[19.124444791868637, 72.83796917369591]}>

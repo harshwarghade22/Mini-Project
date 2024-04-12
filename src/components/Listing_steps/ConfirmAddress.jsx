@@ -37,10 +37,10 @@ function ConfirmAddress() {
         </Link>
       </div>
 
-      <div className='w-[1000px] h-[582px] mx-auto my-8 flex gap-8 '>
-        <div className='w-[45%] h-full'>
-          <h1 className='font-gilroy_semi_bold text-4xl'>Confirm Address</h1>
-          <div className='h-[85%] mt-12 border border-black rounded-md flex-col'>
+      <div className='max-w-5xl lg:w-[1000px] h-[582px] mx-auto my-4 flex flex-col md:flex-row gap-8 '>
+        <div className='max-w-5xl md:w-[45%] h-full'>
+          <h1 className='font-gilroy_semi_bold text-2xl md:text-4xl'>Confirm Address</h1>
+          <div className='h-[85%] mt-6 md:mt-12 border border-black rounded-md flex-col'>
             <div className='h-[16.7%] border-b border-black flex items-center pl-5'>
               <div className='font-gilroy_regular'>
                 <FlatName />
@@ -52,31 +52,31 @@ function ConfirmAddress() {
             <div className='h-[16.7%] border-b border-black flex items-center pl-5'>
               <LandMarks/>
             </div>
-            <div className='h-[16.7%] border-b border-black flex-col pt-4 pl-5'>
+            <div className='h-[16.7%] border-b border-black flex-col md:pt-4 pt-2 pl-5'>
               <h1 className='font-gilroy_regular text-xs'>City/District</h1>
               <h1 className='font-gilroy_bold text-lg'>Mumbai</h1>
             </div>
-            <div className='h-[16.7%] border-b border-black flex-col pt-4 pl-5'>
+            <div className='h-[16.7%] border-b border-black flex-col md:pt-4 pt-2 pl-5'>
               <h1 className='font-gilroy_regular text-xs'>State/UT</h1>
               <h1 className='font-gilroy_bold text-lg'>Maharashtra</h1>
             </div>
-            <div className='h-[16.7%] flex-col pt-4 pl-5'>
+            <div className='h-[16.7%] flex-col md:pt-4 pt-2 pl-5'>
               <h1 className='font-gilroy_regular text-xs'>Country</h1>
               <h1 className='font-gilroy_bold text-lg'>India</h1>
               {/* <SelectCountry/> */}
             </div>
           </div>
         </div>
-        <div className='w-[55%] border overflow-hidden'>
+        <div className='w-full md:w-[55%] border overflow-hidden'>
           <Map/>
         </div>
       </div>
 
       
 
-      <div className="max-w-6xl flex justify-between items-center my-8">
+      <div className="max-w-6xl flex justify-between items-center my-10">
         <Link to="/addLocation">
-          <button className="px-8 py-2 border-[#2C2C2C] border rounded-full flex justify-center items-center gap-2">
+          <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
             <img src={arrow2} alt=""/>
             Back
           </button>
@@ -84,7 +84,7 @@ function ConfirmAddress() {
         
         <Link to="/addImage">
           {" "}
-          <button className="px-8 py-2 bg-[#F45C2C] rounded-full text-white flex justify-center items-center gap-2">
+          <button className="px-14 py-3 bg-[#F45C2C] rounded-lg text-white flex justify-center items-center gap-2">
             Next
             <img src={arrow1} alt="" />
           </button>

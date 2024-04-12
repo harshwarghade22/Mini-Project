@@ -46,10 +46,10 @@ const Hero2 = () => {
         </h1>
       </div>
 
-      <div className="max-w-6xl grid lg:grid-cols-12 gap-4  border rounded-lg border-[#9B9B9B] px-4 py-4  my-8">
-        <div className="lg:col-span-8 md:col-span-6  col-span-12 grid-rows-2 lg:px-1 px-4">
+      <div className="max-w-6xl grid lg:grid-cols-12 gap-4 border rounded-lg border-[#9B9B9B] px-4 py-4 my-8">
+        <div className="lg:col-span-8 md:col-span-6 col-span-12 grid-rows-2 lg:px-1 px-4">
           <img
-            className="rounded-lg md:w-full md:h-[268px] sm:w-[628px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 mb-4 "
+            className="rounded-lg md:w-full md:h-[248px] sm:w-[628px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 mb-4 "
             src={item1}
             alt=""
           />
@@ -75,9 +75,9 @@ const Hero2 = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl flex justify-between items-center my-8">
+      <div className="max-w-6xl flex justify-between items-center my-5">
         <Link to="/addLocation">
-          <button className="px-8 py-2 border-[#2C2C2C] border rounded-full flex justify-center items-center gap-2">
+          <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
             <img src={arrow2} alt="" />
             Back
           </button>
@@ -85,7 +85,7 @@ const Hero2 = () => {
 
         <Link to="/addDetails">
           {" "}
-          <button className="px-8 py-2 bg-[#F45C2C] rounded-full text-white flex justify-center items-center gap-2">
+          <button className="px-14 py-3 bg-[#F45C2C] rounded-lg text-white flex justify-center items-center gap-2">
             Next
             <img src={arrow1} alt="" />
           </button>

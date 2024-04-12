@@ -34,3 +34,10 @@
 }
 
 
+:root {
+    --textBlack: #262626;
+    --bgMain: #F45C2C;
+    --borderGray: #9B9B9B;
+    --background-chip: #E6E6E6;
+    --btnBorderGray: #737373;
+}

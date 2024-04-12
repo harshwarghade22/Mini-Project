@@ -12,7 +12,7 @@ function Layout1() {
     const [size, setSize] = useState(0);
     const [mates, setMates] = useState(0);
 
-    const [city, setCity] = useState("");
+    const [state, setstate] = useState("");
     const [flatSize, setFlatSize] = useState("");
     const [occupancy, setOccupancy] = useState("");
 
@@ -28,7 +28,7 @@ function Layout1() {
 
     const handleChange = (label, value) => {
         if (label === "where") {
-            setCity(value)
+            setstate(value)
         } else if (label === "size") {
             setFlatSize(value)
         } else if (label === "mates") {
@@ -70,7 +70,7 @@ function Layout1() {
                     <div className="bg-white px-2 max-w-[520px]  flex  justify-evenly gap-[4px] drop-shadow-lg items-center rounded-full top-[45%] pt-2">
                         {/* Option input fields */}
                         {[
-                            { label: "Where", state: where, value: city },
+                            { label: "Where", state: where, value: state },
                             { label: "Size", state: size, value: flatSize },
                             { label: "Mates", state: mates, value: occupancy },
                         ].map((option, index) => (
@@ -90,7 +90,7 @@ function Layout1() {
                         {/* GO button */}
                         <Link
                             to="/carts"
-                            state={{ city, flatSize, occupancy }}
+                            state={{ state, flatSize, occupancy }}
                             className="bg-orange-600 flex justify-evenly gap-2 items-center px-2 py-1 font-semibold rounded-full text-white mb-2 flex-grow md:flex-grow-0"
                         >
                             GO

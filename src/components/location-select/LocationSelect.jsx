@@ -2,7 +2,7 @@ import { MultiSelect } from '@mantine/core';
 import { IoMdAdd } from "react-icons/io";
 import classes from "./LocationSelect.module.css";
 
-function LocationSelect() {
+function LocationSelect({setLocation}) {
     return (
         <MultiSelect
             classNames={{
@@ -15,7 +15,8 @@ function LocationSelect() {
             checkIconPosition='right'
             rightSection={<IoMdAdd fontSize={24} />}
             placeholder=""
-            data={['Borivali', 'Malad', 'Dahisar', 'Kurla', 'Bhanyandar Southern West', 'Bandra']}
+            data={['Borivali', 'Malad', 'Dahisar', 'Kurla', 'Bhanyandar Southern West', 'Bandra', 'Mumbai']}
+            onChange={(e) => { setLocation(e) }}
         />
     );
 }
