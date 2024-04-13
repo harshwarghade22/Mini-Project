@@ -9,6 +9,7 @@ import Map from "../Map";
 import { FlatName } from "./IPComponents/FlatName";
 import { Street } from "./IPComponents/Street";
 import { LandMarks } from "./IPComponents/LandMarks";
+import SimpleMap from "../Gmap/GMap";
 
 function ConfirmAddress() {
   return (
@@ -110,7 +111,8 @@ function ConfirmAddress() {
           </div>
         </div>
         <div className="w-full md:w-[55%] border overflow-hidden">
-          <Map />
+          {/* <Map /> */}
+          <SimpleMap/>
         </div>
       </div>
 
