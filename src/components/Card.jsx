@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 function Card({ data }) {
     const serverURL = import.meta.env.VITE_SERVER_URL
-    // const [carousel] = useState(data.attributes.slides.data.map(image => `${serverURL}${image.attributes.url}`));
-    const [carousel] = useState(['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2KOnvlTPQpatlX_VeYcN7Tn6WIF0ByRq0ZW3mRDd0iA&s'])
+    const [carousel] = useState(data.attributes.slides.data.map(image => `${serverURL}${image.attributes.url}`));
+    // const [carousel] = useState(['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2KOnvlTPQpatlX_VeYcN7Tn6WIF0ByRq0ZW3mRDd0iA&s'])
 
     const [currentIndx, setCurrentIndx] = useState(0);
 

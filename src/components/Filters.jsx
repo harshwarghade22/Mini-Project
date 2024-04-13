@@ -23,7 +23,7 @@ function Hero() {
             try {
                 let { state, flatSize, occupancy } = params.state
                 let url = `flats?${location.map(city => `filters[$or][0][$and][0][city][$eq]=${city}&`)}${state && `filters[$or][0][$and][1][state][$eq]=${state}&`}${flatSize && `filters[$or][0][$and][1][flatSize][$eq]=${flatSize}&`}${occupancy && `filters[$or][0][$and][1][occupancy][$eq]=${occupancy}&`}populate=*`
-
+                console.log(url)
                 let config = {
                     method: 'get',
                     maxBodyLength: Infinity,
