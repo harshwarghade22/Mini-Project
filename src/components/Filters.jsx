@@ -1,112 +1,138 @@
-import React from "react";
-import { data } from "../data.js";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import Card from "./Card.jsx";
 import LocationSelect from "./location-select/LocationSelect.jsx";
 import PriceSelect from "./price-select/PriceSelect.jsx";
 import FilterBtn from "./filter-btn/FilterBtn.jsx";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import axios from "axios";
 
 function Hero() {
-  const [listedProperties, setListedProperties] = useState(data);
-  const [filterData, setFilterData] = useState(data);
-  const [priceValue, setPriceValue] = useState("");
-  const [Location, setLocation] = useState([
-    "Mumbai",
-    "Andheri",
-    "Mira-Road",
-    "Borivali",
-  ]);
+    const serverURL = import.meta.env.VITE_SERVER_URL
+    const readAuthToken = import.meta.env.VITE_STRAPI_READ_AUTH_TOKEN
+    const params = useLocation()
 
-  const handleLocationChange = (selectedLocations) => {
-    const searchProperties = listedProperties.filter((property) =>
-      selectedLocations.some((location) =>
-        property.location.toLowerCase().includes(location.toLowerCase())
-      )
+    const [listedProperties, setListedProperties] = useState([]);
+    const [filterData, setFilterData] = useState([]);
+    const [priceValue, setPriceValue] = useState("");
+    const [location, setLocation] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        async function fetchFlats() {
+            try {
+                let { state, flatSize, occupancy } = params.state
+                let url = `flats?${location.map(city => `filters[$or][0][$and][0][city][$eq]=${city}&`)}${state && `filters[$or][0][$and][1][state][$eq]=${state}&`}${flatSize && `filters[$or][0][$and][1][flatSize][$eq]=${flatSize}&`}${occupancy && `filters[$or][0][$and][1][occupancy][$eq]=${occupancy}&`}populate=*`
+                console.log(url)
+                let config = {
+                    method: 'get',
+                    maxBodyLength: Infinity,
+                    url: `${serverURL}/api/${url}`,
+                    headers: {
+                        'Authorization': readAuthToken
+                    }
+                };
+
+                const res = await axios.request(config)
+
+                // res.data.data.forEach(item => {
+                //     item.attributes.slides = item.attributes.slides.data.map(slide => ({ url: serverURL + slide.attributes.url }));
+                // });
+
+                // console.log(res.data.data)
+                setFilterData(res.data.data)
+                setIsLoading(false);
+
+            } catch (err) {
+                console.log(err)
+                setIsLoading(false);
+            }
+        }
+
+        fetchFlats();
+    }, [params, location])
+
+
+    const handleLocationChange = (selectedLocations) => {
+        const searchProperties = listedProperties.filter((property) =>
+            selectedLocations.some((location) =>
+                property.location.toLowerCase().includes(location.toLowerCase())
+            )
+        );
+        setFilterData(searchProperties);
+    };
+
+    const priceChangeHandler = (e) => {
+        const selectedRange = e.target.value;
+        setPriceValue(selectedRange);
+
+        if (selectedRange) {
+            const [min, max] = selectedRange.split("-").map(Number);
+            const priceFilter = listedProperties.filter(
+                (item) => item.price >= min && item.price <= max
+            );
+            setFilterData(priceFilter);
+        } else {
+            setFilterData(listedProperties);
+        }
+    };
+
+    return (
+        isLoading ?
+            (<div className=" flex flex-1 justify-center items-center h-[80vh]">
+                <iframe src="https://lottie.host/embed/b20d59fa-5545-4b28-868a-928d04ac8649/NmBCzgR33r.json"></iframe>
+            </div >)
+
+            :
+
+            (<div className="py-4 px-4 ">
+                <div className="max-w-7xl mx-auto grid md:grid-cols-12">
+                    <div className="xl:col-span-1 col-span-1 my-4 lg:px-2 px-4">
+                        <h1 className="lg:text-xl md:text-2xl text-2xl font-medium font-gilroy_medium">
+                            Mumbai,
+                        </h1>
+                    </div>
+
+                    <div className="xl:col-span-11  md:col-span-12 px-4 lg:flex lg:justify-between justify-start ">
+                        <div className="my-4">
+                            <LocationSelect setLocation={setLocation} />
+                        </div>
+                        <div className="my-4">
+                            <PriceSelect />
+                        </div>
+                        <div className="my-4">
+                            {" "}
+                            <FilterBtn />
+                        </div>
+                    </div>
+                </div>
+
+                {filterData.length ?
+                    <>
+                        <div className="max-w-7xl mx-auto xl:px-4 px-2 ">
+                            <h1 className="text-borderGray font-semibold text-2xl my-4">
+                                <span className="">Spaces near </span>
+                                "Metro Station"
+                            </h1>
+                        </div>
+
+                        <div className="max-w-7xl mx-auto  xl:grid-cols-3 lg:grid-cols-2 grid gap-8 mt-4">
+                            {filterData.map((item, index) => (
+                                <div key={index}>
+                                    <Card key={index} data={item} />
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                    :
+                    <div className=" flex flex-1 justify-center items-center h-[80vh]">
+                        <h1 className="lg:text-3xl md:text-3xl text-2xl font-medium font-gilroy_medium tracking-wider">
+                            No Data...
+                        </h1>
+                    </div>
+                }
+            </div>)
     );
-    setFilterData(searchProperties);
-  };
-
-  const priceChangeHandler = (e) => {
-    const selectedRange = e.target.value;
-    setPriceValue(selectedRange);
-
-    if (selectedRange) {
-      const [min, max] = selectedRange.split("-").map(Number);
-      const priceFilter = listedProperties.filter(
-        (item) => item.price >= min && item.price <= max
-      );
-      setFilterData(priceFilter);
-    } else {
-      setFilterData(listedProperties);
-    }
-  };
-
-  return (
-    <div className="py-4 px-4 ">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-12">
-        <div className="xl:col-span-1 col-span-1 my-4 lg:px-2 px-4">
-          <h1 className="lg:text-xl md:text-2xl text-2xl font-medium font-gilroy_medium">
-            Mumbai,
-          </h1>
-        </div>
-
-        <div className="xl:col-span-11  md:col-span-12 px-4 lg:flex lg:justify-between justify-start ">
-          <div className="my-4">
-            <LocationSelect />
-          </div>
-          <div className="my-4">
-            <PriceSelect />
-          </div>
-          <div className="my-4">
-            {" "}
-            <FilterBtn />
-          </div>
-        </div>
-
-        {/* <div className="xl:col-span-1 md:col-span-4 xl:p-4 py-10 px-4">
-          <button className="py-2 px-4  rounded-full bg-[#F45C2C] text-white font-medium  flex justify-between items-center">
-            Go <Arrow />
-          </button>
-        </div> */}
-
-        {/* <div className="xl:col-span-2 md:col-span-6 lg:px-0">
-          <div className="flex justify-between items-center  md:my-4  shadow-xl rounded-full xl:p-2 sm:px-8 px-6 py-4 ">
-            <div className=" ">
-              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-2xl text-2xl  text-center  font-['Gilroy-Medium'] tracking-tight ">
-                Mumbai
-              </h1>
-            </div>
-            <div className="border-r border-l  border-[#6F6F6F] xl:px-1 lg:px-16 md:px-4 sm:px-16 xs:px-2 px-2">
-              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-xl text-2xl text-center  font-['Gilroy-Medium'] tracking-tight  ">
-                1 BHK
-              </h1>
-            </div>
-            <div className="">
-              <h1 className="xl:text-base lg:text-xl md:text-2xl sm:text-xl text-2xl  font-['Gilroy-Medium'] tracking-tight  ">
-                3 Mates
-              </h1>
-            </div>
-          </div>
-        </div> */}
-      </div>
-
-      <div className="max-w-7xl mx-auto xl:px-4 px-2 ">
-        <h1 className="text-borderGray font-semibold text-2xl my-4">
-          <span className="">Spaces near </span>
-          "Metro Station"
-        </h1>
-      </div>
-
-      <div className="max-w-7xl mx-auto  xl:grid-cols-3 lg:grid-cols-2 grid gap-8 mt-4">
-        {filterData.map((item, index) => (
-          <div >
-            <Card key={item.id} data={item} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
 }
 
 export default Hero;

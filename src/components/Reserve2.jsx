@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import { IoBed } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 import { BsCalendarDateFill } from "react-icons/bs";
-import Reserve from './Reserve';
+// import Reserve from './Reserve';
 import ReserveDate from './ReserveDate';
 
 
