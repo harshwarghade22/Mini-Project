@@ -20,6 +20,7 @@ import MainSearch from "./MainSearch";
 import Page1 from "./components/OnboardingPages/Page1";
 import Page2 from "./components/OnboardingPages/Page2";
 import Footer from "./components/Footer";
+import SimpleMap from "./components/Gmap/GMap";
 
 const router = createBrowserRouter([
   {
@@ -91,6 +92,10 @@ const router = createBrowserRouter([
   {
     path: "/login2",
     element: <Page2 />,
+  },
+  {
+    path: "/gmap",
+    element: <SimpleMap />,
   },
 ]);
 
