@@ -13,7 +13,7 @@ function LocationDetails() {
   return (
     <div className="max-w-5xl mx-auto py-4 px-4">
       <div className="top flex justify-start items-center gap-1">
-        <button className="px-4 py-2 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
+        <button className="px-4 py-3 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           1 Location
         </button>
         <img className="" src={line} alt="" />
@@ -55,11 +55,7 @@ function LocationDetails() {
         </div>
       </div>
 
-        
-
-
       
-
       <div className="max-w-6xl flex justify-between items-center my-8">
         <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
           <img src={arrow2} alt="" />
