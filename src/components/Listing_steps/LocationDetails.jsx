@@ -9,6 +9,7 @@ import Find from '../../assets/Find';
 import { SearchLocation } from './IPComponents/SearchLocation';
 import { FlatName } from './IPComponents/FlatName';
 import SimpleMap from '../Gmap/GMap';
+import MyComponent from '../Gmap/GMap2';
 
 function LocationDetails() {
   return (
@@ -47,7 +48,10 @@ function LocationDetails() {
       <div className='md:max-w-5xl h-[500px] bg-slate-300 my-4 md:my-5'>
         <div className='relative h-full overflow-hidden'>
          {/* <Map/> */}
-         <SimpleMap/>
+         {/* <SimpleMap/> */}
+         <MyComponent/>
+
+         
         </div>
         <div className='search w-[60%] h-[10%] mx-auto bg-slate-100 rounded-full flex items-center gap-3 pl-6'>
             <Find/>
