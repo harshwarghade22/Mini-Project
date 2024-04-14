@@ -1,40 +1,52 @@
-import React from "react";
-import { GoogleMap, useLoadScript, Marker, MarkerF } from "@react-google-maps/api";
-// import { REACT_APP_GOOGLE_MAPS_KEY } from "../constants/constants";
+import React from 'react'
+import { GoogleMap, MarkerF, useJsApiLoader } from '@react-google-maps/api';
 
+const containerStyle = {
+  width: '100%',
+  height: '100vh',
+  // margin:'auto',
+};
 
+const center = {
+  lat:  19.124444791868637,
+  lng:  72.83796917369591
+};
 
-export default function MapComponent () {
-    
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBi387FSuGElvwqJoprcpccJyL6M5oPeYM",
-  });
+function MyComponent() {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: "AIzaSyBi387FSuGElvwqJoprcpccJyL6M5oPeYM"
+  })
 
-  const mapRef = React.useRef();
-  const onMapLoad = React.useCallback((map) => {
-    mapRef.current = map;
-  }, []);
-  if (loadError) return "Error";
-  if (!isLoaded) return "Maps";
+  const [map, setMap] = React.useState(null)
 
-  
+  const onLoad = React.useCallback(function callback(map) {
+    // This is just an example of getting and using the map instance!!! don't just blindly copy!
+    const bounds = new window.google.maps.LatLngBounds(center);
+    map.fitBounds(bounds);
 
-  return (
-    <div style={{ marginTop: "50px" }}>
+    setMap(map)
+  }, [])
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null)
+  }, [])
+
+  return isLoaded ? (
       <GoogleMap
-        mapContainerStyle={{
-          height: "800px",
-        }}
-        center={[19.124444791868637,72.83796917369591]}
-        zoom={20}
-        onLoad={onMapLoad}
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={19}
+        onLoad={onLoad}
+        onUnmount={onUnmount}
       >
+        
         <MarkerF
-          position={[19.124444791868637,72.83796917369591]}
+          position={center}
           icon={"http://maps.google.com/mapfiles/ms/icons/green-dot.png"}
         />
       </GoogleMap>
-    </div>
-  );
-};
+  ) : <></>
+}
 
+export default React.memo(MyComponent)
