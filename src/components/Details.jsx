@@ -11,7 +11,7 @@ import { useFlatContext } from "../contexts/flatContext";
 
 function Details() {
     const serverURL = import.meta.env.VITE_SERVER_URL
-    const {flat} = useFlatContext();
+    const { flat } = useFlatContext();
 
     const [slides, setSlides] = useState([]);
     const [currentIndx, setCurrentIndx] = useState(0);
@@ -19,8 +19,8 @@ function Details() {
     useEffect(() => {
         function flatInfoSet() {
             try {
-                console.log(flat)
-                setSlides(flat.attributes.slides.data.map(image => `${serverURL}${image.attributes.url}`))
+                // console.log(flat)
+                setSlides(flat.attributes.slides.data.map(image => `${image.attributes.url}`))
             } catch (err) {
                 console.log(err);
             }
@@ -119,7 +119,7 @@ function Details() {
                             Amenities
                         </div>
                         <div className="md:ml-10 ml-4 md:mb-7 flex flex-wrap gap-4">
-                            {flat.attributes.amenities.data.map((item, index) => (
+                            {flat.attributes.amenities!=undefined && flat.attributes.amenities.data.map((item, index) => (
                                 <div className="w-[70px] h-[80px] flex flex-col justify-between items-center" key={index}>
                                     <div className="h-5/6 bg-white w-full flex justify-center items-center rounded-2xl">
                                         {amenities[item.attributes.amenity]}
@@ -148,7 +148,7 @@ function Details() {
                             Features
                         </div>
                         <div className="flex md:flex-row justify-start gap-7 px-10 py-5">
-                            {flat.attributes.features.data.map((item, index) => (
+                            {flat.attributes.features!=undefined && flat.attributes.features.data.map((item, index) => (
                                 <div className="w-[70px] h-[80px] flex flex-col justify-between items-center" key={index}>
                                     <div className="h-5/6 bg-white w-full flex justify-center items-center rounded-2xl">
                                         {features[item.attributes.feature]}
@@ -164,7 +164,7 @@ function Details() {
                             Mobility
                         </div>
                         <div className="flex md:flex-row justify-start gap-7 px-10">
-                            {flat.attributes.mobilities.data.map((item, index) => (
+                            {flat.attributes.mobilities!=undefined && flat.attributes.mobilities.data.map((item, index) => (
                                 <div className="w-[70px] h-[80px] flex flex-col justify-between items-center" key={index}>
                                     <div className="h-5/6 bg-white w-full flex justify-center items-center rounded-2xl">
                                         {mobilities[item.attributes.mobility]}
@@ -176,7 +176,7 @@ function Details() {
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     );
 }
 
