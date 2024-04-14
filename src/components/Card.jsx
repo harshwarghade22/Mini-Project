@@ -9,7 +9,7 @@ import { useFlatContext } from "../contexts/flatContext";
 function Card({ data }) {
     const serverURL = import.meta.env.VITE_SERVER_URL;
     const {setFlat} = useFlatContext();
-    const [carousel] = useState(data.attributes.slides.data.map(image => `${serverURL}${image.attributes.url}`));
+    const [carousel] = useState(data.attributes.slides.data.map(image => `${image.attributes.url}`));
     // const [carousel] = useState(['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2KOnvlTPQpatlX_VeYcN7Tn6WIF0ByRq0ZW3mRDd0iA&s'])
 
     const [currentIndx, setCurrentIndx] = useState(0);
@@ -27,6 +27,11 @@ function Card({ data }) {
         const indx = isFirstSlide ? carousel.length - 1 : currentIndx - 1;
         setCurrentIndx(indx);
     };
+
+    const setData = async(data) => {
+        await setFlat(data);
+    }
+
     return (
         <div className="w-full min-h-96 border shadow-xl flex flex-col my-4  rounded-lg  p-3">
             {/* <img
@@ -53,7 +58,7 @@ function Card({ data }) {
 
             <div className="grid grid-cols-6 gap-4 my-2">
                 <div className="col-span-5">
-                    <Link to="/details" onClick={() => {setFlat(data)}}>
+                    <Link to="/details" onClick={() => {setData(data)}}>
                         <h1 className="md:text-lg sm:text-xl text-xl font-gilroy_medium border-b border-gray-800/70 my-2 hover:text-blue-400 ease-in-out duration-500 hover:scale-105">
                             {data.attributes.name}, HSR Layout
                         </h1>
