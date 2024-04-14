@@ -21,6 +21,8 @@ import Page1 from "./components/OnboardingPages/Page1";
 import Page2 from "./components/OnboardingPages/Page2";
 import Footer from "./components/Footer";
 import SimpleMap from "./components/Gmap/GMap";
+import GMap2 from "./components/Gmap/GMap2";
+import MyComponent from "./components/Gmap/GMap2";
 
 const router = createBrowserRouter([
   {
@@ -95,11 +97,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/gmap",
-    element: <SimpleMap />,
+    element: <MyComponent />,
   },
 ]);
 
 function App() {
+
+  
   return (
     <>
       <Navbar />
