@@ -3,6 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "packageManager": "yarn@1.22.22",
     "scripts": {
         "dev": "vite",
         "start": "vite",
@@ -49,7 +50,6 @@
         "vite": "^5.1.4"
     },
     "engines": {
-        "node": "20.11.1",
-        "npm": "10.2.4"
+        "node": "20.11.1"
     }
 }
