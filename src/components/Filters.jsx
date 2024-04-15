@@ -1,34 +1,31 @@
-import React, { useContext, useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card.jsx";
 import LocationSelect from "./location-select/LocationSelect.jsx";
 import PriceSelect from "./price-select/PriceSelect.jsx";
 import FilterBtn from "./filter-btn/FilterBtn.jsx";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import axios from "axios";
 
 function Hero() {
-    const serverURL = import.meta.env.VITE_SERVER_URL
-    const readAuthToken = import.meta.env.VITE_STRAPI_READ_AUTH_TOKEN
-    const params = useLocation()
+    const serverURL = import.meta.env.VITE_SERVER_URL;
+    const readAuthToken = import.meta.env.VITE_STRAPI_READ_AUTH_TOKEN;
+    const params = useLocation();
 
     const [listedProperties, setListedProperties] = useState([]);
     const [filterData, setFilterData] = useState([]);
-    const [priceValue, setPriceValue] = useState("");
-    const [location, setLocation] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         async function fetchFlats() {
             try {
-                let { state, flatSize, occupancy } = params;
-                let url = `flats?${location.map(city => `filters[$or][0][$and][0][city][$eq]=${city}&`)}` +
-                          `${state ? `filters[$or][0][$and][1][state][$eq]=${state}&` : ''}` +
-                          `${flatSize ? `filters[$or][0][$and][1][flatSize][$eq]=${flatSize}&` : ''}` +
-                          `${occupancy ? `filters[$or][0][$and][1][occupancy][$eq]=${occupancy}&` : ''}` +
-                          `populate=*`;
+                const { state, flatSize, occupancy } = params;
+                let url = `flats?`;
+                if (state) url += `filters[$or][0][$and][1][state][$eq]=${state}&`;
+                if (flatSize) url += `filters[$or][0][$and][1][flatSize][$eq]=${flatSize}&`;
+                if (occupancy) url += `filters[$or][0][$and][1][occupancy][$eq]=${occupancy}&`;
+                url += `populate=*`;
                 console.log(url);
-                let config = {
+                const config = {
                     method: 'get',
                     maxBodyLength: Infinity,
                     url: `${serverURL}/api/${url}`,
@@ -36,20 +33,22 @@ function Hero() {
                         'Authorization': readAuthToken
                     }
                 };
-    
+
                 const res = await axios.request(config);
-                setListedProperties(res.data.data);
+                setFilterData(res.data.data);
                 setIsLoading(false);
             } catch (err) {
                 console.log(err);
                 setIsLoading(false);
             }
         }
-    
-        fetchFlats();
-    }, [params, location]);
-    
 
+        fetchFlats();
+    }, [params, serverURL, readAuthToken]);
+
+    useEffect(() => {
+        setFilterData(listedProperties);
+    }, [listedProperties]);
 
     const handleLocationChange = (selectedLocations) => {
         const searchProperties = listedProperties.filter((property) =>
@@ -62,8 +61,6 @@ function Hero() {
 
     const priceChangeHandler = (e) => {
         const selectedRange = e.target.value;
-        setPriceValue(selectedRange);
-
         if (selectedRange) {
             const [min, max] = selectedRange.split("-").map(Number);
             const priceFilter = listedProperties.filter(
@@ -74,6 +71,7 @@ function Hero() {
             setFilterData(listedProperties);
         }
     };
+    
 
     return (
         isLoading ?
@@ -93,10 +91,10 @@ function Hero() {
 
                     <div className="xl:col-span-11  md:col-span-12 px-4 lg:flex lg:justify-between justify-start ">
                         <div className="my-4">
-                            <LocationSelect setLocation={setLocation} />
+                            <LocationSelect setLocation={handleLocationChange} />
                         </div>
                         <div className="my-4">
-                            <PriceSelect />
+                            <PriceSelect onChange={priceChangeHandler} />
                         </div>
                         <div className="my-4">
                             {" "}

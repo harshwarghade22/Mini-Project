@@ -4,8 +4,6 @@ import home2 from "../Images/Vector2222.png";
 import item1 from "../Images/Rectangle 506v1111.png";
 import item2 from "../Images/Group 48096857v2222.png";
 import item3 from "../Images/Group 48096853v3333.png";
-import item4 from "../Images/Group 48096859imgadd.png";
-import item5 from "../Images/Group 48096859imgadd1212.png";
 import arrow1 from "../Images/Arrow 2.png";
 import arrow2 from "../Images/Arrow 21234.png";
 import { Link } from "react-router-dom";
@@ -93,7 +91,7 @@ const Hero2 = () => {
               />
             </div>
 
-            <div className="flex  flex-wrap gap-3 lg:my-2 my-8">
+            <div className="flex  flex-wrap gap-5 lg:my-2 my-8">
               <img
                 className=" rounded-lg lg:w-[350px] lg:h-[268px] md:w-[300px]  md:h-[268px] sm:w-[280px] sm:h-[268px] mb-6  object-cover object-center "
                 src={item3}

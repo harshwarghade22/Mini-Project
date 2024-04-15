@@ -15,7 +15,7 @@ import MyComponent from '../Gmap/GMap2';
 
 function ConfirmAddress() {
   return (
-    <div className="max-w-5xl mx-auto py-4 px-4">
+    <div className="max-w-6xl mx-auto py-4 px-4">
       <div className="top  flex justify-start items-center gap-1">
         <button className="px-4 py-3 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           1 Location
