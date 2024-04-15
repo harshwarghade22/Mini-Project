@@ -16,7 +16,7 @@ import { Input, ScrollArea } from "@mantine/core";
 
 function ConfirmAddress() {
   return (
-    <div className="max-w-6xl mx-auto py-4 px-4">
+    <div className="max-w-5xl mx-auto py-4">
       <div className="top  flex justify-start items-center gap-1">
         <button className="px-4 py-3 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           1 Location
@@ -42,19 +42,19 @@ function ConfirmAddress() {
       </div>
 
       
-      <div className="max-w-5xl lg:w-[1000px] h-[582px] mx-auto my-4 flex flex-col md:flex-row gap-6 md:gap-8 ">
-        <div className="max-w-5xl md:w-[45%] md:h-full h-[70%] ">
+      <div className="max-w-5xl lg:w-[1000px] h-[624px] md:h-[582px] mx-auto my-4 flex flex-col md:flex-row gap-6 md:gap-8 ">
+        <div className="max-w-6xl md:w-[45%] md:h-full h-[70%] ">
           <h1 className="font-gilroy_semi_bold text-2xl md:text-4xl hidden md:block">
             Confirm Address
           </h1>
-          <h1 className="font-gilroy_semi_bold text-4xl md:text-4xl block md:hidden">
+          <h1 className="font-gilroy_semi_bold text-4xl px-4 md:px-0 md:text-4xl block md:hidden">
             Where's your place
           </h1>
-          <h1 className="font-gilroy_semi_bold text-4xl pt-3 md:text-4xl block md:hidden">
+          <h1 className="font-gilroy_semi_bold text-4xl pt-3 px-4 md:px-0 md:text-4xl block md:hidden">
             located ?
           </h1>
 
-          <h1 className="font-gilroy_bold text-lg pt-7 px-5 block md:hidden">Confirm Address</h1>
+          <h1 className="font-gilroy_bold text-lg pt-7 px-5 md:px-0 block md:hidden">Confirm Address</h1>
           <div className="h-[60%] md:h-[85%] mt-2 md:mt-12 mx-5 md:mx-0 border border-black rounded-md flex-col">
             <div className="h-[16.7%] border-b border-black flex items-center pl-5">
               <div class="relative z-0 hidden md:block">
@@ -95,7 +95,6 @@ function ConfirmAddress() {
                 </label>
               </div>
               <div className="block md:hidden">
-              
               <Input variant="unstyled" placeholder="Street/Locality...etc" />
 
               </div>
@@ -145,9 +144,9 @@ function ConfirmAddress() {
       
       
 
-      <div className="max-w-6xl flex justify-between items-center my-10 mx-8 md:mx-0">
+      <div className="max-w-5xl flex justify-between items-center my-10 mx-8 md:mx-0">
         <Link to="/addLocation">
-          <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
+          <button className="md:px-14 px-5  md:py-3 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
             <img src={arrow2} alt="" />
             Back
           </button>
@@ -155,7 +154,7 @@ function ConfirmAddress() {
 
         <Link to="/addImage">
           {" "}
-          <button className="px-14 py-3 bg-[#F45C2C] rounded-lg text-white flex justify-center items-center gap-2">
+          <button className="md:px-14 md:py-3 px-5 py-3 bg-[#F45C2C] rounded-lg text-white flex justify-center items-center gap-2">
             Next
             <img src={arrow1} alt="" />
           </button>
