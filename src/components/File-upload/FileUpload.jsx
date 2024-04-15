@@ -42,7 +42,7 @@ function FileUpload() {
               style={{ position: "relative" }}
             >
               <img
-                className="rounded-lg w-full h-full  md:object-cover object-scale-down"
+                className="rounded-lg w-full h-[226px]  md:object-cover object-scale-down"
                 src={URL.createObjectURL(file)}
                 alt="Uploaded File"
               />

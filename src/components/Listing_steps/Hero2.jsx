@@ -10,6 +10,7 @@ import arrow1 from "../Images/Arrow 2.png";
 import arrow2 from "../Images/Arrow 21234.png";
 import { Link } from "react-router-dom";
 import FileUpload from "../File-upload/FileUpload";
+import { ScrollArea } from "@mantine/core";
 
 const Hero2 = () => {
   return (
@@ -39,41 +40,41 @@ const Hero2 = () => {
         </Link>
       </div>
 
-      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-8 gap-4 ">
+      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-8 gap-4 mb-4">
         <img className="w-10 h-10" src={home2} alt="" />
         <h1 className="text-3xl font-gilroy_semi_bold text-[#262626]">
           ADD IMAGES
         </h1>
       </div>
 
-      <div className="max-w-6xl grid lg:grid-cols-12 gap-4 border rounded-lg border-[#9B9B9B] px-4 py-4 my-8">
-        <div className="lg:col-span-8 md:col-span-6 col-span-12 grid-rows-2 lg:px-1 px-4">
-          <img
-            className="rounded-lg md:w-full md:h-[248px] sm:w-[628px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 mb-4 "
-            src={item1}
-            alt=""
-          />
-          <div className="grid grid-cols-2  gap-4">
+      <ScrollArea h={450} type="never">
+        <div className="max-w-6xl grid lg:grid-cols-12 gap-4 border rounded-lg border-[#9B9B9B] px-4 py-4 my-8">
+          <div className="lg:col-span-8 md:col-span-6 col-span-12 grid-rows-2 lg:px-1 px-4">
             <img
-              className="rounded-lg w-full h-full  md:object-cover object-scale-down"
-              src={item2}
+              className="rounded-lg md:w-full md:h-[248px] sm:w-[628px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 mb-4 "
+              src={item1}
               alt=""
             />
-            <FileUpload />
+            <div className="grid grid-cols-2  gap-4">
+              <img
+                className="rounded-lg w-full h-full  md:object-cover object-scale-down"
+                src={item2}
+                alt=""
+              />
+              <FileUpload />
+            </div>
           </div>
-        </div>
 
-        <div className="lg:col-span-4 md:col-span-6 col-span-12  grid  lg:grid-cols-1 grid-cols-2 gap-4 px-4">
-          <img
-            className=" rounded-lg w-full h-full mb-6  md:object-cover object-scale-down"
-            src={item3}
-            alt=""
-          />
-          <div className=" w-full h-full ">
-            <FileUpload />
+          <div className="lg:col-span-4 md:col-span-6 col-span-12  grid  lg:grid-cols-1 grid-cols-2 gap-4 px-4">
+            <img
+              className=" rounded-lg w-full h-full mb-6  md:object-cover object-scale-down"
+              src={item3}
+              alt=""
+            />
+           <FileUpload />
           </div>
         </div>
-      </div>
+      </ScrollArea>
 
       <div className="max-w-6xl flex justify-between items-center my-5">
         <Link to="/addLocation">
