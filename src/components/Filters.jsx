@@ -41,6 +41,7 @@ function Hero() {
 
                 // console.log(res.data.data)
                 setFilterData(res.data.data)
+                console.log(filterData);
                 setIsLoading(false);
 
             } catch (err) {
