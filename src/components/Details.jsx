@@ -8,6 +8,7 @@ import { amenities, features, mobilities } from "./Icons";
 import Map from "./Map";
 import { Link } from "react-router-dom";
 import { useFlatContext } from "../contexts/flatContext";
+import MyComponent from './Gmap/GMap2'
 
 function Details() {
     const serverURL = import.meta.env.VITE_SERVER_URL
@@ -69,6 +70,7 @@ function Details() {
                 <div className='hidden md:block w-2/5 border border-gray-400 rounded-lg overflow-hidden'>
                     {/* <Map/> */}
                     {/* <SimpleMap/> */}
+                    <MyComponent/>
                 </div>
             </div>
             <div className="md:h-[100px] h-[200px] max-w-full mx-auto mt-6 border-b-2 border-t-2 flex p-5">

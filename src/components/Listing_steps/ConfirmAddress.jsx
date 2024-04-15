@@ -11,6 +11,7 @@ import { Street } from "./IPComponents/Street";
 import { LandMarks } from "./IPComponents/LandMarks";
 import SimpleMap from "../Gmap/GMap";
 import MyComponent from '../Gmap/GMap2';
+import { Input, ScrollArea } from "@mantine/core";
 
 
 function ConfirmAddress() {
@@ -40,21 +41,27 @@ function ConfirmAddress() {
         </Link>
       </div>
 
-      <div className="max-w-5xl lg:w-[1000px] h-[582px] mx-auto my-4 flex flex-col md:flex-row gap-8 ">
-        <div className="max-w-5xl md:w-[45%] h-full">
-          <h1 className="font-gilroy_semi_bold text-2xl md:text-4xl">
+      
+      <div className="max-w-5xl lg:w-[1000px] h-[582px] mx-auto my-4 flex flex-col md:flex-row gap-6 md:gap-8 ">
+        <div className="max-w-5xl md:w-[45%] md:h-full h-[70%] ">
+          <h1 className="font-gilroy_semi_bold text-2xl md:text-4xl hidden md:block">
             Confirm Address
           </h1>
-          <div className="h-[85%] mt-6 md:mt-12 border border-black rounded-md flex-col">
-            <div className="h-[16.7%] border-b border-black flex items-center pl-5 ">
-              {/* <div className='font-gilroy_regular'>
-                <FlatName />
-              </div> */}
-              <div class="relative z-0">
+          <h1 className="font-gilroy_semi_bold text-4xl md:text-4xl block md:hidden">
+            Where's your place
+          </h1>
+          <h1 className="font-gilroy_semi_bold text-4xl pt-3 md:text-4xl block md:hidden">
+            located ?
+          </h1>
+
+          <h1 className="font-gilroy_bold text-lg pt-7 px-5 block md:hidden">Confirm Address</h1>
+          <div className="h-[60%] md:h-[85%] mt-2 md:mt-12 mx-5 md:mx-0 border border-black rounded-md flex-col">
+            <div className="h-[16.7%] border-b border-black flex items-center pl-5">
+              <div class="relative z-0 hidden md:block">
                 <input
                   type="text"
                   id="floating_standard"
-                  class="block  py-3.5 px-0 w-[400px] text-lg text-gray-900 bg-transparent border-0 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  class="block  py-3.5 px-0 w-[400px] text-lg text-gray-900 bg-transparent border-0 border-gray-300 appearance-none dark:text-white dark:border-gray-600  focus:outline-none focus:ring-0  peer"
                   placeholder=""
                 />
                 <label
@@ -64,9 +71,16 @@ function ConfirmAddress() {
                   Flat No./Apartment Name...etc
                 </label>
               </div>
+
+              <div className="block md:hidden">
+              
+              <Input variant="unstyled" placeholder="Flat No./Apartment Name...etc" />
+
+              </div>
+
             </div>
             <div className="h-[16.7%] border-b border-black flex items-center pl-5">
-            <div class="relative z-0">
+            <div class="relative z-0 hidden md:block">
                 <input
                   type="text"
                   id="floating_standard"
@@ -80,9 +94,14 @@ function ConfirmAddress() {
                   Street/Locality...etc
                 </label>
               </div>
+              <div className="block md:hidden">
+              
+              <Input variant="unstyled" placeholder="Street/Locality...etc" />
+
+              </div>
             </div>
             <div className="h-[16.7%] border-b border-black flex items-center pl-5">
-            <div class="relative z-0">
+            <div class="relative z-0 hidden md:block">
                 <input
                   type="text"
                   id="floating_standard"
@@ -95,32 +114,38 @@ function ConfirmAddress() {
                 >
                   Lanmarks...
                 </label>
+            </div>
+
+            <div className="block md:hidden">
+              
+              <Input variant="unstyled" placeholder="Lanmarks..." />
+
               </div>
+            
             </div>
-            <div className="h-[16.7%] border-b border-black flex-col md:pt-4 pt-2 pl-5">
+            <div className="h-[16.7%] border-b border-black md:pt-4 pt-0 pl-5">
               <h1 className="font-gilroy_regular text-xs">City/District</h1>
-              <h1 className="font-gilroy_bold text-lg">Mumbai</h1>
+              <h1 className="font-gilroy_bold md:text-lg text-base">Mumbai</h1>
             </div>
-            <div className="h-[16.7%] border-b border-black flex-col md:pt-4 pt-2 pl-5">
+            <div className="h-[16.7%] border-b border-black flex-col md:pt-4 pt-0 pl-5">
               <h1 className="font-gilroy_regular text-xs">State/UT</h1>
-              <h1 className="font-gilroy_bold text-lg">Maharashtra</h1>
+              <h1 className="font-gilroy_bold md:text-lg text-base">Maharashtra</h1>
             </div>
-            <div className="h-[16.7%] flex-col md:pt-4 pt-2 pl-5">
+            <div className="h-[16.7%] flex-col md:pt-4 pt-0 pl-5">
               <h1 className="font-gilroy_regular text-xs">Country</h1>
-              <h1 className="font-gilroy_bold text-lg">India</h1>
+              <h1 className="font-gilroy_bold md:text-lg text-base">India</h1>
               {/* <SelectCountry/> */}
             </div>
-          </div>
+          </div> 
         </div>
         <div className="w-full md:w-[55%] border overflow-hidden">
-          {/* <Map /> */}
-          {/* <SimpleMap/> */}
           <MyComponent/>
-          
         </div>
       </div>
+      
+      
 
-      <div className="max-w-6xl flex justify-between items-center my-10">
+      <div className="max-w-6xl flex justify-between items-center my-10 mx-8 md:mx-0">
         <Link to="/addLocation">
           <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
             <img src={arrow2} alt="" />

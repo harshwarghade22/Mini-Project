@@ -45,24 +45,19 @@ function LocationDetails() {
         </h1>
       </div>
 
-      <div className='md:max-w-5xl h-[500px] bg-slate-300 my-4 md:my-5'>
+      <div className='md:max-w-5xl h-[535px] md:h-[500px] bg-slate-300 my-4 md:my-5 relative'>
         <div className='relative h-full overflow-hidden'>
-         {/* <Map/> */}
-         {/* <SimpleMap/> */}
-         <MyComponent/>
-
-         
+          <MyComponent/>
         </div>
-        <div className='search w-[60%] h-[10%] mx-auto bg-slate-100 rounded-full flex items-center gap-3 pl-6'>
-            <Find/>
-            <div className='font-gilroy_regular'>
-              <SearchLocation/>
-            </div>
+        <div className='search w-[60%] h-[10%] mx-auto bg-slate-100 rounded-full flex items-center gap-3 pl-6 absolute top-6 left-0 right-0'>
+          <Find/>
+          <div className='font-gilroy_regular'>
+            <SearchLocation/>
+          </div>
         </div>
       </div>
 
-      
-      <div className="max-w-6xl flex justify-between items-center my-8">
+      <div className="max-w-6xl flex justify-between items-center my-8 mx-8 md:mx-0">
         <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
           <img src={arrow2} alt="" />
           Back

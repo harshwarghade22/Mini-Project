@@ -54,7 +54,7 @@ const AddDetails = () => {
         {/* <NearbyPlaces/> */}
       </ScrollArea>
       
-      <div className="max-w-5xl flex justify-between items-center my-8">
+      <div className="max-w-5xl flex justify-between items-center my-8 mx-4 md:mx-0">
         <Link to="/addImage">
           <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
             <img src={arrow2} alt="" />

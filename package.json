@@ -18,8 +18,8 @@
         "@tiptap/extension-link": "^2.2.4",
         "@tiptap/react": "^2.2.4",
         "@tiptap/starter-kit": "^2.2.4",
-        "clsx": "^2.1.0",
         "axios": "^1.6.8",
+        "clsx": "^2.1.0",
         "dayjs": "^1.11.10",
         "embla-carousel-react": "^8.0.0",
         "google-map-react": "^2.2.1",
@@ -46,7 +46,7 @@
         "postcss-preset-mantine": "^1.13.0",
         "postcss-simple-vars": "^7.0.1",
         "tailwindcss": "^3.4.1",
-        "vite": "^5.1.4"
+        "vite": "^5.2.8"
     },
     "engines": {
         "node": "20.11.1",
