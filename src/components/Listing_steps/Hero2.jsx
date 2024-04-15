@@ -14,6 +14,7 @@ import { ScrollArea } from "@mantine/core";
 
 const Hero2 = () => {
   return (
+    <>
     <div className="max-w-5xl  mx-auto py-4 px-4">
       <div className="top  flex justify-start items-center gap-1">
         <Link to="/addLocation">
@@ -74,12 +75,11 @@ const Hero2 = () => {
            <FileUpload />
           </div>
         </div>
-<<<<<<< HEAD
+
       </ScrollArea>
-=======
+
       </div>
      
->>>>>>> 090e70b5daa083773b2214f4d0019d98c7fda9c9
 
       <div className="max-w-6xl flex justify-between items-center my-5">
         <Link to="/addLocation">
@@ -97,7 +97,9 @@ const Hero2 = () => {
           </button>
         </Link>
       </div>
-    </div>
+   
+    
+    </>
   );
 };
 
