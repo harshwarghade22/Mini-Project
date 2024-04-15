@@ -21,9 +21,13 @@ function Hero() {
     useEffect(() => {
         async function fetchFlats() {
             try {
-                let { state, flatSize, occupancy } = params.state
-                let url = `flats?${location.map(city => `filters[$or][0][$and][0][city][$eq]=${city}&`)}${state && `filters[$or][0][$and][1][state][$eq]=${state}&`}${flatSize && `filters[$or][0][$and][1][flatSize][$eq]=${flatSize}&`}${occupancy && `filters[$or][0][$and][1][occupancy][$eq]=${occupancy}&`}populate=*`
-                console.log(url)
+                let { state, flatSize, occupancy } = params;
+                let url = `flats?${location.map(city => `filters[$or][0][$and][0][city][$eq]=${city}&`)}` +
+                          `${state ? `filters[$or][0][$and][1][state][$eq]=${state}&` : ''}` +
+                          `${flatSize ? `filters[$or][0][$and][1][flatSize][$eq]=${flatSize}&` : ''}` +
+                          `${occupancy ? `filters[$or][0][$and][1][occupancy][$eq]=${occupancy}&` : ''}` +
+                          `populate=*`;
+                console.log(url);
                 let config = {
                     method: 'get',
                     maxBodyLength: Infinity,
@@ -32,25 +36,19 @@ function Hero() {
                         'Authorization': readAuthToken
                     }
                 };
-
-                const res = await axios.request(config)
-
-                // res.data.data.forEach(item => {
-                //     item.attributes.slides = item.attributes.slides.data.map(slide => ({ url: serverURL + slide.attributes.url }));
-                // });
-
-                // console.log(res.data.data)
-                setFilterData(res.data.data)
+    
+                const res = await axios.request(config);
+                setListedProperties(res.data.data);
                 setIsLoading(false);
-
             } catch (err) {
-                console.log(err)
+                console.log(err);
                 setIsLoading(false);
             }
         }
-
+    
         fetchFlats();
-    }, [params, location])
+    }, [params, location]);
+    
 
 
     const handleLocationChange = (selectedLocations) => {

@@ -27,11 +27,11 @@ function FileUpload() {
         {(props) =>
           !file ? (
             <div
-              className="rounded-lg w-full h-full border-dashed  border-[1px]  border-black relative flex justify-center items-center "
+              className="rounded-lg lg:w-[350px] lg:h-[268px]   md:w-[300px] md:h-[268px] sm:w-[280p6] sm:h-[268px] border-dashed  border-[1px]  border-black relative flex justify-center items-center "
               {...props}
             >
               <Button
-                className={`w-full h-full rounded-lg  ${buttonStyles.button}`}
+                className={`lg:w-[350px] lg:h-[268px]   md:w-[300px] md:h-[268px] sm:w-[280px] sm:h-[268px] rounded-lg  ${buttonStyles.button}`}
               >
                 <MdOutlineAddAPhoto className="text-black text-center text-5xl opacity-20" />
               </Button>
@@ -42,7 +42,7 @@ function FileUpload() {
               style={{ position: "relative" }}
             >
               <img
-                className="rounded-lg w-full h-[226px]  md:object-cover object-scale-down"
+                className="rounded-lg w-[350px] h-[268px]   md:w-[300px] md:h-[268px] sm:w-[280px] sm:h-[268px] object-cover object-center"
                 src={URL.createObjectURL(file)}
                 alt="Uploaded File"
               />
