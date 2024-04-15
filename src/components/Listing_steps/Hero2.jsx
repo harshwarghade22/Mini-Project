@@ -22,7 +22,7 @@ const Hero2 = () => {
           </div>
         </Link>
         <img className="" src={line} alt="" />
-        <button className="px-4 py-2 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
+        <button className="px-5 py-3 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           2 Images
         </button>
         <img className="" src={line} alt="" />
@@ -74,7 +74,12 @@ const Hero2 = () => {
            <FileUpload />
           </div>
         </div>
+<<<<<<< HEAD
       </ScrollArea>
+=======
+      </div>
+     
+>>>>>>> 090e70b5daa083773b2214f4d0019d98c7fda9c9
 
       <div className="max-w-6xl flex justify-between items-center my-5">
         <Link to="/addLocation">

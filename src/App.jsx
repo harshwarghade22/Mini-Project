@@ -6,7 +6,7 @@ import Reserve2 from "./components/Reserve2";
 import Filters from "./components/Filters";
 import Check from "./components/Check";
 import Home from "./Home";
-import RoomatesListing from "./components/RoomatesListing";
+import RoomatesListing from "./components/mateDetails/RoomatesListing";
 import Map from "./components/Map";
 import MateDetails from "./components/mateDetails/MateDetails";
 import Hero1 from "./components/Listing_steps/Hero1";
@@ -17,6 +17,12 @@ import LocationDetails from "./components/Listing_steps/LocationDetails";
 import ConfirmAddress from "./components/Listing_steps/ConfirmAddress";
 import Hero2 from "./components/Listing_steps/Hero2";
 import MainSearch from "./MainSearch";
+import Page1 from "./components/OnboardingPages/Page1";
+import Page2 from "./components/OnboardingPages/Page2";
+import Footer from "./components/Footer";
+import SimpleMap from "./components/Gmap/GMap";
+import GMap2 from "./components/Gmap/GMap2";
+import MyComponent from "./components/Gmap/GMap2";
 
 const router = createBrowserRouter([
   {
@@ -81,9 +87,23 @@ const router = createBrowserRouter([
     path: "/search",
     element: <MainSearch />,
   },
+  {
+    path: "/login1",
+    element: <Page1 />,
+  },
+  {
+    path: "/login2",
+    element: <Page2 />,
+  },
+  {
+    path: "/gmap",
+    element: <MyComponent />,
+  },
 ]);
 
 function App() {
+
+  
   return (
     <>
       <Navbar />

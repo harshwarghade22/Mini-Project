@@ -8,12 +8,14 @@ import Map from '../Map';
 import Find from '../../assets/Find';
 import { SearchLocation } from './IPComponents/SearchLocation';
 import { FlatName } from './IPComponents/FlatName';
+import SimpleMap from '../Gmap/GMap';
+import MyComponent from '../Gmap/GMap2';
 
 function LocationDetails() {
   return (
     <div className="max-w-5xl mx-auto py-4 px-4">
-      <div className="top  flex justify-start items-center gap-1">
-        <button className="px-4 py-2 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
+      <div className="top flex justify-start items-center gap-1">
+        <button className="px-4 py-3 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           1 Location
         </button>
         <img className="" src={line} alt="" />
@@ -36,7 +38,7 @@ function LocationDetails() {
         </Link>
       </div>
 
-      <div className="flex justify-start items-center lg:mt-12 md:mt-10 mt-4 gap-4 ">
+      <div className="flex justify-start items-center md:mt-10 mt-4 gap-4 ">
         <img className="w-10 h-10 hidden md:block" src={home2} alt="" />
         <h1 className="text-4xl font-gilroy_semi_bold text-[#262626]">
           Where's your place located ?
@@ -45,7 +47,11 @@ function LocationDetails() {
 
       <div className='md:max-w-5xl h-[500px] bg-slate-300 my-4 md:my-5'>
         <div className='relative h-full overflow-hidden'>
-         <Map/>
+         {/* <Map/> */}
+         {/* <SimpleMap/> */}
+         <MyComponent/>
+
+         
         </div>
         <div className='search w-[60%] h-[10%] mx-auto bg-slate-100 rounded-full flex items-center gap-3 pl-6'>
             <Find/>
@@ -55,11 +61,7 @@ function LocationDetails() {
         </div>
       </div>
 
-        
-
-
       
-
       <div className="max-w-6xl flex justify-between items-center my-8">
         <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
           <img src={arrow2} alt="" />

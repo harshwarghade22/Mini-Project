@@ -27,7 +27,7 @@ function Navbar() {
         </a>
       </div>
       <div className="hidden md:block">
-        <a href="">
+        <a href="/login1">
           <div className="h-[39px] border border-black rounded-full flex justify-center items-center hover:bg-black hover:text-white">
             <div className="text-2xl pl-2">
               <CgProfile />

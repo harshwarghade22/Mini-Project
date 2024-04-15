@@ -24,26 +24,14 @@ const FlatDescription = () => {
 
   // Function to toggle the selected state of an occupancy option
   const toggleOccupancy = (occupancy) => {
-    if (selectedOccupancies.includes(occupancy)) {
-      setSelectedOccupancies(
-        selectedOccupancies.filter((item) => item !== occupancy)
-      );
-    } else {
-      setSelectedOccupancies([...selectedOccupancies, occupancy]);
-    }
+    setSelectedOccupancies(occupancy === selectedOccupancies ? null : occupancy);
   };
 
-  const [selectedRentOptions, setSelectedRentOptions] = useState([]);
+  const [selectedRentOptions, setSelectedRentOptions] = useState(null);
 
   // Function to toggle the selected state of a flat rent option
   const toggleRentOption = (option) => {
-    if (selectedRentOptions.includes(option)) {
-      setSelectedRentOptions(
-        selectedRentOptions.filter((item) => item !== option)
-      );
-    } else {
-      setSelectedRentOptions([...selectedRentOptions, option]);
-    }
+    setSelectedRentOptions(option === selectedRentOptions ? null : option);
   };
 
   return (
@@ -69,7 +57,7 @@ const FlatDescription = () => {
         </Link>
         <img className="" src={line} alt="" />
 
-        <button className="px-4 py-2 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
+        <button className="px-8 py-3 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           4 Flat Description
         </button>
       </div>
@@ -86,17 +74,18 @@ const FlatDescription = () => {
           <div className="w-2/5">
             <h1 className="text-2xl font-gilroy_semi_bold">Flat rent</h1>
             <input
-              className="w-full h-16 mt-2 bg-slate-100 rounded-md"
+              className="w-full pl-4 h-16 mt-2 text-xl font-gilroy_medium bg-slate-100 rounded-md border-none"
               type="text"
+              placeholder="Rs"
             />
           </div>
           <div className="w-2/5">
-            <h1 className="text-2xl font-gilroy_semi_bold">Flat rent</h1>
+            <h1 className="text-2xl font-gilroy_semi_bold">Flat</h1>
             <div className="flex justify-between gap-5">
               <button
                 className={`w-1/4 p-4 mt-2 border rounded-lg font-gilroy_medium ${
-                  selectedRentOptions.includes("1BHK")
-                    ? "border-black"
+                  selectedRentOptions === "1BHK"
+                    ? "border-2 border-black"
                     : "border-[#C4C4C4]"
                 }`}
                 onClick={() => toggleRentOption("1BHK")}
@@ -105,8 +94,8 @@ const FlatDescription = () => {
               </button>
               <button
                 className={`w-1/4 p-4 mt-2 border rounded-lg font-gilroy_medium ${
-                  selectedRentOptions.includes("2BHK")
-                    ? "border-black"
+                  selectedRentOptions === "2BHK"
+                    ? "border-2 border-black"
                     : "border-[#C4C4C4]"
                 }`}
                 onClick={() => toggleRentOption("2BHK")}
@@ -115,8 +104,8 @@ const FlatDescription = () => {
               </button>
               <button
                 className={`w-1/4 p-4 mt-2 border rounded-lg font-gilroy_medium ${
-                  selectedRentOptions.includes("3BHK")
-                    ? "border-black"
+                  selectedRentOptions === "3BHK"
+                    ? "border-2 border-black"
                     : "border-[#C4C4C4]"
                 }`}
                 onClick={() => toggleRentOption("3BHK")}
@@ -125,8 +114,8 @@ const FlatDescription = () => {
               </button>
               <button
                 className={`w-1/4 p-4 mt-2 border rounded-lg font-gilroy_medium ${
-                  selectedRentOptions.includes("4BHK")
-                    ? "border-black"
+                  selectedRentOptions === "4BHK"
+                    ? "border-2 border-black"
                     : "border-[#C4C4C4]"
                 }`}
                 onClick={() => toggleRentOption("4BHK")}
@@ -140,8 +129,9 @@ const FlatDescription = () => {
           <div className="w-2/5">
             <h1 className="text-2xl font-gilroy_semi_bold">Size</h1>
             <input
-              className="w-full h-16 mt-2 bg-slate-100 rounded-md"
+              className="w-full h-16 mt-2 pl-4 text-xl font-gilroy_medium bg-slate-100 rounded-md"
               type="text"
+              placeholder="(sqft)"
             />
           </div>
           <div className="w-2/5">
@@ -149,8 +139,8 @@ const FlatDescription = () => {
             <div className="flex justify-between gap-5">
               <button
                 className={`w-1/4 p-4 mt-2 border rounded-lg font-gilroy_medium ${
-                  selectedOccupancies.includes("Private")
-                    ? "border-black"
+                  selectedOccupancies==="Private"
+                    ? "border-2 border-black"
                     : "border-[#C4C4C4]"
                 }`}
                 onClick={() => toggleOccupancy("Private")}
@@ -159,8 +149,8 @@ const FlatDescription = () => {
               </button>
               <button
                 className={`w-1/4 p-4 mt-2 border rounded-lg font-gilroy_medium ${
-                  selectedOccupancies.includes("Double")
-                    ? "border-black"
+                  selectedOccupancies==="Double"
+                    ? "border-2 border-black"
                     : "border-[#C4C4C4]"
                 }`}
                 onClick={() => toggleOccupancy("Double")}
@@ -169,8 +159,8 @@ const FlatDescription = () => {
               </button>
               <button
                 className={`w-1/4 p-4 mt-2 border rounded-lg font-gilroy_medium ${
-                  selectedOccupancies.includes("Triple")
-                    ? "border-black"
+                  selectedOccupancies==="Triple"
+                    ? "border-2 border-black"
                     : "border-[#C4C4C4]"
                 }`}
                 onClick={() => toggleOccupancy("Triple")}
@@ -179,8 +169,8 @@ const FlatDescription = () => {
               </button>
               <button
                 className={`w-1/4 p-4 mt-2 border rounded-lg font-gilroy_medium ${
-                  selectedOccupancies.includes("Quadrapule")
-                    ? "border-black"
+                  selectedOccupancies==="Quadrapule"
+                    ? "border-2 border-black"
                     : "border-[#C4C4C4]"
                 }`}
                 onClick={() => toggleOccupancy("Quadrapule")}
