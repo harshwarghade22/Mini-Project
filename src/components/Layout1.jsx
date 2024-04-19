@@ -37,7 +37,7 @@ function Layout1() {
     }
 
     // Options data
-    const whereOptions = ["Bangalore", "Gurugram", "Chennai", "Mumbai"];
+    const whereOptions = ["bangalore", "gurugram", "chennai", "mumbai"];
     const sizeOptions = ["1BHK", "2BHK", "3BHK", "1RK"];
     const matesOptions = ["Single", "Double", "Triple", "Quadruple"];
 
@@ -88,14 +88,28 @@ function Layout1() {
                         ))}
 
                         {/* GO button */}
-                        <Link
-                            to="/carts"
-                            state={{ state, flatSize, occupancy }}
-                            className="bg-orange-600 flex justify-evenly gap-2 items-center px-2 py-1 font-semibold rounded-full text-white mb-2 flex-grow md:flex-grow-0"
-                        >
-                            GO
-                            <FaArrowRightLong />
-                        </Link>
+                        {
+                            (state == "" || flatSize == "" || occupancy == "") ? (
+                                <button
+                                    disabled={true}
+                                    onClick={() => console.log('hello')}
+                                    className="bg-orange-600 flex justify-evenly gap-2 items-center px-2 py-1 font-semibold rounded-full text-white mb-2 flex-grow md:flex-grow-0 cursor-not-allowed"
+                                >
+                                    GO
+                                    <FaArrowRightLong />
+                                </button>)
+                                :
+                                (
+                                    <Link
+                                        to="/carts"
+                                        state={{ state, flatSize, occupancy }}
+                                        className="bg-orange-600 flex justify-evenly gap-2 items-center px-2 py-1 font-semibold rounded-full text-white mb-2 flex-grow md:flex-grow-0"
+                                    >
+                                        GO
+                                        <FaArrowRightLong />
+                                    </Link>
+                                )
+                        }
                     </div>
 
                     {/* Option dropdowns */}

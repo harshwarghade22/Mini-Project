@@ -6,80 +6,76 @@ import PriceSelect from "./price-select/PriceSelect.jsx";
 import FilterBtn from "./filter-btn/FilterBtn.jsx";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
+import { getFlatDataFromFilter, getFlatDataFromQuery } from "../utils/qs.js";
+import { queryOptions, useQuery } from "@tanstack/react-query";
 
 function Hero() {
     const serverURL = import.meta.env.VITE_SERVER_URL
     const readAuthToken = import.meta.env.VITE_STRAPI_READ_AUTH_TOKEN
     const params = useLocation()
 
-    const [listedProperties, setListedProperties] = useState([]);
     const [filterData, setFilterData] = useState([]);
-    const [priceValue, setPriceValue] = useState("");
     const [location, setLocation] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    let { state, flatSize, occupancy } = params.state
+
+    
+    async function fetchFlats() {
+        let url;
+        if (location.length)
+            url = getFlatDataFromFilter(location)
+        else
+            url = getFlatDataFromQuery(state, flatSize, occupancy)
+
+        console.log(`${serverURL}/api/flats?${url}`)
+
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: `${serverURL}/api/flats?${url}`,
+            headers: {
+                'Authorization': readAuthToken
+            }
+        };
+
+        const res = await axios.request(config)
+        return res.data.data;
+    }
+
+    function groupOptions(key) {
+        return (
+            queryOptions({
+                queryKey: key,
+                queryFn: fetchFlats,
+                staleTime: 5 * 1000,
+            })
+        )
+    }
+
+    let {data: flatData, isPending: isLoading} = useQuery(groupOptions([state, flatSize, occupancy]))
 
     useEffect(() => {
-        async function fetchFlats() {
+        const fetchData = async () => {
             try {
-                let { state, flatSize, occupancy } = params.state
-                let url = `flats?${location.map(city => `filters[$or][0][$and][0][city][$eq]=${city}&`)}${state && `filters[$or][0][$and][1][state][$eq]=${state}&`}${flatSize && `filters[$or][0][$and][1][flatSize][$eq]=${flatSize}&`}${occupancy && `filters[$or][0][$and][1][occupancy][$eq]=${occupancy}&`}populate=*`
-                console.log(url)
-                let config = {
-                    method: 'get',
-                    maxBodyLength: Infinity,
-                    url: `${serverURL}/api/${url}`,
-                    headers: {
-                        'Authorization': readAuthToken
-                    }
-                };
-
-                const res = await axios.request(config)
-
-                // res.data.data.forEach(item => {
-                //     item.attributes.slides = item.attributes.slides.data.map(slide => ({ url: serverURL + slide.attributes.url }));
-                // });
-
-                // console.log(res.data.data)
-                setFilterData(res.data.data)
-                console.log(filterData);
-                setIsLoading(false);
-
-            } catch (err) {
-                console.log(err)
-                setIsLoading(false);
+                const res = await fetchFlats();
+                console.log(res)
+                setFilterData(res)
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            } finally {
+                isLoading = false
             }
-        }
+        };
+        isLoading = true
+        fetchData();
+    }, [location])
 
-        fetchFlats();
-    }, [params, location])
+    useEffect(() => {
+        setFilterData(flatData)
+    },[flatData, isLoading])
 
-
-    const handleLocationChange = (selectedLocations) => {
-        const searchProperties = listedProperties.filter((property) =>
-            selectedLocations.some((location) =>
-                property.location.toLowerCase().includes(location.toLowerCase())
-            )
-        );
-        setFilterData(searchProperties);
-    };
-
-    const priceChangeHandler = (e) => {
-        const selectedRange = e.target.value;
-        setPriceValue(selectedRange);
-
-        if (selectedRange) {
-            const [min, max] = selectedRange.split("-").map(Number);
-            const priceFilter = listedProperties.filter(
-                (item) => item.price >= min && item.price <= max
-            );
-            setFilterData(priceFilter);
-        } else {
-            setFilterData(listedProperties);
-        }
-    };
 
     return (
-        isLoading ?
+        (isLoading) ?
             (<div className=" flex flex-1 justify-center items-center h-[80vh]">
                 <iframe src="https://lottie.host/embed/b20d59fa-5545-4b28-868a-928d04ac8649/NmBCzgR33r.json"></iframe>
             </div >)
@@ -108,7 +104,7 @@ function Hero() {
                     </div>
                 </div>
 
-                {filterData.length ?
+                {(filterData!= undefined && filterData.length) ?
                     <>
                         <div className="max-w-7xl mx-auto xl:px-4 px-2 ">
                             <h1 className="text-borderGray font-semibold text-2xl my-4">

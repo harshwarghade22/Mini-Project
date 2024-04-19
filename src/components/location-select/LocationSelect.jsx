@@ -15,8 +15,8 @@ function LocationSelect({setLocation}) {
             checkIconPosition='right'
             rightSection={<IoMdAdd fontSize={24} />}
             placeholder=""
-            data={['Borivali', 'Malad', 'Dahisar', 'Kurla', 'Bhanyandar Southern West', 'Bandra', 'Mumbai']}
-            onChange={(e) => { setLocation(e) }}
+            data={['Borivali', 'Malad', 'Dahisar', 'Kurla', 'Bhanyandar Southern West', 'Bandra', 'mumbai']}
+            onChange={(e) => { setLocation(e); }}
         />
     );
 }
