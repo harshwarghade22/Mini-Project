@@ -33,12 +33,26 @@ export function getFlatDataFromFilter(location) {
         filters: {
             $or: [{
                 city: {
-                    $in : location
+                    $in: location
                 }
             }]
         },
         fields: ['city', 'name', 'state', 'price'],
         populate: 'slides'
+    }
+
+    const uri = qs.stringify(getFlatData);
+    return decodeURIComponent(uri);
+}
+
+
+export function getFlatDataFromId(id) {
+
+    const getFlatData = {
+        filters: {
+            id: { $eq : id }
+        },
+        populate: '*'
     }
 
     const uri = qs.stringify(getFlatData);

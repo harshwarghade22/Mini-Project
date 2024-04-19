@@ -1,5 +1,7 @@
 import React from 'react'
 import { GoogleMap, MarkerF, useJsApiLoader } from '@react-google-maps/api';
+// import Location from '../Icons/Location';
+import Location from '../Images/Location.png'
 
 const containerStyle = {
   width: '100%',
@@ -36,14 +38,14 @@ function MyComponent() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={19}
+        zoom={18}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
         
         <MarkerF
           position={center}
-          icon={"http://maps.google.com/mapfiles/ms/icons/green-dot.png"}
+          icon={Location}
         />
       </GoogleMap>
   ) : <></>

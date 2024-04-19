@@ -27,11 +27,11 @@ function FileUpload() {
         {(props) =>
           !file ? (
             <div
-              className="rounded-lg w-full h-full border-dashed  border-[1px]  border-black relative flex justify-center items-center "
+              className="rounded-lg lg:w-[350px] lg:h-[268px]   md:w-[280px] md:h-[268px] sm:w-[280p6] sm:h-[268px] border-dashed  border-[1px]  border-black relative flex justify-center items-center"
               {...props}
             >
               <Button
-                className={`w-full h-full rounded-lg  ${buttonStyles.button}`}
+                className={`lg:w-[350px] lg:h-[268px]   md:w-[280px] md:h-[268px] sm:w-[280px] sm:h-[268px] rounded-lg  ${buttonStyles.button}`}
               >
                 <MdOutlineAddAPhoto className="text-black text-center text-5xl opacity-20" />
               </Button>
@@ -42,15 +42,15 @@ function FileUpload() {
               style={{ position: "relative" }}
             >
               <img
-                className="rounded-lg w-full h-full  md:object-cover object-scale-down"
+                className="rounded-lg lg:w-[350px] lg:h-[268px] md:w-[280px] md:h-[268px] sm:w-[280px] sm:h-[268px]  object-cover object-center  "
                 src={URL.createObjectURL(file)}
                 alt="Uploaded File"
               />
               <Button
-                className={`close-btn absolute lg:top-0  top-8 opacity-0 right-1 m-2 ${buttonStyles.button}`}
+                className={`close-btn  absolute lg:top-0  top-8 opacity-0 hover:opacity-100 hover:bg-zinc-300 right-1 m-2 ${buttonStyles.button} ${buttonStyles.remove} `}
                 onClick={clearFile}
               >
-                <CiCircleRemove className="text-3xl text-red-400" />
+                <CiCircleRemove className="text-3xl font-bold text-red-400" />
               </Button>
             </div>
           )

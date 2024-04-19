@@ -9,19 +9,14 @@ import Home from "./Home";
 import RoomatesListing from "./components/mateDetails/RoomatesListing";
 import Map from "./components/Map";
 import MateDetails from "./components/mateDetails/MateDetails";
-import Hero1 from "./components/Listing_steps/Hero1";
 import AddDetails from "./components/Listing_steps/AddDetails";
 import FlatDescription2 from "./components/Listing_steps/FlatDescription2";
-import FlatDescription from "./components/Listing_steps/FlatDescription";
 import LocationDetails from "./components/Listing_steps/LocationDetails";
 import ConfirmAddress from "./components/Listing_steps/ConfirmAddress";
 import Hero2 from "./components/Listing_steps/Hero2";
 import MainSearch from "./MainSearch";
 import Page1 from "./components/OnboardingPages/Page1";
 import Page2 from "./components/OnboardingPages/Page2";
-import Footer from "./components/Footer";
-import SimpleMap from "./components/Gmap/GMap";
-import GMap2 from "./components/Gmap/GMap2";
 import MyComponent from "./components/Gmap/GMap2";
 
 const router = createBrowserRouter([
@@ -34,7 +29,7 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/details",
+    path: "/details/:id",
     element: <Details />,
   },
   {
@@ -102,8 +97,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-
-  
   return (
     <>
       <Navbar />

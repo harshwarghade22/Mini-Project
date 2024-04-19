@@ -14,7 +14,7 @@ import { MdNorthEast } from "react-icons/md";
 
 const AddDetails = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-4">
+    <div className="max-w-5xl mx-auto px-4 md:px-0 py-4">
       <div className="top flex justify-start items-center gap-1">
         <Link to="/addLocation">
           <div className="w-12 h-12 rounded-full bg-black text-white flex justify-center items-center">
@@ -46,7 +46,7 @@ const AddDetails = () => {
 
   
 
-      <ScrollArea h={520} >
+      <ScrollArea h={530} >
         <SelectAmmenitiesIcons/>
         <SelectFeatureIcon/>
         <SelectFeatureIcon/>
@@ -54,15 +54,15 @@ const AddDetails = () => {
         {/* <NearbyPlaces/> */}
       </ScrollArea>
       
-      <div className="max-w-5xl flex justify-between items-center my-8">
+      <div className="max-w-5xl flex justify-between items-center my-12 mx-5 md:mx-0">
         <Link to="/addImage">
-          <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
+          <button className="md:px-14 md:py-3 px-5 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
             <img src={arrow2} alt="" />
             Back
           </button>
         </Link>
         <Link to="/flatDescription">
-          <button className="px-14 py-3 bg-[#F45C2C] rounded-lg text-white flex justify-center items-center gap-2">
+          <button className="md:px-14 md:py-3 px-5 py-3 bg-[#F45C2C] rounded-lg text-white flex justify-center items-center gap-2">
             Next
             <img src={arrow1} alt="" />
           </button>

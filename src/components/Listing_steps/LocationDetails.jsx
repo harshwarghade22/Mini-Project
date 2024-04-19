@@ -13,7 +13,7 @@ import MyComponent from '../Gmap/GMap2';
 
 function LocationDetails() {
   return (
-    <div className="max-w-5xl mx-auto py-4 px-4">
+    <div className="max-w-5xl mx-auto py-4">
       <div className="top flex justify-start items-center gap-1">
         <button className="px-4 py-3 bg-[#F45C2C] rounded-full text-white font-gilroy_medium">
           1 Location
@@ -38,38 +38,33 @@ function LocationDetails() {
         </Link>
       </div>
 
-      <div className="flex justify-start items-center md:mt-10 mt-4 gap-4 ">
+      <div className="flex justify-start items-center md:mt-10 mt-4 gap-4 px-4 md:px-4 ">
         <img className="w-10 h-10 hidden md:block" src={home2} alt="" />
         <h1 className="text-4xl font-gilroy_semi_bold text-[#262626]">
           Where's your place located ?
         </h1>
       </div>
 
-      <div className='md:max-w-5xl h-[500px] bg-slate-300 my-4 md:my-5'>
-        <div className='relative h-full overflow-hidden'>
-         {/* <Map/> */}
-         {/* <SimpleMap/> */}
-         <MyComponent/>
-
-         
+      <div className='md:max-w-5xl h-[535px] md:h-[500px] my-4 md:my-5 relative '>
+        <div className='relative h-full overflow-hidden px-4 md:px-0'>
+          <MyComponent/>
         </div>
-        <div className='search w-[60%] h-[10%] mx-auto bg-slate-100 rounded-full flex items-center gap-3 pl-6'>
-            <Find/>
-            <div className='font-gilroy_regular'>
-              <SearchLocation/>
-            </div>
+        <div className='search w-[60%] h-[10%] mx-auto bg-slate-100 rounded-full flex items-center gap-3 pl-6 absolute top-6 left-0 right-0'>
+          <Find/>
+          <div className='font-gilroy_regular'>
+            <SearchLocation/>
+          </div>
         </div>
       </div>
 
-      
-      <div className="max-w-6xl flex justify-between items-center my-8">
-        <button className="px-14 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
+      <div className="max-w-5xl flex justify-between items-center my-8 mx-8 md:mx-0">
+        <button className="md:px-14 md:py-3 px-5 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
           <img src={arrow2} alt="" />
           Back
         </button>
         <Link to="/addLocation/confirmAddress">
           {" "}
-          <button className="px-14 py-3 bg-[#F45C2C] rounded-lg text-white flex justify-center items-center gap-2">
+          <button className="md:px-14 md:py-3 px-5 py-3 bg-[#F45C2C] rounded-lg text-white flex justify-center items-center gap-2">
             Next
             <img src={arrow1} alt="" />
           </button>
