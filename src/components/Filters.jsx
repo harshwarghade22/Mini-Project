@@ -22,7 +22,7 @@ function Hero() {
     async function fetchFlats() {
         let url;
         if (location.length)
-            url = getFlatDataFromFilter(location)
+            url = getFlatDataFromFilter(state, flatSize, occupancy, location)
         else
             url = getFlatDataFromQuery(state, flatSize, occupancy)
 

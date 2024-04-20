@@ -37,7 +37,7 @@ function Layout1() {
     }
 
     // Options data
-    const whereOptions = ["bangalore", "gurugram", "chennai", "mumbai"];
+    const whereOptions = ["maharashtra"];
     const sizeOptions = ["1BHK", "2BHK", "3BHK", "1RK"];
     const matesOptions = ["Single", "Double", "Triple", "Quadruple"];
 
