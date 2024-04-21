@@ -46,7 +46,7 @@ const AddDetails = () => {
 
   
 
-      <ScrollArea h={530} >
+      <ScrollArea h={500} >
         <SelectAmmenitiesIcons/>
         <SelectFeatureIcon/>
         <SelectFeatureIcon/>

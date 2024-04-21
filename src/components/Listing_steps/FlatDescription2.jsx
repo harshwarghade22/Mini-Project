@@ -69,7 +69,7 @@ const FlatDescription = () => {
         </h1>
       </div>
 
-      <div className="max-w-7xl h-[480px] flex flex-col gap-4 mt-4">
+      <div className="max-w-6xl h-[480px] flex flex-col gap-4 mt-4">
         <div className="w-full flex gap-12 pt-10">
           <div className="w-2/5">
             <h1 className="text-2xl font-gilroy_semi_bold">Flat rent</h1>
@@ -248,6 +248,7 @@ const FlatDescription = () => {
           Complete Listing
           <img src={arrow1} alt="" />
         </button>
+       
       </div>
     </div>
   );
