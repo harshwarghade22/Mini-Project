@@ -121,7 +121,7 @@ function FileUpload() {
                         className={`text-white ${buttonStyles.button}`}
                         onClick={() => clearFile()}
                       >
-                        <MdDelete className="text-3xl font-bold text-black" />
+                        <MdDelete className="text-3xl font-bold text-green-500" />
                         <span className="text-lg font-gilroy_semi_bold"> Remove </span>
                       </Button>
                       <Button
@@ -129,7 +129,7 @@ function FileUpload() {
                         className={`text-white ${buttonStyles.button}`}
                         htmlFor="file-input"
                       >
-                        <MdFindReplace className="text-3xl font-bold text-white" />
+                        <MdFindReplace className="text-3xl font-bold text-blue-500" />
                         <span className="text-lg font-gilroy_semi_bold"> Replace </span>
                       </Button>
                     </div>
