@@ -1,33 +1,34 @@
 import React from "react";
 import { CgProfile } from "react-icons/cg";
 import { Dropdown } from "./DropDown/dropdown";
+import { Link } from "react-router-dom";
 
 
 function Navbar() {
   return (
     <div className="max-w-7xl px-4 mx-auto h-20 border-b-black flex justify-between items-center ">
       <div className=" text-3xl font-gilroy_semi_bol font-semibold">
-        Conti<span className="text-orange-400">new...</span>
+        <a href="/">
+          PG<span className="text-orange-400">Plaza</span>
+        </a>
       </div>
       <div className="hidden md:flex justify-between gap-8 text-gray-400 font-gilroy_medium">
-        <a href="/">
-          <div className="hover:text-black text-sm">Home</div>
-        </a>
         <a href="/roomates">
           <div className="hover:text-black text-sm">Mates</div>
         </a>
         <a href="">
           <div className="hover:text-black text-sm">Rent More</div>
         </a>
-        <a href="">
+        <a href="/services">
           <div className="hover:text-black text-sm">Services</div>
         </a>
         <a href="/addLocation">
           <div className="hover:text-black text-sm">ListProperty</div>
         </a>
-        <a href="/addLocation">
-          <div className="hover:text-black text-sm">Services</div>
+        <a href="/about">
+          <div className="hover:text-black text-sm">About us</div>
         </a>
+        
       </div>
       <div className="hidden md:block">
         <a href="/login1">

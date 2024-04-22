@@ -21,6 +21,8 @@ import MyComponent from "./components/Gmap/GMap2";
 import MapComponent from "./components/Gmap/LocationIQ";
 import MapWithLayerControl from "./components/Gmap/LocationIQ";
 import LocationIQMap from "./components/Gmap/LocationIQ";
+import Service from "./components/Services/ServicesList";
+import AboutUs from "./components/About";
 
 const router = createBrowserRouter([
   {
@@ -100,6 +102,14 @@ const router = createBrowserRouter([
   {
     path: "/gmap2",
     element: <LocationIQMap />,
+  },
+  {
+    path: "/services",
+    element: <Service />,
+  },
+  {
+    path: "/about",
+    element: <AboutUs />,
   },
 ]);
 
