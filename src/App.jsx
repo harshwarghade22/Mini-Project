@@ -18,6 +18,9 @@ import MainSearch from "./MainSearch";
 import Page1 from "./components/OnboardingPages/Page1";
 import Page2 from "./components/OnboardingPages/Page2";
 import MyComponent from "./components/Gmap/GMap2";
+import MapComponent from "./components/Gmap/LocationIQ";
+import MapWithLayerControl from "./components/Gmap/LocationIQ";
+import LocationIQMap from "./components/Gmap/LocationIQ";
 
 const router = createBrowserRouter([
   {
@@ -93,6 +96,10 @@ const router = createBrowserRouter([
   {
     path: "/gmap",
     element: <MyComponent />,
+  },
+  {
+    path: "/gmap2",
+    element: <LocationIQMap />,
   },
 ]);
 

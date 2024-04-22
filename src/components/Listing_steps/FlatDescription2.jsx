@@ -5,6 +5,7 @@ import arrow1 from "../Images/Arrow 2.png";
 import arrow2 from "../Images/Arrow 21234.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { ScrollArea } from "@mantine/core";
 
 const FlatDescription = () => {
   const [selectedPreferences, setSelectedPreferences] = useState([]);
@@ -63,15 +64,17 @@ const FlatDescription = () => {
       </div>
 
       <div className="flex justify-start items-center lg:mt-14 md:mt-10 mt-8 gap-4 ">
-        <img className="w-10 h-10" src={home2} alt="" />
+        <img className="w-10 h-10 hidden md:block" src={home2} alt="" />
         <h1 className="text-3xl font-gilroy_semi_bold text-[#262626]">
           FLAT DESCRIPTION
         </h1>
+        
       </div>
 
-      <div className="max-w-7xl h-[480px] flex flex-col gap-4 mt-4">
-        <div className="w-full flex gap-12 pt-10">
-          <div className="w-2/5">
+      <ScrollArea h={530} scrollbars="y">
+      <div className="md:max-w-7xl max-w-md md:h-[480px] flex flex-col gap-4 mt-4">
+        <div className="w-full flex md:flex-row flex-col  gap-12 pt-10">
+          <div className="w-full md:w-2/5">
             <h1 className="text-2xl font-gilroy_semi_bold">Flat rent</h1>
             <input
               className="w-full pl-4 h-16 mt-2 text-xl font-gilroy_medium bg-slate-100 rounded-md border-none"
@@ -79,7 +82,7 @@ const FlatDescription = () => {
               placeholder="Rs"
             />
           </div>
-          <div className="w-2/5">
+          <div className="w-full md:w-2/5">
             <h1 className="text-2xl font-gilroy_semi_bold">Flat</h1>
             <div className="flex justify-between gap-5">
               <button
@@ -125,8 +128,8 @@ const FlatDescription = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex gap-12 pt-10">
-          <div className="w-2/5">
+        <div className="w-full flex md:flex-row flex-col gap-12 pt-10">
+          <div className="w-full md:w-2/5">
             <h1 className="text-2xl font-gilroy_semi_bold">Size</h1>
             <input
               className="w-full h-16 mt-2 pl-4 text-xl font-gilroy_medium bg-slate-100 rounded-md"
@@ -134,7 +137,7 @@ const FlatDescription = () => {
               placeholder="(sqft)"
             />
           </div>
-          <div className="w-2/5">
+          <div className="w-full md:w-2/5">
             <h1 className="text-2xl font-gilroy_semi_bold">Occupancy</h1>
             <div className="flex justify-between gap-5">
               <button
@@ -182,9 +185,10 @@ const FlatDescription = () => {
         </div>
         <div className="preferences mt-8">
           <h1 className="text-2xl font-gilroy_semi_bold">Preferences</h1>
-          <div className="w-11/12 flex gap-12 mt-4">
+          <ScrollArea scrollbars="x" type="never">
+          <div className="md:w-11/12 w-full flex gap-5 mt-4">
             <button
-              className={`px-10 py-4 border rounded-full text-xl font-gilroy_medium ${
+              className={`px-20 py-2 border rounded-full text-base font-gilroy_medium ${
                 selectedPreferences.includes("No Drinking")
                   ? "border-black"
                   : "border-[#C4C4C4]"
@@ -234,8 +238,12 @@ const FlatDescription = () => {
               Family
             </button>
           </div>
+          </ScrollArea>
+          
         </div>
       </div>
+      </ScrollArea>
+      
 
       <div className="max-w-5xl flex justify-between sm:mt-8">
         <Link to="/addDetails">

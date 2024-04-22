@@ -77,7 +77,7 @@ const Hero2 = () => {
       </ScrollArea> */}
 
         <ScrollArea h={530} type="never">
-          <div className="max-w-7xl grid w-full h-full  border rounded-lg border-[#9B9B9B] lg:p-2 p-4 my-4">
+          <div className="max-w-7xl grid w-full h-full  border rounded-lg border-[#9B9B9B] lg:p-2 p-4 my-2">
             <div className="top grid md:grid-cols-12 gap-3">
               <img
                 className="col-span-8   rounded-lg lg:w-full  md:h-[268px] sm:w-[658px] sm:h-[268px]  md:object-cover object-scale-down lg:mb-4 md:mb-8 mb-4 "
@@ -103,7 +103,7 @@ const Hero2 = () => {
           </div>
         </ScrollArea>
 
-        <div className="max-w-7xl flex justify-between items-center md:my-6 my-14 mx-8 md:mx-0">
+        <div className="max-w-7xl flex justify-between items-center md:my-6 my-10 mx-8 md:mx-0">
           <Link to="/addLocation">
             <button className="md:px-14 md:py-3 px-5 py-3 border-[#2C2C2C] border rounded-lg flex justify-center items-center gap-2">
               <img src={arrow2} alt="" />
