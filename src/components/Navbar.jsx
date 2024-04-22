@@ -25,6 +25,9 @@ function Navbar() {
         <a href="/addLocation">
           <div className="hover:text-black text-sm">ListProperty</div>
         </a>
+        <a href="/addLocation">
+          <div className="hover:text-black text-sm">Services</div>
+        </a>
       </div>
       <div className="hidden md:block">
         <a href="/login1">
