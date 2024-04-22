@@ -27,11 +27,20 @@ export function getFlatDataFromQuery(state, flatSize, occupancy) {
 }
 
 
-export function getFlatDataFromFilter(location) {
+export function getFlatDataFromFilter(state, flatSize, occupancy, location) {
 
     const getFlatData = {
         filters: {
-            $or: [{
+            $and: [{
+                ...(state ?
+                    { state: { $eq: state } }
+                    : {}),
+                ...(flatSize ?
+                    { flatSize: { $eq: flatSize } }
+                    : {}),
+                ...(occupancy ?
+                    { occupancy: { $eq: occupancy } }
+                    : {}),
                 city: {
                     $in: location
                 }
@@ -50,7 +59,7 @@ export function getFlatDataFromId(id) {
 
     const getFlatData = {
         filters: {
-            id: { $eq : id }
+            id: { $eq: id }
         },
         populate: '*'
     }

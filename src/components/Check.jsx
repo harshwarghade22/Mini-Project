@@ -4,7 +4,7 @@ import NavArrow from "./Icons/NavArrow";
 function Check() {
   return (
     <div className="py-12 px-4">
-      <div className="max-w-7xl  mx-auto grid lg:grid-cols-7  border-2 border-gray-700/50 ">
+      <div className="max-w-7xl  mx-auto grid grid-cols-7  border-2 border-gray-700/50 ">
         <div className="relative col-span-4 ">
           <img
             className=" w-full h-full object-cover object-center"

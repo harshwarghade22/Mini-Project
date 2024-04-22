@@ -72,7 +72,7 @@ const FlatDescription = () => {
       </div>
 
       <ScrollArea h={530} scrollbars="y">
-      <div className="md:max-w-7xl max-w-md md:h-[480px] flex flex-col gap-4 mt-4">
+      <div className="md:max-w-6xl max-w-md md:h-[480px] flex flex-col gap-4 mt-4">
         <div className="w-full flex md:flex-row flex-col  gap-12 pt-10">
           <div className="w-full md:w-2/5">
             <h1 className="text-2xl font-gilroy_semi_bold">Flat rent</h1>
@@ -256,6 +256,7 @@ const FlatDescription = () => {
           Complete Listing
           <img src={arrow1} alt="" />
         </button>
+       
       </div>
     </div>
   );

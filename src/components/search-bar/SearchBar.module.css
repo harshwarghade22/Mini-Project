@@ -1,0 +1,68 @@
+.grouproot {
+    display: flex;
+    flex-direction: column;
+    
+
+    @media (min-width: 36em) {
+        flex-direction: row;
+        border: 1px solid var(--mantine-color-default-border);
+        border-radius: 48px;
+        width: 50%; /* Adjust the width as needed */
+        margin: 0 auto;
+    }
+      
+}
+
+.searchinput {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+
+.inputroot {
+    padding: 6px 16px;
+    border-radius: 48px;
+    &:focus-within {
+        background-color: var(--mantine-color-gray-2);
+    }
+}
+
+.wheredropdown {
+    padding: 8px;
+    border-radius: 24px;
+}
+
+.whereoptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.whereoption {
+    padding: 8px;
+    border-radius: 24px;
+    &>span {
+        font-size: 16px;
+        line-height: 2.2;
+    }
+}
+
+.optionempty {
+    grid-column: span 2 / span 2;
+}
+
+.whatdropdown {
+    min-width: 200px;
+    padding: 8px;
+    border-radius: 24px;
+}
+
+.whatoption {
+   
+    padding: 8px;
+    border-radius: 24px;
+    &>span {
+        font-size: 16px;
+        line-height: 2.2;
+        white-space: nowrap;
+    }
+}

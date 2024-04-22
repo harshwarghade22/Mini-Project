@@ -6,6 +6,7 @@ import { FaApple } from "react-icons/fa";
 import { DiAndroid } from "react-icons/di";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SearchBar from "./search-bar/SearchBar";
 
 function Layout1() {
     const [where, setWhere] = useState(0);
@@ -37,7 +38,7 @@ function Layout1() {
     }
 
     // Options data
-    const whereOptions = ["bangalore", "gurugram", "chennai", "mumbai"];
+    const whereOptions = ["maharashtra"];
     const sizeOptions = ["1BHK", "2BHK", "3BHK", "1RK"];
     const matesOptions = ["Single", "Double", "Triple", "Quadruple"];
 
@@ -137,6 +138,8 @@ function Layout1() {
                         </div>
                     ))}
                 </div>
+
+               
 
                 <div className="bg-zinc-50">
                     <img
