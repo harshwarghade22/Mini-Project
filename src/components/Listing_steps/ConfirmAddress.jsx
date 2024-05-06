@@ -138,7 +138,8 @@ function ConfirmAddress() {
           </div> 
         </div>
         <div className="w-full md:w-[55%] border overflow-hidden">
-          <MyComponent/>
+          {/* <MyComponent/> */}
+          <Map/>
         </div>
       </div>
       

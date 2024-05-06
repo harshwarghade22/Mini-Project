@@ -47,7 +47,8 @@ function LocationDetails() {
 
       <div className='md:max-w-5xl h-[535px] md:h-[500px] my-4 md:my-5 relative '>
         <div className='relative h-full overflow-hidden px-4 md:px-0'>
-          <MyComponent/>
+          {/* <MyComponent/> */}
+          <Map/>
         </div>
         <div className='search w-[60%] h-[10%] mx-auto bg-slate-100 rounded-full flex items-center gap-3 pl-6 absolute top-6 left-0 right-0'>
           <Find/>

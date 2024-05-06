@@ -7,6 +7,7 @@ import { DiAndroid } from "react-icons/di";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "./search-bar/SearchBar";
+import Home_BL from './Images/Home_BL.png';
 
 function Layout1() {
     const [where, setWhere] = useState(0);
@@ -89,28 +90,14 @@ function Layout1() {
                         ))}
 
                         {/* GO button */}
-                        {
-                            (state == "" || flatSize == "" || occupancy == "") ? (
-                                <button
-                                    disabled={true}
-                                    onClick={() => console.log('hello')}
-                                    className="bg-orange-600 flex justify-evenly gap-2 items-center px-2 py-1 font-semibold rounded-full text-white mb-2 flex-grow md:flex-grow-0 cursor-not-allowed"
-                                >
-                                    GO
-                                    <FaArrowRightLong />
-                                </button>)
-                                :
-                                (
-                                    <Link
-                                        to="/carts"
-                                        state={{ state, flatSize, occupancy }}
-                                        className="bg-orange-600 flex justify-evenly gap-2 items-center px-2 py-1 font-semibold rounded-full text-white mb-2 flex-grow md:flex-grow-0"
-                                    >
-                                        GO
-                                        <FaArrowRightLong />
-                                    </Link>
-                                )
-                        }
+                        <Link
+                            to="/carts"
+                            state={{ state, flatSize, occupancy }}
+                            className="bg-orange-600 flex justify-evenly gap-2 items-center px-2 py-1 font-semibold rounded-full text-white mb-2 flex-grow md:flex-grow-0"
+                        >
+                            GO
+                            <FaArrowRightLong />
+                        </Link>
                     </div>
 
                     {/* Option dropdowns */}
@@ -139,7 +126,7 @@ function Layout1() {
                     ))}
                 </div>
 
-               
+
 
                 <div className="bg-zinc-50">
                     <img
@@ -151,15 +138,13 @@ function Layout1() {
             </div>
 
             <div className="bg-zinc-500 grid grid-cols-6  gap-[2px]">
-                <div className="bg-zinc-50 md:col-span-3">
+                <div className="bg-zinc-50 md:col-span-3 p-5">
                     <img
-                        className="p-3 grayscale object-cover w-full h-[150px] "
-                        src="https://s3-alpha-sig.figma.com/img/4546/2521/bb10066d5108ed30250d32f9bc9d5657?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Gphqz8b4UzM3ylJ4E9f7hFWMKnL5B0PCU-EX089kobSj6RifFEcLTlFyGoLvFhqoctAAHznTLPZcXdp9ysDSeDvJALPd8OnDeO-vSI3jyH51djByzjC80affKWG5YiwAMPuTEQsfSk2OoAE4vhBs8fTslEGcp5n3o8hePnN2sm0yvbf0XWHqUAfAtW6B424mKBQGgSMQG-eOyALlCBh7Xz6FGW7z~4KHUlJG-UOl15ELuiv~78i~9T1KC8WI7z5MADjCrOBXDAr-ZL90oKv~ISahrvzuekcPQu83a5sDL0OixCJRBcWbBrDQ2lq-iCPorUisR4eMMunMXhetdm1SYA__"
+                        src={Home_BL}
                         alt=""
                     />
                 </div>
-                {/* <div className="bg-zinc-50"></div>
-      <div className="bg-zinc-50"></div> */}
+                
                 <div className="bg-zinc-50 md:col-span-3">
                     <img
                         className="p-3 grayscale object-cover w-full h-[150px]"
@@ -167,8 +152,7 @@ function Layout1() {
                         alt=""
                     />
                 </div>
-                {/* <div className="bg-zinc-50"></div>
-      <div className="bg-zinc-50"></div> */}
+                
             </div>
         </div>
     );
