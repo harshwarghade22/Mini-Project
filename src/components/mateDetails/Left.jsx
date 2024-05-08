@@ -1,15 +1,19 @@
 import React from "react";
 import users from "../Images/image.png";
 import userLogo from "../Images/Group 48096603userLogo.png";
+import { useLocation } from "react-router-dom";
 
 function Left() {
+  const location = useLocation();
+  const img = location.state ? location.state.img : ""; // Extract image URL
+
   return (
     <div className="left  lg:col-span-4 md:col-span-12 md:grid-rows-12  md:mb-6">
       <div className="row-span-4">
         <div>
           <img
-            className="lg:w-[475px] w-full h-[333px] object-cover  rounded-xl"
-            src="https://s3-alpha-sig.figma.com/img/6ba4/81ef/1fa1409398b433169861f47fc01aee64?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iBrDOWJzbjYDV0NysHs9hdfNcOF80NAzwaSGnCBhkLkqjk4uclcx6GgLtzMX90o5wIQt3Lo4FOAqI98VG1dstqqnXX1TRSj4bsX6FUl0KtegqNeivvWa2hj34xvHObIJSEJhaOJjRs4srMHWupA0BhRjlkboE-e6zFDYPTAA35SrqW910lSiaenrIm~XlZY-iYhUT4yxoGWzUtVVJmZI17Ka-ARAfukuH19NyXImgQ66km3dhWuUYX3rrUK-OSlz5NLdt~ZYpv0hAjFlTQh4j-1Puk9MSHzucXAm8g0v5txPRLHK8x6CvLOU2qZUXW9Vx3OpymeTMWLIU47Ko212Mw__"
+            className="lg:w-[475px] w-full h-[333px] object-cover rounded-xl"
+            src={img} // Use the extracted image URL
             alt=""
           />
         </div>
