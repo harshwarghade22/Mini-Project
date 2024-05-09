@@ -9,37 +9,7 @@ import { Link } from "react-router-dom";
 
 
 function Hero({ data = [
-    {
-        id: 1,
-        name: "Prathamesh Apt",
-        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, voluptatem?",
-        isVeg: false,
-        gender: "Male",
-        isAc: true,
-
-        img: "https://plus.unsplash.com/premium_photo-1661962841993-99a07c27c9f4?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        rating: 4,
-        price: 3000,
-        location: "Mumbai",
-        size: "1 BHK",
-        mates: 3,
-        attributes: {
-            slides: [
-                {
-                    url: "https://images.unsplash.com/photo-1615471618985-97108e2ba478?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                },
-                {
-                    url: "https://images.unsplash.com/photo-1620332372374-f108c53d2e03?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                },
-                {
-                    url: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                },
-                {
-                    url: "https://images.unsplash.com/photo-1611048267451-e6ed903d4a38?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                },
-            ],
-        }
-    },
+    
 
     {
         id: 2,
@@ -188,6 +158,39 @@ function Hero({ data = [
         mates: 4,
         attributes: {
             slides: [
+                {
+                    url: "https://images.unsplash.com/photo-1620332372374-f108c53d2e03?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+                {
+                    url: "https://images.unsplash.com/photo-1615471618985-97108e2ba478?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+
+                {
+                    url: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+                {
+                    url: "https://images.unsplash.com/photo-1611048267451-e6ed903d4a38?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+            ],
+        }
+    },
+    {
+        id: 7,
+        name: "Mumbai plaza",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, voluptatem?",
+        isVeg: true,
+        gender: "Female",
+        isAc: false,
+
+        img: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        rating: 4.5,
+        price: 3500,
+        location: "Andheri",
+        size: "3 BHK",
+        mates: 5,
+        attributes: {
+            slides: [
+
                 {
                     url: "https://images.unsplash.com/photo-1620332372374-f108c53d2e03?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 },

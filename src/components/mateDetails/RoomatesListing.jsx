@@ -1,14 +1,9 @@
 import React from "react";
-
 import RoomateCard from "./RoomateCard";
 import LocationSelect from "../location-select/LocationSelect";
 import PriceSelect from "../price-select/PriceSelect";
 import FilterBtn from "../filter-btn/FilterBtn";
 import GenderSelect from "../gender-select/genderSelect";
-import profile1 from "../Images/Rectangle 105.png";
-import Contact from "../Icons/Contact";
-import Fav from "../Icons/Fav";
-import { Link } from "react-router-dom";
 
 
 function RoomatesListing({mates=[

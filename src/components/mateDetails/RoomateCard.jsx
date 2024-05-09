@@ -27,7 +27,7 @@ function RoomateCard({ mate }) {
               <p className="font-gilroy_medium text-[#6E6E6E]">{mate.budget}</p>
             </div>
             <div className="flex flex-col h-full justify-between">
-              <p className="text-sm font-gilroy_medium text-[#A9A9A9]">Looking for</p>
+              <p className="text-sm font-gilroy_medium text-[#A9A9A9]">Gender</p>
               <p className="font-gilroy_medium text-[#6E6E6E]">{mate.gender}</p>
             </div>
             <div className="flex flex-col h-full justify-between">

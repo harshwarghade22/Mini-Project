@@ -6,6 +6,7 @@ import CalendarIcon from "./Icons/CalendarIcon";
 import { useEffect } from "react";
 import { DatePicker } from "@mantine/dates";
 import { ScrollArea, Box } from '@mantine/core';
+import { Link } from "react-router-dom";
 
 function ReserveDate() {
   const months = [
@@ -326,9 +327,10 @@ function ReserveDate() {
               {time}
             </div>
           </div>
-          <div className="w-[30%] border rounded-lg bg-orange-600 flex justify-center items-center font-gilroy_regular text-white p-3">
+          
+          <Link to="/check" className="w-[30%] border rounded-lg bg-orange-600 flex justify-center items-center font-gilroy_regular text-white p-3">
             Schedule a visit
-          </div>
+          </Link >
         </div>
       </div>
     </div>
